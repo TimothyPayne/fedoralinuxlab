@@ -11,52 +11,37 @@
 			p { background: transparent; margin-bottom: 0.1in; line-height: 115%; background: transparent }
 			a:link { color: #000080; text-decoration: underline }
 			a:visited { color: #800000; text-decoration: underline }
+
+		/* Simple layout classes to replace legacy <font> tags */
+		.title { font-size: 24pt; text-align: center; margin: 0.5em 0; }
+		.subtitle { font-size: 20pt; text-align: center; margin: 0.3em 0; }
+		.lead { font-size: 16pt; text-align: center; margin-bottom: 0.8em; }
+		.body-text { font-size: 14pt; text-align: left; margin-bottom: 0.6em; }
+		.section-title { font-size: 14pt; font-weight: bold; margin-top: 0.6em; margin-bottom: 0.3em; text-align:left; }
+		.small-right-mail { text-align: right; font-size: 12px; margin: 0.8em 6px 0 0; }
 		</style>
 </head>
 <body lang="en-US" link="#000080" vlink="#800000" dir="ltr">
 <p style="margin:0; padding:0;">
 	<img src="images/UdrConst.jpeg" alt="UdrConst" style="float:left; margin:6px 12px 12px 6px; max-width:120px; height:auto;">
 </p>
-<p align="center">
-<font size="6" style="font-size: 24pt">Welcome to the Fedora Linux
-Lab</font></p>
-<p align="center"><font size="5" style="font-size: 20pt">A resource
-for parents of High School children</font></p>
-<p align="center"><font size="5" style="font-size: 20pt">All people
-are welcome and help from Linux Professionals is greatly appreciated</font></p>
-<p align="center"><font size="4" style="font-size: 16pt">Caution must
-be used when using the family computer and is discouraged. Fedora can
-be used with as little as 4 GB of RAM</font></p>
+<h1 class="title">Welcome to the Fedora Linux Lab</h1>
+<h2 class="subtitle">A resource for parents of High School children</h2>
+<p class="subtitle">All people are welcome and help from Linux Professionals is greatly appreciated</p>
+<p class="lead">Caution must be used when using the family computer. Fedora can be used with as little as 4 GB of RAM.</p>
 
-<p align="left"><font size="4" style="font-size: 14pt">The goal of
-this site is to give parents in Las Cruces New Mexico (or around the
-world) a way for their child to develop the number 1 skill employers
-want ‘Problem Solving’ no matter what the job. This is to ‘Learn
-How’ problems are solved hands on, that High School can not teach
-currently. By using Fedora Linux as the Lab with ChatGPT and other AI
-as the textbook with the answers. I was alarmed at the progress of
-robots and that Tesla’s Humanoid Robot costs less than a year for a
-Human at $15 per hour. Even worse the robot will last a few years
-making them far less cost than a Human. A low cost box with 2 arms
-and a camera with an AI wireless connection will make things even more
-difficult. As I looked further into AI finding that it will make
-things difficult in New Mexico in the near future. A robot may be
-better, cheaper, faster, but it does not have our Human imagination
-to solve problems. Using AI to ask a question, use the answer, take
-the error message if it did not work and form another detailed
-question, in a loop until the problem is solved. Just one of the many
-skills it takes to solve problems step by step. This will not be
-easy, gaining valuable skills never is.</font></p>
-<p align="left"><a href="NmJobs.html"><font size="4" style="font-size: 14pt">Link to Top 2 sectors by number of workers in NM</font></a></p>
-<p align="left"><a href="SkillsLinks.html"><font size="4" style="font-size: 14pt">Link to needed skills</font></a></p>
-<p align="left"><a href="FastFoodRobots.html"><font size="4" style="font-size: 14pt">Fast Food Robots</font></a></p>
-<p align="left"><a href="LUGreasons.html"><font size="4" style="font-size: 14pt">Reasons for a Lab</font></a></p>
-<p><font size="2" style="font-size: 10pt"><font color="#333d42"><font face="apple-system, Bli
-nkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif"><br/>                                                           </font></font><font size="4" style="font-size: 14pt">What
-is Linux?</font></font></p>
-<p align="left"><font size="4" style="font-size: 14pt">Linux is a
-free and open-source computer operating system, like Windows only
-much better and there are big fundamental differences.</font></p>
+<p class="body-text">The goal of this site is to give parents in Las Cruces, New Mexico a way for their child to develop the number one skill employers want: problem solving — no matter what the job. You can buy a condo for what it costs to go to university. This site is to teach how problems are solved hands-on, something High School currently cannot teach. By using Fedora Linux as the lab and ChatGPT and other AI as resources, students can follow step-by-step guidance, test, and iterate until problems are solved. I was concerned about the progress of robots: a humanoid robot that costs less per year than a human worker at $15/hour is a serious change. Robots may be better, cheaper, and faster, but they lack human imagination for creative problem solving. Learning to work with AI and debug errors is one of the many skills required to solve real problems; this will not be easy, but gaining valuable skills never is.</p>
+
+<p class="body-text"><a href="NmJobs.html">Link to Top 2 sectors by number of workers in NM</a></p>
+
+<p class="body-text"><a href="SkillsLinks.html">Link to needed skills</a></p>
+
+<p class="body-text"><a href="FastFoodRobots.html">Fast Food Robots</a></p>
+
+<p class="body-text"><a href="LUGreasons.html">Reasons for a Lab</a></p>
+<h3 class="section-title">What is Linux?</h3>
+<p class="body-text">Linux is a free and open-source computer operating system, like Windows only much better and there are big fundamental differences.</p>
+
 <p align="left"><font size="4" style="font-size: 14pt">Fedora allows
 you to change the desktop you use not just colors or style, you can
 switch to a light weight desktop if you are short on RAM. It may
@@ -90,6 +75,11 @@ designed to serve as a public testing ground and technology incubator
 for new features. They could not possibly test every combination of
 hardware and software by themselves. </font>
 </p>
-<p style="text-align:right; font-size:12px; margin:0.8em 6px 0 0;"><a href="mailto:info@fedoralinuxlab.org">info@fedoralinuxlab.org</a></p>
+<p align="left"><font size="4" style="font-size: 14pt">This is a do-it-yourself skills-building approach that can cost little to nothing. AI tools can provide helpful, step-by-step guidance. If you have an older computer, ask ChatGPT for detailed instructions to install a lightweight desktop.</font></p>
+
+<p align="left"><font size="4" style="font-size: 14pt"><a href="https://www.fedoraproject.org/workstation/download">Download Fedora Linux OS</a> — official Fedora Workstation download.</font></p>
+
+<p align="left"><font size="4" style="font-size: 14pt"><a href="https://docs.fedoraproject.org/en-US/fedora/latest/preparing-boot-media/#_fedora_media_writer">How to get started</a> — prepare boot media and initial setup instructions from the Fedora docs.</font></p>
+<p class="small-right-mail"><a href="mailto:info@fedoralinuxlab.org">info@fedoralinuxlab.org</a></p>
 </body>
 </html>
