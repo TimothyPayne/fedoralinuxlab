@@ -2,12 +2,12 @@
 
 @page { size: 8.5in 11in; margin-left: 0.79in; margin-right: 0.39in; margin-top: 0.39in; margin-bottom: 0.39in }
 
-body { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #111; }
+body { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #06283D; background-color: #87CEEB; margin: 0; padding: 1rem; }
 
 p { background: transparent; margin-bottom: 0.6em; line-height: 1.4; }
 
-a:link { color: #000080; text-decoration: underline }
-a:visited { color: #800000; text-decoration: underline }
+a:link { color: #002E5D; text-decoration: underline }
+a:visited { color: #003f6b; text-decoration: underline }
 
 /* Layout classes replacing legacy <font> tags */
 .title { font-size: 24pt; text-align: center; margin: 0.5em 0; }
