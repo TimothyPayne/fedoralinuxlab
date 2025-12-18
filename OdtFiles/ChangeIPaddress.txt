@@ -1,0 +1,30 @@
+✅ Step 1 — List your NetworkManager connections
+nmcli connection show
+
+
+You will see something like:
+
+NAME                UUID                                  TYPE      DEVICE
+Wired connection 1  9f3a7bd0-2c4e-4a66-9a9b-9b4d0e6ace21  ethernet  enp3s0
+
+
+You need the NAME (example: Wired connection 1).
+
+✅ Step 2 — Bring the connection down
+sudo nmcli connection down "Wired connection 1"
+
+
+(Replace with your actual connection name.)
+
+✅ Step 3 — Bring the connection up
+sudo nmcli connection up "Wired connection 1"
+
+🔁 Full example including setting an IP
+
+If you were trying to set a manual IP:
+
+sudo nmcli connection modify "Wired connection 1" ipv4.addresses "192.168.1.50/24"
+sudo nmcli connection modify "Wired connection 1" ipv4.gateway "192.168.1.1"
+sudo nmcli connection modify "Wired connection 1" ipv4.method manual
+sudo nmcli connection down "Wired connection 1"
+sudo nmcli connection up "Wired connection 1"

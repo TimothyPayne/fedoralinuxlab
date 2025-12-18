@@ -1,0 +1,115 @@
+PUSH_INSTRUCTIONS.txt
+
+Purpose
+-------
+This file contains concise instructions for committing and pushing changes to GitHub using a Personal Access Token (PAT), previewing the static site locally, and tips for deploying to your host by FTP or automating deploys with GitHub Actions or GitHub Pages.
+
+1) Quick local workflow (commit & push)
+--------------------------------------
+- Make your edits locally in the repo (e.g., `/home/Mothy/LUGpages/index.html`).
+
+- Stage and commit changes:
+
+```bash
+cd /home/Mothy/LUGpages
+git add index.html
+git commit -m "Small edit: update logo placement or text"
+```
+
+- Push to GitHub (HTTPS). When prompted for a password, enter a GitHub Personal Access Token (PAT) instead of your password.
+
+```bash
+git push origin main
+```
+
+Notes about the PAT:
+- Create a PAT at https://github.com/settings/tokens (classic or fine-grained tokens work). Minimum scopes: repo (for repo access). If you only need to push to public repos, repo:public_repo is sufficient.
+- Do NOT paste the token into files or share it. Treat it like a password.
+
+2) Avoid entering the PAT every push (optional)
+---------------------------------------------
+- Use Git credential helper (store once):
+
+```bash
+# Store credentials (prompts once and saves in plain text in ~/.git-credentials)
+git config --global credential.helper store
+# Or cache temporarily (in-memory cache)
+git config --global credential.helper cache
+```
+
+- Or use your OS credential manager (recommended) or a personal credential manager tool.
+
+3) Preview the site locally (fast)
+----------------------------------
+- From the repo directory serve the site with Python (simple):
+
+```bash
+cd /home/Mothy/LUGpages
+python3 -m http.server 8000
+```
+
+- Open http://localhost:8000 in a browser. This serves files exactly as static files so you can verify links and images.
+
+4) FTP / FileZilla quick checklist (if you must upload manually)
+---------------------------------------------------------------
+- In FileZilla, confirm the remote directory where `index.html` is located. Typical docroots:
+  - `public_html/`
+  - `httpdocs/`
+  - `htdocs/`
+  - `www/`
+- Ensure `images/` is a sibling of `index.html` and contains `UdrConst.jpeg` with exact filename case.
+- Right-click the file → File permissions → set to 644 for files and 755 for directories.
+- If things look missing, upload `test-xyz.html` next to `index.html`, then browse https://yourdomain/test-xyz.html to confirm you're in the right docroot.
+
+5) Automate deployment (no FTP, no host panel required)
+-----------------------------------------------------
+A) GitHub Actions → FTP deploy (recommended if host supports FTP)
+- Add a workflow that uploads the contents of the repo to your host via FTP when you push.
+- Add these repository secrets in GitHub: `FTP_HOST`, `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_REMOTE_DIR` (path to the webroot, e.g., `public_html/`).
+- Workflow template (example using an FTP action) — I can add this file to your repo if you want.
+
+B) GitHub Pages (if you can change DNS)
+- Go to your repo Settings → Pages and choose `main` branch, root (/) as the source.
+- If you want to use `fedoralinuxlab.org` as a custom domain, update your DNS records to point to GitHub Pages and add a `CNAME` file with the domain.
+- GitHub Pages automatically publishes on each push.
+
+C) Netlify / Vercel (recommended alternative)
+- Connect your GitHub repo to Netlify or Vercel and set the publish directory to the repo root.
+- They provide easy custom-domain setup and continuous deploy on push.
+
+6) Troubleshooting checklist
+----------------------------
+- Case sensitivity: Linux hosting is case-sensitive. Ensure filename in HTML matches exactly.
+- Permissions: Files 644, directories 755.
+- `.htaccess`: A rewrite rule or deny directive could block `/images/`. If present, download and inspect it.
+- CDN / Cache: If you use Cloudflare or similar, purge cache after uploading.
+- Confirm remote path: In FileZilla the top path shown is usually the FTP home; the actual webroot may be a subfolder like `public_html/`.
+
+7) If you want me to automate the deploy (I can add files to the repo)
+------------------------------------------------------------------------
+I can create a GitHub Actions workflow that will FTP-upload the site whenever you push to `main`. To set that up I will:
+- Create `.github/workflows/ftp-deploy.yml` in the repo.
+- Provide exact names for repository secrets to add (e.g., `FTP_HOST`, `FTP_USER`, `FTP_PASS`, `FTP_REMOTE_DIR`).
+- Test the workflow instructions here; you will add the secrets through the GitHub UI.
+
+8) Quick commands reference
+--------------------------
+```bash
+# Serve locally
+python3 -m http.server 8000
+
+# Stage, commit and push changes
+git add .
+git commit -m "Update site"
+git push origin main
+
+# Use cached credentials (prompt saved for some time)
+git config --global credential.helper cache
+```
+
+9) Notes and safety
+-------------------
+- Never commit secrets (PATs, FTP passwords) into the repo. Use GitHub Secrets for Actions.
+- If you want me to add the Actions workflow, I'll provide the file and exact secret names; you add secrets in repo Settings → Secrets → Actions.
+
+If you want, I can now add the `PUSH_INSTRUCTIONS.txt` file (this file), plus an FTP deploy workflow. Tell me which: (A) just the instructions file (done), (B) add FTP deploy GitHub Action, or (C) switch to GitHub Pages/Netlify guidance and files.
