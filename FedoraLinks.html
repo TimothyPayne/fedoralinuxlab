@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Fedora Linux links and beginner guidance for hands-on computer learning AI prompt builder AI Practice.">
+	<meta name="keywords" content="Fedora Linux, open source, beginner Linux, Fedora download, Linux practice">
+	<link rel="canonical" href="https://aipracticelab.org/FedoraLinks.html">
+	<title>Fedora Linux Links and Getting Started</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<p><a href="/">Home</a></p>
+
+<section class="readable-flow">
+<h1 class="title">Fedora Linux Links</h1>
+
+<p><strong>What is Linux?</strong></p>
+<p>Linux is a free and open-source computer operating system, like Windows only much better and there are big fundamental differences. Fedora allows you to change the desktop you see not just colors, you can switch to a different lightweight desktop for older computers short on RAM.</p>
+
+<p><strong>What is Open Source?</strong></p>
+<p>Open Source allows you access to the source code (programming) so it is 'Open'. Why give it away? There are countless reasons many make a version available free, and offer extra options for the paid version.</p>
+
+<p><strong>What is Fedora?</strong></p>
+<p>Red Hat (DoD spends a Billion+ with them) produces Fedora which is designed to serve as a public testing ground and technology incubator for new features.</p>
+
+<p class="body-text">This is an intense do-it-yourself skills-building approach that can cost little to nothing. AI tools can provide helpful, step-by-step guidance. You really should use a dedicated computer for this, it can be an older machine I am using Xfce desktop. You will make mistakes and that is how you learn, that makes it risky for the family computer. Booting from a USB drive and looking around Fedora is safe if you are careful, the Media Writer will do the download for you and write to the USB. A ChatGPT account is highly recommended.</p>
+
+<p class="body-text"><a href="https://fedoraproject.org/workstation/">Download Fedora Workstation</a> - official Fedora Workstation download.</p>
+
+<p class="body-text"><a href="https://fedoraproject.org/spins/xfce/download">Download Fedora Xfce for older machines</a> - official Fedora Xfce download.</p>
+
+<p class="body-text"><a href="https://docs.fedoraproject.org/en-US/fedora/latest/preparing-boot-media/#_fedora_media_writer">How to get started</a> - prepare boot media and initial setup instructions from the Fedora docs.</p>
+
+<p class="lead">Caution must be used when using the family computer. Fedora can be used with as little as 4 GB of RAM.</p>
+
+<p class="body-text"><a href="PhoneBU.html">1st problem to solve: Back up phone by booting Fedora from a USB and copy phone data to another USB.</a></p>
+</section>
+
+<section class="prompt-builder" aria-labelledby="linux-builder-title">
+	<h3 id="linux-builder-title">Interactive Linux Help Prompt Builder</h3>
+	<p>Fill in the details below, then click <strong>Build Prompt</strong>. Paste the result into any chatbot for a focused troubleshooting response.</p>
+
+	<div class="prompt-grid">
+		<div class="prompt-field">
+			<label class="prompt-label" for="linuxOsVersion">Linux OS and version</label>
+			<input id="linuxOsVersion" type="text" placeholder="Example: Fedora Workstation 42 (GNOME)">
+		</div>
+
+		<div class="prompt-field">
+			<label class="prompt-label" for="linuxHardwareModel">Hardware model number</label>
+			<input id="linuxHardwareModel" type="text" placeholder="Example: Dell Latitude 7490">
+		</div>
+
+		<div class="prompt-field prompt-field-full">
+			<label class="prompt-label" for="linuxCommandLookup">Command or topic to look up</label>
+			<input id="linuxCommandLookup" type="text" placeholder="Example: dnf update, journalctl errors, wifi restart command">
+		</div>
+
+		<div class="prompt-field">
+			<label class="prompt-label" for="linuxOutputMode">Output mode</label>
+			<select id="linuxOutputMode">
+				<option value="quick" selected>Quick triage</option>
+				<option value="deep">Deep diagnostic</option>
+			</select>
+		</div>
+
+		<div class="prompt-field prompt-field-full">
+			<label class="prompt-label" for="linuxErrorMessage">Error message</label>
+			<textarea id="linuxErrorMessage" placeholder="Paste the full error text here..."></textarea>
+		</div>
+
+		<div class="prompt-field prompt-field-full">
+			<label class="prompt-label" for="linuxWhatTried">What you already tried (optional)</label>
+			<textarea id="linuxWhatTried" placeholder="Example: rebooted, ran sudo dnf clean all, checked cables..."></textarea>
+		</div>
+
+		<div class="prompt-field prompt-field-full">
+			<label class="prompt-label" for="linuxGeneratedPrompt">Prompt to copy into any chatbot</label>
+			<textarea id="linuxGeneratedPrompt" readonly placeholder="Click Build Prompt to generate a Linux troubleshooting prompt."></textarea>
+		</div>
+	</div>
+
+	<div class="prompt-actions">
+		<button id="linuxBuildPromptBtn" class="prompt-button" type="button">Build Prompt</button>
+		<button id="linuxCopyPromptBtn" class="prompt-button" type="button">Copy Prompt</button>
+		<button id="linuxSharePromptBtn" class="prompt-button" type="button">Share Prompt</button>
+		<button id="linuxClearFormBtn" class="prompt-button prompt-button-secondary" type="button">Clear</button>
+	</div>
+
+	<p><strong>Suggestion:</strong> Include the exact command you ran and copy the full error text. Complete details usually produce much better troubleshooting steps.</p>
+	<p id="linuxCopyStatus" class="copy-status" role="status" aria-live="polite"></p>
+</section>
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
+<script src="js/linux-prompt-builder.js"></script>
+</body>
+</html>

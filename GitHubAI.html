@@ -1,72 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="AI for Everyone - A friendly quick start guide for non-technical users. Learn how to use AI tools step-by-step without needing computer expertise.">
-	<meta name="keywords" content="AI quick start, beginner AI guide, artificial intelligence tutorial, non-technical AI, AI for beginners, easy AI learning">
-	<link rel="canonical" href="https://aipracticelab.org/QuickStart.html">
-	<title>Quick Start For AI Questions - Fedora Linux Lab Org </title>
-	<meta name="created" content="2025-12-05T06:19:04.421955349"/>
-	<meta name="changed" content="2025-12-05T06:48:59.531693196"/>
-        <link rel="stylesheet" href="styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="AI practice projects and exercises for learning prompt engineering and artificial intelligence skills. Resources for students and professionals.">
+    <meta name="keywords" content="AI practice, AI projects, prompt engineering, AI learning, ChatGPT practice, AI exercises, AI training">
+    
+	<title>GitHub AI Example of Work Done From a Prompt With Prompt Builder</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <p><a href="/">Home</a></p>
-<h1>A Friendly Quick Start</h1>
-<h2>For Asking Better AI Questions</h2>
 
 <section class="readable-flow">
-<p>This page gives a plain-language guide to asking AI (chatbots) better questions so you get clearer, more useful answers.</p>
+<h1>Example: AI Prompt and the Actions Taken</h1>
 
-<hr>
+<h2>My Prompt to the AI</h2>
+<p>"GitHubAI.html was created with a word processor and needs unwanted characters removed, plus background color and an email address in the lower-right corner."</p>
 
-<h2>Think of AI Like a Helpful Shopkeeper</h2>
+<h2>Actions Taken</h2>
+<p>The file was cleaned and standardized. Summary:</p>
+
+<h3>Removed LibreOffice Artifacts</h3>
 <ul>
-	<li>AI does not "know" things exactly like a person. It uses patterns from what you ask.</li>
-	<li>The clearer your request, the more likely AI gives you the right result.</li>
+	<li>Removed LibreOffice generator metadata.</li>
+	<li>Removed excessive font-family declarations (`.western`, `.cjk`, `.ctl`).</li>
+	<li>Removed print-specific styling (`@page` rules).</li>
+	<li>Converted inline font tags (`&lt;font&gt;`) into semantic HTML.</li>
 </ul>
 
-<hr>
-
-<h2>Why Wording Matters</h2>
+<h3>Added Background Color</h3>
 <ul>
-	<li>Vague question -> AI guesses.</li>
-	<li>Specific question -> AI gives focused, useful answers.</li>
-	<li>Best results usually include audience, purpose, and format (list, steps, short summary).</li>
+	<li>Linked `styles.css`, which provides the site background styling.</li>
 </ul>
 
-<hr>
-
-<h2>Five Friendly Rules</h2>
-<ol>
-	<li><strong>Be specific.</strong> Include the important details.</li>
-	<li><strong>Say who the answer is for.</strong> This helps AI set tone and difficulty.</li>
-	<li><strong>Ask for a format.</strong> For example: bullet list, checklist, or step-by-step.</li>
-	<li><strong>Add constraints.</strong> Time, materials, budget, safety limits, or privacy limits.</li>
-	<li><strong>Ask for verification.</strong> Request sources or ask the AI to explain its reasoning.</li>
-</ol>
-
-<h3>Example: Better Prompt</h3>
-<p><strong>Instead of:</strong> "How fix my printer?"</p>
-<p><strong>Try:</strong> "My HP DeskJet 2620 won't print. It says paper jam but I can't find one. I use Windows 10. Give me step-by-step checks I can do safely at home."</p>
-
-<hr>
-
-<h2>Common AI Mistakes to Watch For</h2>
+<h3>Added Email in Lower Right Corner</h3>
 <ul>
-	<li>AI can sound confident and still be wrong. Check important facts.</li>
-	<li>AI can answer too generally if your request is too broad.</li>
+	<li>Added `info@aipracticelab.org` using the site footer pattern.</li>
 </ul>
 
-<hr>
-
-<h2>Useful Follow-Up Questions</h2>
+<h3>Fixed HTML Structure</h3>
 <ul>
-	<li>"Explain that in simpler terms for a beginner."</li>
-	<li>"You missed X. Please include it and try again."</li>
-	<li>"Make this shorter." or "Expand this into clear steps."</li>
+	<li>Ensured navigation links are inside the `<body>`.</li>
+	<li>Used proper language and charset declarations.</li>
+	<li>Removed redundant attributes and cleaned formatting.</li>
 </ul>
+
+<p>The page now has consistent site styling and cleaner, more maintainable markup.</p>
+
+<hr>
 
 <section class="prompt-builder" aria-labelledby="practice-builder-title">
 	<h3 id="practice-builder-title">Interactive Practice Prompt Builder</h3>
@@ -75,7 +57,7 @@
 	<div class="prompt-grid">
 		<div class="prompt-field">
 			<label class="prompt-label" for="topic">Topic or assignment</label>
-			<input id="topic" type="text" placeholder="Example: Explain this in plain language for beginners.">
+			<input id="topic" type="text" placeholder="Example: Review this AI-assisted edit summary.">
 		</div>
 
 		<div class="prompt-field">
@@ -126,7 +108,7 @@
 
 		<div class="prompt-field prompt-field-full">
 			<label class="prompt-label" for="extraGoal">Optional extra goal</label>
-			<input id="extraGoal" type="text" placeholder="Example: Keep the answer concise and practical.">
+			<input id="extraGoal" type="text" placeholder="Example: Suggest one stronger revision and one test case.">
 		</div>
 
 		<div class="prompt-field prompt-field-full">
@@ -146,20 +128,9 @@
 
 	<p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
 </section>
-
-<hr>
-
-<h2>Safety and Privacy Reminders</h2>
-<ul>
-	<li>Do not paste passwords, banking details, or private medical records.</li>
-	<li>For medical, legal, or safety-critical issues, use AI as a starting point and consult a qualified professional.</li>
-</ul>
-
-<p>If you want more practice, open the exercises page next and compare how small prompt changes improve results.</p>
 </section>
 
-<p class="body-text"><a href="ProjectLinks.html">Back to AI Practice</a></p>
-
+<p class="body-text"><a href="ProjectLinks.html">Back to Practice AI </a></p>
 <div class="fixed-home-link"><a href="/">Home</a></div>
 <div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
 <script src="js/prompt-builder.js"></script>

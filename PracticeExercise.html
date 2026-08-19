@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///home/mothy/Downloads/ai_questioning_practice_activity_web_page.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Questioning Practice Activity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="readable-flow">
+<h1>AI Questioning Practice Activity</h1>
+<p><strong>Goal:</strong> Learn how to ask better questions so AI gives clearer, more accurate answers.</p>
+
+<hr>
+
+<div class="section">
+  <h2>Part 1: Fix the Question</h2>
+  <p>Rewrite each weak question to make it more specific and useful.</p>
+
+  <p>1. What’s that movie about war?</p>
+  <span class="answer-line"></span>
+
+  <p>2. Help me write something.</p>
+  <span class="answer-line"></span>
+
+  <p>3. Make a chart.</p>
+  <span class="answer-line"></span>
+
+  <p>4. Tell me about history.</p>
+  <span class="answer-line"></span>
+</div>
+
+<div class="section">
+  <h2>Part 2: Add More Detail</h2>
+  <p>Add time, place, purpose, and format.</p>
+
+  <p><strong>Basic Question:</strong> Tell me about climate change</p>
+  <p><strong>Improved Question:</strong></p>
+  <span class="answer-line"></span>
+  <span class="answer-line"></span>
+</div>
+
+<div class="section">
+  <h2>Part 3: Compare Results</h2>
+  <p>Ask both versions and compare.</p>
+
+  <p>What was different?</p>
+  <span class="answer-line"></span>
+
+  <p>Which answer was better and why?</p>
+  <span class="answer-line"></span>
+</div>
+
+<div class="section">
+  <h2>Part 4: Create Your Own Question</h2>
+
+  <p>Your Question:</p>
+  <span class="answer-line"></span>
+
+  <p>Better Version:</p>
+  <span class="answer-line"></span>
+  <span class="answer-line"></span>
+</div>
+
+<div class="section">
+  <h2>Part 5: Reflection</h2>
+  <p>Why do better questions lead to better answers?</p>
+  <span class="answer-line"></span>
+  <span class="answer-line"></span>
+</div>
+
+<section class="prompt-builder" aria-labelledby="practice-builder-title">
+  <h3 id="practice-builder-title">Interactive Practice Prompt Builder</h3>
+  <p>Type your topic and answer, then click <strong>Build Prompt</strong>. Copy or share the generated text into any chatbot to get feedback, suggestions, and your next challenge.</p>
+
+  <div class="prompt-grid">
+    <div class="prompt-field">
+      <label class="prompt-label" for="topic">Topic or assignment</label>
+      <input id="topic" type="text" placeholder="Example: Rewrite question 2 to be more specific.">
+    </div>
+
+    <div class="prompt-field">
+      <label class="prompt-label" for="promptType">Prompt type</label>
+      <select id="promptType">
+        <option value="Student coaching" selected>Student coaching</option>
+        <option value="Coding">Coding</option>
+        <option value="Image generation">Image generation</option>
+        <option value="Writing help">Writing help</option>
+        <option value="Research">Research</option>
+      </select>
+      <small class="prompt-help">Choose the job you want the AI to do: coaching, coding, image prompts, writing help, or research.</small>
+    </div>
+
+    <div class="prompt-field">
+      <label class="prompt-label" for="ageLevel">Student age level</label>
+      <select id="ageLevel">
+        <option value="10-12 years old">10-12 years old</option>
+        <option value="13-15 years old">13-15 years old</option>
+        <option value="16+ years old">16+ years old</option>
+        <option value="High School" selected>High School</option>
+        <option value="College">College</option>
+      </select>
+    </div>
+
+    <div class="prompt-field">
+      <label class="prompt-label" for="challengeLevel">Challenge level</label>
+      <select id="challengeLevel">
+        <option value="gentle">Gentle</option>
+        <option value="standard" selected>Standard</option>
+        <option value="stretch">Stretch</option>
+      </select>
+    </div>
+
+    <div class="prompt-field">
+      <label class="prompt-label" for="responseStyle">Feedback style</label>
+      <select id="responseStyle">
+        <option value="short bullet list">Short bullet list</option>
+        <option value="table with strengths and improvements">Table</option>
+        <option value="step-by-step coaching">Step-by-step coaching</option>
+      </select>
+    </div>
+
+    <div class="prompt-field prompt-field-full">
+      <label class="prompt-label" for="studentAnswer">Student answer</label>
+      <textarea id="studentAnswer" placeholder="Paste or type the student's answer here..."></textarea>
+    </div>
+
+    <div class="prompt-field prompt-field-full">
+      <label class="prompt-label" for="extraGoal">Optional extra goal</label>
+      <input id="extraGoal" type="text" placeholder="Example: Focus on adding context and format details.">
+    </div>
+
+    <div class="prompt-field prompt-field-full">
+      <label class="prompt-label" for="generatedPrompt">Prompt to copy into any chatbot</label>
+      <textarea id="generatedPrompt" readonly placeholder="Click Build Prompt to generate reusable instructions."></textarea>
+    </div>
+  </div>
+
+  <div class="prompt-actions">
+    <button id="buildPromptBtn" class="prompt-button" type="button">Build Prompt</button>
+    <button id="copyPromptBtn" class="prompt-button" type="button">Copy Prompt</button>
+    <button id="sharePromptBtn" class="prompt-button" type="button">Share Prompt</button>
+    <button id="clearFormBtn" class="prompt-button prompt-button-secondary" type="button">Clear</button>
+  </div>
+
+  <p><strong>Tip:</strong> On a phone, tap <strong>Share Prompt</strong>. On a computer, use <strong>Copy Prompt</strong> and paste into your chatbot.</p>
+
+  <p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
+</section>
+
+<hr>
+
+<div class="section">
+  <h2>Quick Tips</h2>
+  <ul>
+    <li>Be specific</li>
+    <li>Add context (who, what, when, where, why)</li>
+    <li>Ask for a format (list, paragraph, steps)</li>
+    <li>It’s okay if your question isn’t perfect—just give clues</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Privacy Reminder</h2>
+  <p>Do not include personal or sensitive information (such as full names, addresses, or ID numbers).</p>
+</div>
+</section>
+
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
+<script src="js/prompt-builder.js"></script>
+</body></html>

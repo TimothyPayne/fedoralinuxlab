@@ -2,385 +2,190 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="First problem-solving project: Backup your phone by booting Fedora Linux from USB. Learn data management and Linux basics hands-on.">
 	<meta name="keywords" content="phone backup, Fedora USB boot, data backup, Linux tutorial, hands-on learning, first Linux project">
-	<title>Phone Backup Project Guide</title>
-	<meta name="generator" content="LibreOffice 25.2.7.2 (Linux)"/>
+	<link rel="canonical" href="https://aipracticelab.org/PhoneBU.html">
+	<title>Fedora Phone Backup Project Guide Using Fedora Live USB</title>
 	<meta name="created" content="2025-11-28T10:45:51.776133987"/>
 	<meta name="changed" content="2025-11-28T10:48:16.123115400"/>
-	<style type="text/css">
-		@page { size: 8.5in 11in; margin: 1in }
-		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
-		h1 { margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
-		h1.western { font-weight: bold; font-size: 24pt; font-family: "Liberation Serif", serif }
-		h1.cjk { font-weight: bold; font-size: 24pt; font-family: "Noto Serif CJK SC" }
-		h1.ctl { font-weight: bold; font-family: "Noto Sans Devanagari"; font-size: 24pt }
-	</style>
-        <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<p><a href="index.html">Home</a></p><h1 class="western" style="letter-spacing: normal; widows: 2; border-top: none; border-bottom: 1px solid #d1d9e0; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0in; padding-right: 0in; font-style: normal; margin-top: 0in; margin-bottom: 0.17in; font-variant: normal; line-height: 125%; orphans: 2">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt"><b>First
-HowTo: Back up your phone using Fedora Live USB</b></font></font></font></h1>
-<p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal; letter-spacing: normal; widows: 2">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Estimated
-time: 15–30 minutes<br/>
-Difficulty: Easy (beginner)<br/>
-Audience:
-Teens learning how to use Linux and safely copy files</font></font></font></p>
-<p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal; letter-spacing: normal; widows: 2">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">What
-you'll do: Boot a computer from a Fedora live USB, plug in your
-phone, and copy the phone’s photos and files to a second USB stick
-(a simple, safe manual backup).</font></font></font></p>
-<p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal; letter-spacing: normal; widows: 2">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">What
-you need</font></font></font></p>
+<p><a href="/">Home</a></p>
+<h1>First HowTo: Back Up Your Phone Using Fedora Live USB</h1>
+<section class="readable-flow">
+<p><strong>Estimated time:</strong> 15-30 minutes<br/>
+<strong>Difficulty:</strong> Easy (beginner)<br/>
+<strong>Audience:</strong> Teens learning how to use Linux and safely copy files</p>
+
+<p>You will boot a computer from a Fedora live USB, connect your phone, and copy photos/files to a second USB stick for a simple manual backup.</p>
+
+<h2>What You Need</h2>
 <ul>
-	<li><p style="letter-spacing: normal; widows: 2; font-variant: normal; orphans: 2; font-style: normal; margin-bottom: 0.17in; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">A
-	computer that can boot from USB.</font></font></font></p></li>
-	<li><p style="margin-bottom: 0.17in; font-style: normal; orphans: 2; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Two
-	USB sticks:</font></font></font></p>
+	<li>A computer that can boot from USB.</li>
+	<li>Two USB sticks:</li>
 	<ul>
-		<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal; font-style: normal; margin-bottom: 0in; orphans: 2">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">USB
-		A: a Fedora Live USB (the one you boot from).</font></font></font></p></li>
-		<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal; font-style: normal; margin-bottom: 0in; orphans: 2">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">USB
-		B: an empty or spare USB (where you will copy the phone files).</font></font></font></p></li>
+		<li>USB A: a Fedora Live USB (the one you boot from).</li>
+		<li>USB B: an empty or spare USB (where you will copy the phone files).</li>
 	</ul>
-	<li><p style="margin-bottom: 0.17in; font-style: normal; orphans: 2; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">A
-	phone (Android is easiest for this guide).</font></font></font></p></li>
-	<li><p style="margin-bottom: 0.17in; font-style: normal; orphans: 2; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">A
-	USB cable for your phone.</font></font></font></p></li>
-	<li><p style="orphans: 2; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal; font-style: normal; margin-bottom: 0.17in">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Optional:
-	Wi&#8209;Fi on the live session if you want to install extra tools.</font></font></font></p></li>
+	<li>A phone (Android is easiest for this guide).</li>
+	<li>A USB cable for your phone.</li>
+	<li>Optional: Wi-Fi in the live session if you want to install extra tools.</li>
 </ul>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Safety
-and privacy first</font></font></font></p>
+
+<hr>
+
+<h2>Safety and Privacy First</h2>
 <ul>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Only
-	back up your own phone or a phone you have permission to copy.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Don’t
-	overwrite important files on the backup USB by accident—make a new
-	folder for the backup.</font></font></font></p></li>
-	<li><p style="font-style: normal; margin-bottom: 0.17in; letter-spacing: normal; widows: 2; font-variant: normal; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Keep
-	the phone battery above 20% or plug it in while copying.</font></font></font></p></li>
+	<li>Back up only your own phone, or a phone you have permission to copy.</li>
+	<li>Do not overwrite important files on the backup USB. Create a new backup folder first.</li>
+	<li>Keep phone battery above 20% or leave it plugged in while copying.</li>
 </ul>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Quick
-overview</font></font></font></p>
+
+<hr>
+
+<h2>Quick Overview</h2>
 <ol>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Prepare
-	USB B (check space and format if needed).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Boot
-	the computer from Fedora Live USB (USB A).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Plug
-	in USB B and your phone.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">On
-	the phone choose &quot;File transfer&quot; / &quot;MTP&quot;.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Use
-	Fedora's Files app to copy folders (like DCIM for photos) from phone
-	to USB B.</font></font></font></p></li>
-	<li><p style="font-style: normal; margin-bottom: 0.17in; letter-spacing: normal; widows: 2; font-variant: normal; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Safely
-	eject both devices.</font></font></font></p></li>
+	<li>Prepare USB B (check space and format if needed).</li>
+	<li>Boot computer from Fedora Live USB (USB A).</li>
+	<li>Connect USB B and your phone.</li>
+	<li>On phone, choose File transfer / MTP mode.</li>
+	<li>Use Fedora Files to copy folders (like DCIM) to USB B.</li>
+	<li>Safely eject both devices.</li>
 </ol>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Step-by-step
-(GUI, kid-friendly)</font></font></font></p>
-<p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal; letter-spacing: normal; widows: 2">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">A.
-Prepare USB B (backup USB)</font></font></font></p>
+
+<hr>
+
+<h2>Step-by-Step (GUI, Beginner Friendly)</h2>
+
+<h3>A. Prepare USB B (Backup USB)</h3>
 <ol>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Plug
-	USB B into the computer before or after booting—either works.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Make
-	sure there’s enough free space for your photos/files. If there’s
-	old stuff you don’t need, move it or use a new USB.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">If
-	you want maximum compatibility with phones and Windows/Mac later,
-	format USB B as exFAT:</font></font></font></p>
+	<li>Plug USB B into the computer (before or after booting).</li>
+	<li>Confirm enough free space for photos/files. Move old files or use a new USB if needed.</li>
+	<li>If you want broad compatibility with Windows/Mac/phones, format USB B as exFAT:</li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Open
-		&quot;Disks&quot; (gnome-disk-utility).</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Select
-		USB B on the left → the big gear icon → &quot;Format
-		Partition&quot;.</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Choose
-		exFAT (or FAT if the stick is small) and give it a name like
-		PHONE-BACKUP.</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Warning:
-		Formatting erases everything on the USB. Back up first if needed.</font></font></font></p></li>
+		<li>Open Disks (gnome-disk-utility).</li>
+		<li>Select USB B, click the gear icon, then Format Partition.</li>
+		<li>Choose exFAT (or FAT for very small drives), name it like PHONE-BACKUP.</li>
+		<li>Warning: formatting erases everything on that USB.</li>
 	</ul>
 </ol>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">B.
-Boot Fedora Live</font></font></font></p>
+
+<h3>B. Boot Fedora Live</h3>
 <ol>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Insert
-	the Fedora Live USB (USB A).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Restart
-	the computer and press the key to open the boot menu (often F12,
-	F10, Esc or similar). Choose the USB device to boot.</font></font></font></p></li>
-	<li><p style="font-style: normal; margin-bottom: 0.17in; letter-spacing: normal; widows: 2; font-variant: normal; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">When
-	Fedora starts, choose &quot;Try Fedora&quot; or similar (we want the
-	live desktop, not install).</font></font></font></p></li>
+	<li>Insert Fedora Live USB (USB A).</li>
+	<li>Restart and open boot menu (often F12/F10/Esc), then choose the USB device.</li>
+	<li>Choose Try Fedora (live session, not install).</li>
 </ol>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">C.
-Connect devices</font></font></font></p>
+
+<h3>C. Connect Devices</h3>
 <ol>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Plug
-	USB B into the computer (if not already).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Plug
-	your phone into the computer with its cable.</font></font></font></p></li>
-	<li><p style="font-style: normal; margin-bottom: 0.17in; letter-spacing: normal; widows: 2; font-variant: normal; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">On
-	the phone, unlock it and choose “File transfer (MTP)” or
-	“Transfer files” from the USB options that appear. If you don’t
-	see it, pull down the notification shade and tap the USB options.</font></font></font></p></li>
+	<li>Plug in USB B if it is not already connected.</li>
+	<li>Connect your phone with its USB cable.</li>
+	<li>Unlock phone and choose File transfer (MTP). If needed, open phone notifications and change USB mode.</li>
 </ol>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">D.
-Copy files (Files / Nautilus)</font></font></font></p>
+
+<h3>D. Copy Files (Files / Nautilus)</h3>
 <ol>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Open
-	the Files app (looks like a folder).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">In
-	the left sidebar you should see:</font></font></font></p>
+	<li>Open the Files app.</li>
+	<li>In the left sidebar you should see:</li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Your
-		USB B (named as you formatted it or its device label).</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Your
-		phone as something like &quot;Phone — &quot; or &quot;MTP
-		device&quot;.</font></font></font></p></li>
+		<li>USB B by its label.</li>
+		<li>Your phone as an MTP device.</li>
 	</ul>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Click
-	the phone entry → open &quot;Internal storage&quot; (sometimes
-	named Internal shared storage).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Common
-	folders to back up:</font></font></font></p>
+	<li>Open phone entry, then open Internal storage.</li>
+	<li>Common folders to back up:</li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">DCIM
-		(your phone camera photos and videos)</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Pictures
-		(other app photos)</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Downloads
-		(files you saved)</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Documents
-		(if present)</font></font></font></p></li>
+		<li>DCIM (camera photos and videos)</li>
+		<li>Pictures (app photos)</li>
+		<li>Downloads</li>
+		<li>Documents (if present)</li>
 	</ul>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">In
-	USB B, create a new folder for the backup. Use a name like
-	MyPhoneBackup-2025-11-28 so it’s not mixed with other stuff.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Click
-	to open DCIM on the phone, select the folders or files you want
-	(Ctrl+A to select all), right-click → Copy (or Ctrl+C).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Go
-	to the backup folder on USB B and Paste (Ctrl+V). Wait—don’t
-	remove anything while copying.</font></font></font></p></li>
-	<li><p style="font-style: normal; margin-bottom: 0.17in; letter-spacing: normal; widows: 2; font-variant: normal; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">When
-	the copy finishes, spot-check by opening a few photos from the USB
-	to make sure they copied correctly.</font></font></font></p></li>
+	<li>Create a backup folder on USB B, for example: MyPhoneBackup-2025-11-28.</li>
+	<li>Copy folders from phone (Ctrl+C) and paste into USB B backup folder (Ctrl+V).</li>
+	<li>Wait for copy to finish. Do not disconnect during transfer.</li>
+	<li>Spot-check by opening a few copied files from USB B.</li>
 </ol>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">E.
-Finish safely</font></font></font></p>
+
+<h3>E. Finish Safely</h3>
 <ol>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">In
-	Files, right-click the phone and choose &quot;Unmount&quot; or
-	&quot;Eject&quot; (or just safely disconnect on the phone first).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Right-click
-	the USB B device in Files and choose &quot;Eject&quot; or &quot;Safely
-	Remove Drive&quot;.</font></font></font></p></li>
-	<li><p style="font-style: normal; margin-bottom: 0.17in; letter-spacing: normal; widows: 2; font-variant: normal; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Remove
-	the phone cable and USB stick when the system says it is safe.</font></font></font></p></li>
+	<li>In Files, unmount/eject the phone.</li>
+	<li>Eject USB B from Files.</li>
+	<li>Disconnect phone and USB only after safe-remove confirmation.</li>
 </ol>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Troubleshooting
-(common problems)</font></font></font></p>
+
+<hr>
+
+<h2>Troubleshooting (Common Problems)</h2>
 <ul>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Phone
-	not showing up:</font></font></font></p>
+	<li><strong>Phone not showing up:</strong></li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Make
-		sure the phone is unlocked and set to &quot;File transfer (MTP)&quot;.</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Try
-		a different USB cable (some cables only charge).</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Try
-		a different USB port.</font></font></font></p></li>
+		<li>Unlock phone and set USB mode to File transfer (MTP).</li>
+		<li>Try a different USB cable (some are charge-only).</li>
+		<li>Try a different USB port.</li>
 	</ul>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Files
-	app says “Cannot access”:</font></font></font></p>
+	<li><strong>Files app says "Cannot access":</strong></li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Wait
-		a few seconds—MTP sometimes takes a moment to mount.</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Reconnect
-		the phone, or restart the Files app.</font></font></font></p></li>
+		<li>Wait a few seconds; MTP can mount slowly.</li>
+		<li>Reconnect phone or restart Files app.</li>
 	</ul>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">USB
-	B doesn’t have enough space:</font></font></font></p>
+	<li><strong>USB B has no space:</strong></li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Copy
-		only the DCIM folder first (most space).</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Use
-		a larger USB or delete files you don’t need.</font></font></font></p></li>
+		<li>Copy DCIM first (usually largest and most important).</li>
+		<li>Use a larger USB or remove unneeded files.</li>
 	</ul>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">If
-	Fedora Live doesn't offer MTP support (rare):</font></font></font></p>
+	<li><strong>If Fedora Live lacks MTP support (rare):</strong></li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">You
-		may need network to install a tiny package; optional advanced steps
-		below show how to use adb or install MTP support.</font></font></font></p></li>
+		<li>Use network to install support packages or use the optional ADB method below.</li>
 	</ul>
 </ul>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Optional
-advanced: use adb to pull files (power user)</font></font></font></p>
+
+<hr>
+
+<h2>Optional Advanced Method: Use ADB</h2>
 <ul>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">This
-	requires enabling Developer options and USB Debugging on Android
-	(Settings → About phone → tap Build number 7 times; then
-	Settings → Developer options → USB debugging).</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">In
-	a Fedora live session you likely need to install android-tools
-	(requires internet):</font></font></font></p>
+	<li>This requires Android Developer options and USB debugging.</li>
+	<li>In Fedora Live you usually need to install android-tools (requires internet):</li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Open
-		Terminal and run: sudo dnf install android-tools</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Connect
-		phone, allow debugging access when prompted.</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">List
-		device: adb devices</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Copy
-		the entire storage (example): adb pull /sdcard/
-		/run/media/live//MyPhoneBackup-adb/</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">adb
-		can copy everything including hidden app files, but it’s more
-		advanced and slower.</font></font></font></p></li>
+		<li>Open Terminal and run: <code>sudo dnf install android-tools</code></li>
+		<li>Connect phone and allow debugging prompt.</li>
+		<li>List device: <code>adb devices</code></li>
+		<li>Copy storage example: <code>adb pull /sdcard/ /run/media/live//MyPhoneBackup-adb/</code></li>
+		<li>ADB is powerful but slower and more advanced.</li>
 	</ul>
 </ul>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">iPhone
-users — short note</font></font></font></p>
+
+<hr>
+
+<h2>iPhone Users: Short Note</h2>
 <ul>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">iPhones
-	don’t offer a simple MTP file transfer like Android. On Linux, you
-	can often access photos using libimobiledevice tools, but support
-	varies and may require installing software or using a Mac/Windows
-	with iTunes to do a full encrypted backup.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Best
-	simple options:</font></font></font></p>
+	<li>iPhone file transfer on Linux is not as simple as Android MTP and may require extra tools.</li>
+	<li>Simple options:</li>
 	<ul>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Use
-		iCloud to back up (Apple devices).</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; widows: 2; letter-spacing: normal; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Use
-		a Mac or Windows machine with iTunes for a full local backup.</font></font></font></p></li>
-		<li><p style="margin-bottom: 0in; font-style: normal; orphans: 2; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-		<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">If
-		you want to try on Linux, you’ll need network in the live session
-		and to install libimobiledevice packages—this is an advanced
-		setup.</font></font></font></p></li>
+		<li>Use iCloud backup.</li>
+		<li>Use Mac/Windows with iTunes for full local backup.</li>
+		<li>Linux + libimobiledevice is possible but advanced.</li>
 	</ul>
 </ul>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">What
-to check after the backup</font></font></font></p>
+
+<hr>
+
+<h2>What to Check After Backup</h2>
 <ul>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Open
-	a few photos on the USB to confirm they open.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Check
-	the total size on the USB to make sure it matches an estimate of
-	files you copied.</font></font></font></p></li>
-	<li><p style="font-style: normal; margin-bottom: 0.17in; letter-spacing: normal; widows: 2; font-variant: normal; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Keep
-	the backup in a safe place or copy it to cloud storage for extra
-	safety.</font></font></font></p></li>
+	<li>Open a few copied photos/files directly from USB B.</li>
+	<li>Check total size to confirm major folders copied correctly.</li>
+	<li>Store backup safely, or duplicate it to cloud/offsite storage.</li>
 </ul>
-<p style="orphans: 2; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; font-weight: normal">
-<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">Why
-this is a great first project</font></font></font></p>
+
+<h2>Why This Is a Great First Project</h2>
 <ul>
-	<li><p style="orphans: 2; font-style: normal; margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; widows: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">You
-	get hands-on experience booting a live Linux system.</font></font></font></p></li>
-	<li><p style="font-variant: normal; letter-spacing: normal; widows: 2; font-style: normal; margin-bottom: 0.17in; orphans: 2; font-weight: normal">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">It’s
-	a real-life useful task—saving photos and files.</font></font></font></p></li>
-	<li><p style="letter-spacing: normal; widows: 2; margin-bottom: 0.17in; font-style: normal; font-weight: normal; font-variant: normal; orphans: 2">
-	<font color="#1f2328"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"><font size="3" style="font-size: 12pt">You
-	learn about USBs, filesystems, and safely ejecting drives.</font></font></font></p></li>
+	<li>You get real hands-on practice with Linux boot media.</li>
+	<li>You complete a practical task: protecting important files.</li>
+	<li>You learn USB handling, filesystems, and safe ejection habits.</li>
 </ul>
-<p><a href="index.html">Home</a></p>
-<p class="small-right-mail">info@fedoralinuxlab.org</p>
+</section>
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
 </body>
 </html>

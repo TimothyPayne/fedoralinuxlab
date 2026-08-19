@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using AI for Office and Administrative Support - Fedora Linux Lab</title>
-    <meta name="description" content="Learn how AI can help with office and administrative tasks. Practical examples for writing emails, creating memos, organizing records, and managing schedules with better AI prompts.">
+    <link rel="canonical" href="https://aipracticelab.org/OfficeAI.html">
+    <title>Using AI for Office and Administrative Support</title>
+    <meta name="description" content="Learn how AI can help with office and administrative tasks">
     <meta name="keywords" content="AI for office work, administrative AI, AI email writing, office automation, AI memos, scheduling with AI, AI admin tasks, workplace AI">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -12,8 +13,9 @@
 <body>
 
 <!-- Home Link Top -->
-<p><a href="index.html">Home</a></p>
+<p><a href="/">Home</a></p>
 
+<section class="readable-flow">
 <h1>Using AI for Office and Administrative Support</h1>
 
 <p>Artificial Intelligence (AI) can help with many common office and administrative tasks. The quality of the results depends on how clearly the task is described. Small changes in wording can change tone, format, and usefulness of the response.</p>
@@ -62,6 +64,85 @@
 
 <p><strong>Privacy Reminder:</strong> Do not include confidential or personal information (such as student records, addresses, or ID numbers) when using AI tools.</p>
 
+<section class="prompt-builder" aria-labelledby="practice-builder-title">
+    <h3 id="practice-builder-title">Interactive Practice Prompt Builder</h3>
+    <p>Type your topic and answer, then click <strong>Build Prompt</strong>. Copy or share the generated text into any chatbot to get feedback, suggestions, and your next challenge.</p>
+
+    <div class="prompt-grid">
+        <div class="prompt-field">
+            <label class="prompt-label" for="topic">Topic or assignment</label>
+            <input id="topic" type="text" placeholder="Example: Draft a parent follow-up email after a missed meeting.">
+        </div>
+
+        <div class="prompt-field">
+            <label class="prompt-label" for="promptType">Prompt type</label>
+            <select id="promptType">
+                <option value="Student coaching" selected>Student coaching</option>
+                <option value="Coding">Coding</option>
+                <option value="Image generation">Image generation</option>
+                <option value="Writing help">Writing help</option>
+                <option value="Research">Research</option>
+            </select>
+            <small class="prompt-help">Choose the job you want the AI to do: coaching, coding, image prompts, writing help, or research.</small>
+        </div>
+
+        <div class="prompt-field">
+            <label class="prompt-label" for="ageLevel">Student age level</label>
+            <select id="ageLevel">
+                <option value="10-12 years old">10-12 years old</option>
+                <option value="13-15 years old">13-15 years old</option>
+                <option value="16+ years old">16+ years old</option>
+                <option value="High School" selected>High School</option>
+                <option value="College">College</option>
+            </select>
+        </div>
+
+        <div class="prompt-field">
+            <label class="prompt-label" for="challengeLevel">Challenge level</label>
+            <select id="challengeLevel">
+                <option value="gentle">Gentle</option>
+                <option value="standard" selected>Standard</option>
+                <option value="stretch">Stretch</option>
+            </select>
+        </div>
+
+        <div class="prompt-field">
+            <label class="prompt-label" for="responseStyle">Feedback style</label>
+            <select id="responseStyle">
+                <option value="short bullet list">Short bullet list</option>
+                <option value="table with strengths and improvements">Table</option>
+                <option value="step-by-step coaching">Step-by-step coaching</option>
+            </select>
+        </div>
+
+        <div class="prompt-field prompt-field-full">
+            <label class="prompt-label" for="studentAnswer">Student answer</label>
+            <textarea id="studentAnswer" placeholder="Paste or type the student's answer here..."></textarea>
+        </div>
+
+        <div class="prompt-field prompt-field-full">
+            <label class="prompt-label" for="extraGoal">Optional extra goal</label>
+            <input id="extraGoal" type="text" placeholder="Example: Improve professional tone and sentence clarity.">
+        </div>
+
+        <div class="prompt-field prompt-field-full">
+            <label class="prompt-label" for="generatedPrompt">Prompt to copy into any chatbot</label>
+            <textarea id="generatedPrompt" readonly placeholder="Click Build Prompt to generate reusable instructions."></textarea>
+        </div>
+    </div>
+
+    <div class="prompt-actions">
+        <button id="buildPromptBtn" class="prompt-button" type="button">Build Prompt</button>
+        <button id="copyPromptBtn" class="prompt-button" type="button">Copy Prompt</button>
+        <button id="sharePromptBtn" class="prompt-button" type="button">Share Prompt</button>
+        <button id="clearFormBtn" class="prompt-button prompt-button-secondary" type="button">Clear</button>
+    </div>
+
+    <p><strong>Tip:</strong> On a phone, tap <strong>Share Prompt</strong>. On a computer, use <strong>Copy Prompt</strong> and paste into your chatbot.</p>
+
+    <p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
+</section>
+
 <hr>
 
 <h2>Additional Examples for Office and Administrative Support</h2>
@@ -96,11 +177,14 @@
 <strong>Question B:</strong> List end-of-day closeout tasks for a school office, including records, communication, and security.<br>
 <strong>What Changes:</strong> Specific context leads to a complete and useful checklist.</p>
 
+<p class="body-text"><a href="ProjectLinks.html">Back to AI Practice</a></p>
+</section>
+
 <!-- Home Link Bottom -->
-<p><a href="index.html">Home</a></p>
 
 <!-- Email Footer -->
-<p class="small-right-mail"><a href="mailto:info@fedoralinuxlab.org">info@fedoralinuxlab.org</a></p>
-
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
+<script src="js/prompt-builder.js"></script>
 </body>
 </html>

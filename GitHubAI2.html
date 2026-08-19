@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>GitHub AI Conversation Example</title>
+	<meta name="created" content="2026-06-02T17:33:11.040143403"/>
+	<meta name="changed" content="2026-07-05T17:00:03.003934173"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<p><a href="/">Home</a></p>
+<section class="readable-flow">
+<h1>AI Workflow Conversation Example</h1>
+<p>This page records a real back-and-forth about improving homepage link cards with AI assistance.</p>
+
+<b>User: I want to change the 3 links that start 'Links to' put in 3
+boxes like on the page: <a href="https://awesome-copilot.github.com/">https://awesome-copilot.github.com/</a></b></p>
+<p><br/>
+<br/>
+
+</p>
+<p><b>GitHub Copilot:</b> I’ll inspect the current index.html to
+find the three “Links to …” items and then restyle just those
+links into box cards similar to the referenced page, keeping the rest
+of your layout intact.</p>
+<p>I’m pulling the relevant sections of the page now so I can
+target only those three link blocks and avoid unintended style
+changes.</p>
+<p>Read 
+</p>
+<p>Read 
+</p>
+<p>I found the three target links in your homepage and next I’m
+converting just those into a 3-card section, then adding matching CSS
+so they render as boxed links without changing other page content.</p>
+<p>Generating patch (36 lines) in 
+</p>
+<p>Generating patch (44 lines) in 
+</p>
+<p>The new card styles are in place; I’m quickly verifying the
+exact markup and CSS sections to ensure the three links are now boxed
+and responsive.</p>
+<p>Read , lines 18 to 48</p>
+<p>Read , lines 20 to 74</p>
+<p>I’m making one refinement so the boxes feel closer to the
+reference style: three columns on larger screens and stacking on
+smaller screens.</p>
+<p>Generating patch (24 lines) in 
+</p>
+<p>Updated the three “Links to …” items into boxed cards on
+your homepage.</p>
+<p>Changes made:</p>
+<ol>
+	<li><p>Replaced the three paragraph links with a dedicated card
+	section in index.html.</p></li>
+	<li><p>Added new card styling in styles.css:</p></li>
+</ol>
+<ul>
+	<li><p>Box borders, rounded corners, light gradient background,
+	shadow</p></li>
+	<li><p>Hover lift effect</p></li>
+	<li><p>Responsive layout</p></li>
+</ul>
+<p>Layout behavior now:</p>
+<ul>
+	<li><p>Desktop: 3 boxes in one row</p></li>
+	<li><p>Smaller screens: boxes stack vertically</p></li>
+</ul>
+<p>If you want, I can also tune the box colors/spacing to match the
+reference page even more closely.</p>
+<p>Made changes.</p>
+<p><br/>
+<br/>
+
+</p>
+<p><b>User: This is close, but I was looking for less width and
+taller boxes</b></p>
+<p><br/>
+<br/>
+
+</p>
+<p><b>GitHub Copilot:</b>
+I’ll tighten the card width and increase their height so they look
+narrower and taller while keeping the same three-link structure.</p>
+<p>Generating patch (48 lines) in 
+</p>
+<p>Adjusted the boxes to be narrower and taller in styles.css.</p>
+<p>What changed:</p>
+<ol>
+	<li><p>Made boxes narrower:</p></li>
+</ol>
+<ul>
+	<li><p>Added max-width:
+	290px;</p></li>
+	<li><p>Centered each box in its column with justify-items:
+	center;</p></li>
+</ul>
+<ol>
+	<li><p>Made boxes taller:</p></li>
+</ol>
+<ul>
+	<li><p>Added min-height:
+	180px;</p></li>
+	<li><p>Increased vertical padding to 1.35rem</p></li>
+</ul>
+<ol>
+	<li><p>Kept responsive behavior:</p></li>
+</ol>
+<ul>
+	<li><p>Tablet/phone sizes now keep good proportions with adjusted
+	max-width and
+	min-height.</p></li>
+</ul>
+<p>If you want them even slimmer/taller, I can push it further (for
+example max-width: 240px
+and min-height: 220px).</p>
+<p>Made changes.</p>
+<p>User: For the card on the left I want to put icon
+/images/AI-red-icon.png in the upper left corner reducing its size
+above the text starting 'Links to' and add left justified text: Free
+&amp; Anonymous&nbsp;AI Practice All Ages&nbsp;Employment Skills</p>
+<p>GitHub Copilot: I’m updating just the left card so it gets the
+icon in the upper-left and a short, left-aligned feature list above
+the existing “Links to …” text.</p>
+<p>Read , lines 20 to 48</p>
+<p>Read , lines 25 to 92</p>
+<p>I’ve got the target markup; before editing I’m checking that
+the icon file exists at the exact path you gave so I can wire it in
+without creating a broken image.</p>
+<p>Read 
+</p>
+<p>I found the icon, and I’m patching the left card with a small
+internal layout so the image sits at the upper-left, the new text
+stays left-aligned, and the existing link title remains underneath.</p>
+<p>Generating patch (75 lines) in , 
+</p>
+<p>The new content and styling are in; I’m doing a quick read-back
+of the touched section to verify the left card structure and its new
+CSS selectors match.</p>
+<p>Read , lines 24 to 50</p>
+<p>Read , lines 34 to 110</p>
+<p>The left card now has the icon in the upper-left, reduced to a
+small square, with the new left-aligned text above the existing
+“Links to …” title.</p>
+<p>I updated the markup in index.html and added the supporting card
+styles in styles.css. The three added lines are:&nbsp;Free &amp;
+Anonymous&nbsp;AI Practice All Ages&nbsp;Employment Skills</p>
+<p>If you want, I can make that left card a little taller still so
+the icon and text have more breathing room.</p>
+<p>Made changes.</p>
+
+<hr>
+
+<section class="prompt-builder" aria-labelledby="practice-builder-title">
+	<h3 id="practice-builder-title">Interactive Practice Prompt Builder</h3>
+	<p>Type your topic and answer, then click <strong>Build Prompt</strong>. Copy or share the generated text into any chatbot to get feedback, suggestions, and your next challenge.</p>
+
+	<div class="prompt-grid">
+		<div class="prompt-field">
+			<label class="prompt-label" for="topic">Topic or assignment</label>
+			<input id="topic" type="text" placeholder="Example: Summarize this AI workflow conversation.">
+		</div>
+
+		<div class="prompt-field">
+			<label class="prompt-label" for="promptType">Prompt type</label>
+			<select id="promptType">
+				<option value="Student coaching" selected>Student coaching</option>
+				<option value="Coding">Coding</option>
+				<option value="Image generation">Image generation</option>
+				<option value="Writing help">Writing help</option>
+				<option value="Research">Research</option>
+			</select>
+			<small class="prompt-help">Choose the job you want the AI to do: coaching, coding, image prompts, writing help, or research.</small>
+		</div>
+
+		<div class="prompt-field">
+			<label class="prompt-label" for="ageLevel">Student age level</label>
+			<select id="ageLevel">
+				<option value="10-12 years old">10-12 years old</option>
+				<option value="13-15 years old">13-15 years old</option>
+				<option value="16+ years old">16+ years old</option>
+				<option value="High School" selected>High School</option>
+				<option value="College">College</option>
+			</select>
+		</div>
+
+		<div class="prompt-field">
+			<label class="prompt-label" for="challengeLevel">Challenge level</label>
+			<select id="challengeLevel">
+				<option value="gentle">Gentle</option>
+				<option value="standard" selected>Standard</option>
+				<option value="stretch">Stretch</option>
+			</select>
+		</div>
+
+		<div class="prompt-field">
+			<label class="prompt-label" for="responseStyle">Feedback style</label>
+			<select id="responseStyle">
+				<option value="short bullet list">Short bullet list</option>
+				<option value="table with strengths and improvements">Table</option>
+				<option value="step-by-step coaching">Step-by-step coaching</option>
+			</select>
+		</div>
+
+		<div class="prompt-field prompt-field-full">
+			<label class="prompt-label" for="studentAnswer">Student answer</label>
+			<textarea id="studentAnswer" placeholder="Paste or type the student's answer here..."></textarea>
+		</div>
+
+		<div class="prompt-field prompt-field-full">
+			<label class="prompt-label" for="extraGoal">Optional extra goal</label>
+			<input id="extraGoal" type="text" placeholder="Example: Ask for clearer structure and cleaner conclusions.">
+		</div>
+
+		<div class="prompt-field prompt-field-full">
+			<label class="prompt-label" for="generatedPrompt">Prompt to copy into any chatbot</label>
+			<textarea id="generatedPrompt" readonly placeholder="Click Build Prompt to generate reusable instructions."></textarea>
+		</div>
+	</div>
+
+	<div class="prompt-actions">
+		<button id="buildPromptBtn" class="prompt-button" type="button">Build Prompt</button>
+		<button id="copyPromptBtn" class="prompt-button" type="button">Copy Prompt</button>
+		<button id="sharePromptBtn" class="prompt-button" type="button">Share Prompt</button>
+		<button id="clearFormBtn" class="prompt-button prompt-button-secondary" type="button">Clear</button>
+	</div>
+
+	<p><strong>Tip:</strong> On a phone, tap <strong>Share Prompt</strong>. On a computer, use <strong>Copy Prompt</strong> and paste into your chatbot.</p>
+
+	<p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
+</section>
+</section>
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
+<script src="js/prompt-builder.js"></script>
+</body>
+</html>

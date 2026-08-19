@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Ask Better Questions of AI - Fedora Linux Lab</title>
+    <link rel="canonical" href="https://aipracticelab.org/1PageExample.html">
+    <title>How to Ask Better Questions of AI - Fedora Linux Lab Org</title>
     <meta name="description" content="Learn how to ask AI better questions. Small changes in wording create very different results. Practical examples for students to get more useful AI responses.">
     <meta name="keywords" content="AI questions, prompt engineering, asking AI, AI for students, better AI responses, AI tips, ChatGPT tips, AI learning">
     <link rel="stylesheet" href="styles.css">
@@ -12,8 +13,9 @@
 <body>
 
 <!-- Home Link Top -->
-<p><a href="index.html">Home</a></p>
+<p><a href="/">Home</a></p>
 
+<section class="readable-flow">
 <h1>How to Ask Better Questions of AI</h1>
 
 <p>Artificial Intelligence (AI) gives answers based on the words you use. Small changes in your question can lead to very different results. Learning how to ask clear, specific questions helps you get better and more useful answers.</p>
@@ -53,28 +55,95 @@
 
 <p><strong>Privacy Reminder:</strong> Never share personal information (such as your full name, address, passwords, or school ID numbers) when asking questions of an AI.</p>
 
-<br>
+<section class="prompt-builder" aria-labelledby="practice-builder-title">
+    <h3 id="practice-builder-title">Interactive Practice Prompt Builder</h3>
+    <p>Type your topic and answer, then click <strong>Build Prompt</strong>. Copy or share the generated text into any chatbot to get feedback, suggestions, and your next challenge.</p>
+
+    <div class="prompt-grid">
+        <div class="prompt-field">
+            <label class="prompt-label" for="topic">Topic or assignment</label>
+            <input id="topic" type="text" placeholder="Example: Improve question 2 to include audience and format.">
+        </div>
+
+        <div class="prompt-field">
+            <label class="prompt-label" for="promptType">Prompt type</label>
+            <select id="promptType">
+                <option value="Student coaching" selected>Student coaching</option>
+                <option value="Coding">Coding</option>
+                <option value="Image generation">Image generation</option>
+                <option value="Writing help">Writing help</option>
+                <option value="Research">Research</option>
+            </select>
+            <small class="prompt-help">Choose the job you want the AI to do: coaching, coding, image prompts, writing help, or research.</small>
+        </div>
+
+        <div class="prompt-field">
+            <label class="prompt-label" for="ageLevel">Student age level</label>
+            <select id="ageLevel">
+                <option value="10-12 years old">10-12 years old</option>
+                <option value="13-15 years old">13-15 years old</option>
+                <option value="16+ years old">16+ years old</option>
+                <option value="High School" selected>High School</option>
+                <option value="College">College</option>
+            </select>
+        </div>
+
+        <div class="prompt-field">
+            <label class="prompt-label" for="challengeLevel">Challenge level</label>
+            <select id="challengeLevel">
+                <option value="gentle">Gentle</option>
+                <option value="standard" selected>Standard</option>
+                <option value="stretch">Stretch</option>
+            </select>
+        </div>
+
+        <div class="prompt-field">
+            <label class="prompt-label" for="responseStyle">Feedback style</label>
+            <select id="responseStyle">
+                <option value="short bullet list">Short bullet list</option>
+                <option value="table with strengths and improvements">Table</option>
+                <option value="step-by-step coaching">Step-by-step coaching</option>
+            </select>
+        </div>
+
+        <div class="prompt-field prompt-field-full">
+            <label class="prompt-label" for="studentAnswer">Student answer</label>
+            <textarea id="studentAnswer" placeholder="Paste or type the student's answer here..."></textarea>
+        </div>
+
+        <div class="prompt-field prompt-field-full">
+            <label class="prompt-label" for="extraGoal">Optional extra goal</label>
+            <input id="extraGoal" type="text" placeholder="Example: Focus on stronger specificity and context.">
+        </div>
+
+        <div class="prompt-field prompt-field-full">
+            <label class="prompt-label" for="generatedPrompt">Prompt to copy into any chatbot</label>
+            <textarea id="generatedPrompt" readonly placeholder="Click Build Prompt to generate reusable instructions."></textarea>
+        </div>
+    </div>
+
+    <div class="prompt-actions">
+        <button id="buildPromptBtn" class="prompt-button" type="button">Build Prompt</button>
+        <button id="copyPromptBtn" class="prompt-button" type="button">Copy Prompt</button>
+        <button id="sharePromptBtn" class="prompt-button" type="button">Share Prompt</button>
+        <button id="clearFormBtn" class="prompt-button prompt-button-secondary" type="button">Clear</button>
+    </div>
+
+    <p><strong>Tip:</strong> On a phone, tap <strong>Share Prompt</strong>. On a computer, use <strong>Copy Prompt</strong> and paste into your chatbot.</p>
+
+    <p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
+</section>
+
 <hr>
-<br>
 
-<p style="line-height: 100%; margin-bottom: 0in"><strong>More projects to
-follow in the future as they can be produced.</strong></p>
-
-<p class="body-text"><a href="QuickStart.html">Quick Start Guide for AI</a></p>
-
-<p class="body-text"><a href="PracticeAI.html">Short Practice Exercises for using AI</a></p>
-
-<p class="body-text"><a href="ProjectFor10yrs.html">Practice for everyone 10 years and older</a></p>
-
-<p class="body-text"><a href="OfficeAI.html">Practice for Office Administration</a></p>
-
-
+<p class="body-text"><a href="ProjectLinks.html">Back to AI Practice</a></p>
+</section>
 
 <!-- Home Link Bottom -->
-<p><a href="index.html">Home</a></p>
 
 <!-- Email Footer -->
-<p class="small-right-mail"><a href="mailto:info@fedoralinuxlab.org">info@fedoralinuxlab.org</a></p>
-
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
+<script src="js/prompt-builder.js"></script>
 </body>
 </html>

@@ -2,183 +2,76 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Complete guide to backing up Windows safely before installing Fedora Linux. Protect your data and learn safe dual-boot setup procedures.">
 	<meta name="keywords" content="Windows backup, Fedora Linux installation, data backup, dual boot, Windows safety, Linux installation guide">
-	<title>How To Backup Windows</title>
-	<meta name="generator" content="LibreOffice 25.2.7.2 (Linux)"/>
+	<link rel="canonical" href="https://aipracticelab.org/BackupWindows.html">
+	<title>How To Backup and Rescue Windows - Fedora Linux Lab Org</title>
 	<meta name="created" content="00:00:00"/>
 	<meta name="changed" content="2025-11-27T17:11:18.422991427"/>
-	<style type="text/css">
-		@page { size: 8.5in 11in; margin: 1in }
-		p { margin-bottom: 0.1in; widows: 0; color: #000000; orphans: 0; direction: ltr; line-height: 115%; background: transparent }
-		p.western { so-language: en-US; font-size: 12pt; font-family: "Liberation Serif", serif }
-		p.cjk { so-language: zh-CN; font-family: "0"; font-size: 12pt }
-		p.ctl { font-size: 12pt; font-family: "Noto Sans Devanagari"; so-language: hi-IN }
-		a:link { color: #000080; text-decoration: underline }
-		a:visited { color: #800000; text-decoration: underline }
-	</style>
-        <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<p><a href="index.html">Home</a></p>
+<p><a href="/">Home</a></p>
+<section class="readable-flow">
 <h1>How To Backup Windows</h1>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">In
-</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt">Windows
-</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt">File
-Explorer on the </font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt">Left</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt">
-will show Local Disk (C:)</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Right
-Click the drive - Select Properties at the bottom of the list. This
-shows you the drive size and what is used.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Amazon
-sells 2.5 inch laptop drives and USB external cases, they are
-inexpensive, to hold your backups if needed.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Windows
-10 Backup</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	Recovery
-Drive</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	This
-is needed to recover from a data disater, Microsoft is very strict so
-no one can install a free 	copy </font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt">of
-Windows</font></font><font face="Calibri, serif"><font size="2" style="font-size: 11pt">.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Type
-in search box in the Lower Left corner: Recovery Drive and select it
-on the top of the list.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Check:
-Backup System Files needs to be selected, this is the default and
-should already be checked.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click
-Next to start - Please Wait </font></font>
-</p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	This
-takes time it can be confusing, it is making a small drive inside
-like putting a partition in a box.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Select
-the USB flash drive  The available USB drive will be listed</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Next WARNING: All data on the drive will be deleted.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Create - Creating the recovery drive - This can take a very long time
-depending on your USB drive.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Finish - The recovery drive is ready</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	Partition
-the drive: Extream Caution must be used here, Measure twice - Cut
-once</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">In
-the Lower Left search box type: Partition - Select Create and Format
-Partitions</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	Disk
-Management will show the list of drives. The C: drive is your Windows
-the file system is NTFS</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	RECOVERY
-is the USB drive you are working with it has the FAT32 filesystem.
-Check twice.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Right
-Click: Unallocated section. It is blank and can not be written to
-yet.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-New Simple Volume at the top of the list.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Next - In the New Simple Volume Wizard</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Next - The Maximum number at the top should match the box at the
-bottom - defualt, is the size of the drive.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Next - The defualt letter Windows gave it, you can change it if you
-want.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Format
-the drive - Defualt is NTFS - Volume Lable to name the drive 'Backup'
-is a good choice</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Next - The check box for 'quick format' is the default</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Finish - The list is all you have done so far, double check the
-information.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Close
-all open windows you are finished, next is doing a Backup to your
-snappy new drive, good job.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">-----------------------------------------------------------------------------------------------------------------------------------------</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Windows
-has changed Windows Backup to use cloud storage that they will
-happily sell you, or to use the USB drive:</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">In
-the Lower Left search box type: Control Panel.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Select
-Control Panel from the top of the list.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">System
-and Security is on the top on the Left</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Select
-Backup and Restore (Windows 7) at the bottom of that section 3rd one
-down above Network and Internet.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Back
-up or restore your files. The Change settings is at the bottom of the
-list to select drive it is above Restore</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">The
-pop up window - Double click to select the drive to backup to.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Set
-up back up: Let Windows choose is the defualt and recomended</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Next </font></font>
-</p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Review
-your backup settings - Defaults work fine, you can change the time
-from Sunday</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Click:
-Save settings and run backup.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Windows
-will run the backup, you can start the backup at any time you do not
-have to wait for the day of the week.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<font face="Calibri, serif"><font size="2" style="font-size: 11pt">Backup
-in progress... Click the View Details if you want to watch the
-individual files zip by.</font></font></p>
-<p class="western" align="left" style="margin-bottom: 0.14in; line-height: 115%">
-<br/>
-<br/>
 
-</p>
-<p><a href="index.html">Home</a></p>
-<p class="small-right-mail">info@fedoralinuxlab.org</p>
+<p>In Windows File Explorer, the left sidebar shows Local Disk (C:).</p>
+<p>Right-click the drive and choose Properties at the bottom of the list. This shows the drive size and what is used.</p>
+<p>If needed, inexpensive 2.5-inch laptop drives and USB external cases can be used for backups.</p>
+
+<hr>
+
+<h2>Part 1: Create a Recovery Drive (Windows 10)</h2>
+<p>This is needed to recover from a data disaster. Microsoft requires proper recovery media for reinstall and repair.</p>
+
+<ol>
+	<li>In the lower-left search box, type Recovery Drive and open it.</li>
+	<li>Confirm Backup system files is selected (this is usually the default).</li>
+	<li>Click Next and wait.</li>
+	<li>Select your USB flash drive from the list.</li>
+	<li>Click Next. Warning: all data on that USB drive will be deleted.</li>
+	<li>Click Create. This can take a long time depending on USB speed.</li>
+	<li>Click Finish when the recovery drive is ready.</li>
+</ol>
+
+<h2>Part 2: Partition and Prepare the Backup Drive</h2>
+<p>Use extreme caution here. Measure twice, cut once.</p>
+
+<ol>
+	<li>In the lower-left search box, type Partition and open Create and format hard disk partitions.</li>
+	<li>In Disk Management, confirm the C: drive is your Windows NTFS drive.</li>
+	<li>Confirm the RECOVERY USB is the device you are editing (often FAT32). Check twice.</li>
+	<li>Right-click the Unallocated section.</li>
+	<li>Choose New Simple Volume.</li>
+	<li>In the wizard, click Next through size and drive-letter screens. Default values are usually correct.</li>
+	<li>Format the volume (default NTFS is fine) and set a label like Backup.</li>
+	<li>Leave Quick format checked (default), then click Finish.</li>
+</ol>
+
+<p>Close all open windows. Your backup drive is now ready.</p>
+
+<hr>
+
+<h2>Part 3: Run Windows Backup</h2>
+<p>Windows encourages cloud storage, but you can still back up to USB.</p>
+
+<ol>
+	<li>Open Control Panel from the lower-left search box.</li>
+	<li>Go to System and Security.</li>
+	<li>Select Backup and Restore (Windows 7).</li>
+	<li>Select Change settings to choose the backup drive.</li>
+	<li>In the pop-up window, double-click the drive you want to use.</li>
+	<li>For setup, Let Windows choose is the default and recommended.</li>
+	<li>Click Next.</li>
+	<li>Review settings (defaults are usually fine; schedule can be changed).</li>
+	<li>Click Save settings and run backup.</li>
+</ol>
+
+<p>Backup can be started any time; you do not have to wait for the scheduled day.</p>
+<p>While backup is running, click View details to watch progress.</p>
+</section>
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
 </body>
 </html>
