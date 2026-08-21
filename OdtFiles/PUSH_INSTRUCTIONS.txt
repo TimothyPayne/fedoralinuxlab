@@ -70,7 +70,7 @@ A) GitHub Actions → FTP deploy (recommended if host supports FTP)
 
 B) GitHub Pages (if you can change DNS)
 - Go to your repo Settings → Pages and choose `main` branch, root (/) as the source.
-- If you want to use `fedoralinuxlab.org` as a custom domain, update your DNS records to point to GitHub Pages and add a `CNAME` file with the domain.
+- If you want to use `aipracticelab.org` as a custom domain, update your DNS records to point to GitHub Pages and add a `CNAME` file with the domain.
 - GitHub Pages automatically publishes on each push.
 
 C) Netlify / Vercel (recommended alternative)
