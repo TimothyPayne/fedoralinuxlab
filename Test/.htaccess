@@ -1,0 +1,16 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Force HTTPS - redirect all HTTP traffic to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove www - redirect www to non-www (consistent with canonical tags)
+RewriteCond %{HTTP_HOST} ^www\.aipracticelab\.org [NC]
+RewriteRule ^(.*)$ https://aipracticelab.org/$1 [L,R=301]
+
+# Keep /index.html directly accessible (avoid Search Console "Page with redirect")
+RewriteRule ^index\.html$ - [L]
+
+# Set index.html as the default directory index
+DirectoryIndex index.html

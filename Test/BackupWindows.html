@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Complete guide to backing up Windows safely before installing Fedora Linux. Protect your data and learn safe dual-boot setup procedures.">
+	<meta name="keywords" content="Windows backup, Fedora Linux installation, data backup, dual boot, Windows safety, Linux installation guide">
+	<link rel="canonical" href="https://aipracticelab.org/BackupWindows.html">
+	<title>How To Backup and Rescue Windows - Fedora Linux Lab Org</title>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2025-11-27T17:11:18.422991427"/>
+<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="test-header">
+  <a class="test-brand" href="index.html">AI Practice Lab</a>
+  <nav aria-label="Primary navigation">
+    <a href="ProjectLinks.html">Practice</a>
+    <a href="FedoraLinks.html">Linux skills</a>
+    <a href="InfoLinks.html">AI and work</a>
+  </nav>
+</header>
+<main id="main-content">
+<p><a href="/">Home</a></p>
+<section class="readable-flow">
+<h1>How To Backup Windows</h1>
+
+<p>In Windows File Explorer, the left sidebar shows Local Disk (C:).</p>
+<p>Right-click the drive and choose Properties at the bottom of the list. This shows the drive size and what is used.</p>
+<p>If needed, inexpensive 2.5-inch laptop drives and USB external cases can be used for backups.</p>
+
+<hr>
+
+<h2>Part 1: Create a Recovery Drive (Windows 10)</h2>
+<p>This is needed to recover from a data disaster. Microsoft requires proper recovery media for reinstall and repair.</p>
+
+<ol>
+	<li>In the lower-left search box, type Recovery Drive and open it.</li>
+	<li>Confirm Backup system files is selected (this is usually the default).</li>
+	<li>Click Next and wait.</li>
+	<li>Select your USB flash drive from the list.</li>
+	<li>Click Next. Warning: all data on that USB drive will be deleted.</li>
+	<li>Click Create. This can take a long time depending on USB speed.</li>
+	<li>Click Finish when the recovery drive is ready.</li>
+</ol>
+
+<h2>Part 2: Partition and Prepare the Backup Drive</h2>
+<p>Use extreme caution here. Measure twice, cut once.</p>
+
+<ol>
+	<li>In the lower-left search box, type Partition and open Create and format hard disk partitions.</li>
+	<li>In Disk Management, confirm the C: drive is your Windows NTFS drive.</li>
+	<li>Confirm the RECOVERY USB is the device you are editing (often FAT32). Check twice.</li>
+	<li>Right-click the Unallocated section.</li>
+	<li>Choose New Simple Volume.</li>
+	<li>In the wizard, click Next through size and drive-letter screens. Default values are usually correct.</li>
+	<li>Format the volume (default NTFS is fine) and set a label like Backup.</li>
+	<li>Leave Quick format checked (default), then click Finish.</li>
+</ol>
+
+<p>Close all open windows. Your backup drive is now ready.</p>
+
+<hr>
+
+<h2>Part 3: Run Windows Backup</h2>
+<p>Windows encourages cloud storage, but you can still back up to USB.</p>
+
+<ol>
+	<li>Open Control Panel from the lower-left search box.</li>
+	<li>Go to System and Security.</li>
+	<li>Select Backup and Restore (Windows 7).</li>
+	<li>Select Change settings to choose the backup drive.</li>
+	<li>In the pop-up window, double-click the drive you want to use.</li>
+	<li>For setup, Let Windows choose is the default and recommended.</li>
+	<li>Click Next.</li>
+	<li>Review settings (defaults are usually fine; schedule can be changed).</li>
+	<li>Click Save settings and run backup.</li>
+</ol>
+
+<p>Backup can be started any time; you do not have to wait for the scheduled day.</p>
+<p>While backup is running, click View details to watch progress.</p>
+</section>
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
+</main>
+<footer class="test-footer">
+  <div><h2>AI Practice Lab</h2><p>Free, practical ways to build problem-solving and computer skills.</p></div>
+  <div><h2>Start learning</h2><ul><li><a href="ProjectLinks.html">Practice projects</a></li><li><a href="QuickStart.html">Quick start</a></li></ul></div>
+  <div><h2>Explore</h2><ul><li><a href="FedoraLinks.html">Fedora Linux</a></li><li><a href="InfoLinks.html">AI and work</a></li></ul></div>
+  <div><h2>Contact</h2><p><a href="mailto:info.org">Email the lab</a></p></div>
+  <p class="footer-note">Free and anonymous learning resources from Las Cruces, New Mexico.</p>
+</footer>
+</body>
+</html>

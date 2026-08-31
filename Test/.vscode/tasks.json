@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Preview: Start server and open FedoraLinks",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "if [ -f /tmp/lugpages-preview.pid ] && kill -0 \"$(cat /tmp/lugpages-preview.pid)\" 2>/dev/null; then echo \"Preview server already running\"; else nohup python3 -m http.server 8000 --directory \"${workspaceFolder}\" >/tmp/lugpages-preview.log 2>&1 & echo $! >/tmp/lugpages-preview.pid; echo \"Started preview server on http://127.0.0.1:8000\"; fi; if command -v google-chrome >/dev/null 2>&1; then google-chrome \"http://127.0.0.1:8000/FedoraLinks.html\" >/dev/null 2>&1 & elif command -v google-chrome-stable >/dev/null 2>&1; then google-chrome-stable \"http://127.0.0.1:8000/FedoraLinks.html\" >/dev/null 2>&1 & else xdg-open \"http://127.0.0.1:8000/FedoraLinks.html\" >/dev/null 2>&1 || true; fi"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Preview: Stop server",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "if [ -f /tmp/lugpages-preview.pid ]; then pid=\"$(cat /tmp/lugpages-preview.pid)\"; kill \"$pid\" 2>/dev/null || true; rm -f /tmp/lugpages-preview.pid; echo \"Stopped preview server (pid $pid)\"; else echo \"No preview server PID file found\"; fi"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

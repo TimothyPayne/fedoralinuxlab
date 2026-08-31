@@ -6,10 +6,91 @@
     <meta name="description" content="AI practice projects and exercises for learning prompt engineering and artificial intelligence skills. Resources for students and professionals.">
     <meta name="keywords" content="AI practice, AI projects, prompt engineering, AI learning, ChatGPT practice, AI exercises, AI training">
     <link rel="canonical" href="https://aipracticelab.org/ProjectLinks.html">
-    <title>Practice Projects for Artificial Intelligence and Robot Industry Information</title>
+    <title>Practice Projects for AI and Robot Industry</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <style>
+            .manufacturing-feature {
+                grid-column: span 2;
+                grid-row: span 2;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                align-items: stretch;
+                max-width: none;
+                min-height: 360px;
+                padding: 0.8rem;
+                text-align: right;
+            }
+
+            .manufacturing-feature-images {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                gap: 0.8rem;
+                min-width: 0;
+            }
+
+            .manufacturing-feature-images img,
+            .manufacturing-feature-right img {
+                display: block;
+                width: 75%;
+                height: 75%;
+                min-height: 0;
+                object-fit: cover;
+                justify-self: center;
+                align-self: center;
+            }
+
+            .manufacturing-feature-right {
+                display: grid;
+                grid-template-rows: 1fr auto 1fr;
+                gap: 0.5rem;
+                min-width: 0;
+            }
+
+            .manufacturing-feature-copy {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                color: #08324b;
+            }
+
+            .manufacturing-feature-copy strong {
+                display: block;
+                margin-bottom: 1rem;
+                font-size: 1.45rem;
+            }
+
+            .manufacturing-feature-copy p {
+                margin: 0 0 1rem;
+                font-size: 1.2rem;
+            }
+
+            .manufacturing-feature-copy p:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 980px) {
+                .manufacturing-feature {
+                    grid-column: auto;
+                    grid-row: auto;
+                    min-height: 320px;
+                }
+            }
+
+            @media (max-width: 560px) {
+                .manufacturing-feature {
+                    grid-template-columns: 1fr;
+                    min-height: 0;
+                }
+
+                .manufacturing-feature-images {
+                    min-height: 260px;
+                }
+            }
+        </style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -30,6 +111,15 @@
 
 <h1>Practice Projects for Artificial Intelligence</h1>
 <h3>The Better Your Prompt Is, The More Work You Can Get Done</h3>
+
+<div class="prompt-builder copy-prompt-box">
+  <h3>Use this without the Prompt Builder</h3>
+  <p>Copy and paste this lead for your own question with this short text first. It helps the AI refine a poorly worded question and turns a one-shot answer into a real conversation instead of frustration:</p>
+  <textarea id="copyable-ai-prompt" readonly aria-label="Copyable AI lead prompt">Act as a patient tutor. First rephrase my question more clearly if it is unclear, then answer step by step in plain language, and end by asking me one good follow-up question so we can keep improving the answer together.</textarea>
+  <div class="prompt-actions">
+    <button class="prompt-button" type="button" data-copy-target="copyable-ai-prompt">Copy prompt</button>
+  </div>
+</div>
 
 </section>
 
@@ -67,6 +157,25 @@
 <section class="readable-flow">
 <h3>More projects will be added as they are produced.</h3>
 </section>
+
+<div class="links-box-grid" aria-label="Manufacturing project">
+    <a class="links-box links-box-featured manufacturing-feature" href="RiverRouge.html">
+        <span class="manufacturing-feature-images" aria-hidden="true">
+            <img src="images/RiverRouge.jpg" alt="">
+            <img src="images/GigaTx.jpeg" alt="">
+        </span>
+        <span class="manufacturing-feature-right">
+            <img src="images/1932Ford.jpg" alt="">
+            <span class="manufacturing-feature-copy">
+               <strong>Rouge River to Tesla’s Giga Texas - 100 years</strong>
+<p>Don’t worry — you don’t need to be a computer expert to have a good job.</p>
+<p>The 1st PC was available in 1980, in the early 1980s all Community Colleges had night classes full of regular people gaining their first computer skills. Now it's AI.<br>
+Start the River Rouge to Giga Texas exercise:</p>
+            </span>
+            <img src="images/CyberCab.png" alt="">
+        </span>
+    </a>
+</div>
 
 <div class="links-box-grid" aria-label="Practice project links">
     <a class="links-box links-box-featured" href="PracticeAI.html">

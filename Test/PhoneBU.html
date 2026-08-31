@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="First problem-solving project: Backup your phone by booting Fedora Linux from USB. Learn data management and Linux basics hands-on.">
+	<meta name="keywords" content="phone backup, Fedora USB boot, data backup, Linux tutorial, hands-on learning, first Linux project">
+	<link rel="canonical" href="https://aipracticelab.org/PhoneBU.html">
+	<title>Fedora Phone Backup Project Guide Using Fedora Live USB</title>
+	<meta name="created" content="2025-11-28T10:45:51.776133987"/>
+	<meta name="changed" content="2025-11-28T10:48:16.123115400"/>
+<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="test-header">
+  <a class="test-brand" href="index.html">AI Practice Lab</a>
+  <nav aria-label="Primary navigation">
+    <a href="ProjectLinks.html">Practice</a>
+    <a href="FedoraLinks.html">Linux skills</a>
+    <a href="InfoLinks.html">AI and work</a>
+  </nav>
+</header>
+<main id="main-content">
+<p><a href="/">Home</a></p>
+<h1>First HowTo: Back Up Your Phone Using Fedora Live USB</h1>
+<section class="readable-flow">
+<p><strong>Estimated time:</strong> 15-30 minutes<br/>
+<strong>Difficulty:</strong> Easy (beginner)<br/>
+<strong>Audience:</strong> Teens learning how to use Linux and safely copy files</p>
+
+<p>You will boot a computer from a Fedora live USB, connect your phone, and copy photos/files to a second USB stick for a simple manual backup.</p>
+
+<h2>What You Need</h2>
+<ul>
+	<li>A computer that can boot from USB.</li>
+	<li>Two USB sticks:</li>
+	<ul>
+		<li>USB A: a Fedora Live USB (the one you boot from).</li>
+		<li>USB B: an empty or spare USB (where you will copy the phone files).</li>
+	</ul>
+	<li>A phone (Android is easiest for this guide).</li>
+	<li>A USB cable for your phone.</li>
+	<li>Optional: Wi-Fi in the live session if you want to install extra tools.</li>
+</ul>
+
+<hr>
+
+<h2>Safety and Privacy First</h2>
+<ul>
+	<li>Back up only your own phone, or a phone you have permission to copy.</li>
+	<li>Do not overwrite important files on the backup USB. Create a new backup folder first.</li>
+	<li>Keep phone battery above 20% or leave it plugged in while copying.</li>
+</ul>
+
+<hr>
+
+<h2>Quick Overview</h2>
+<ol>
+	<li>Prepare USB B (check space and format if needed).</li>
+	<li>Boot computer from Fedora Live USB (USB A).</li>
+	<li>Connect USB B and your phone.</li>
+	<li>On phone, choose File transfer / MTP mode.</li>
+	<li>Use Fedora Files to copy folders (like DCIM) to USB B.</li>
+	<li>Safely eject both devices.</li>
+</ol>
+
+<hr>
+
+<h2>Step-by-Step (GUI, Beginner Friendly)</h2>
+
+<h3>A. Prepare USB B (Backup USB)</h3>
+<ol>
+	<li>Plug USB B into the computer (before or after booting).</li>
+	<li>Confirm enough free space for photos/files. Move old files or use a new USB if needed.</li>
+	<li>If you want broad compatibility with Windows/Mac/phones, format USB B as exFAT:</li>
+	<ul>
+		<li>Open Disks (gnome-disk-utility).</li>
+		<li>Select USB B, click the gear icon, then Format Partition.</li>
+		<li>Choose exFAT (or FAT for very small drives), name it like PHONE-BACKUP.</li>
+		<li>Warning: formatting erases everything on that USB.</li>
+	</ul>
+</ol>
+
+<h3>B. Boot Fedora Live</h3>
+<ol>
+	<li>Insert Fedora Live USB (USB A).</li>
+	<li>Restart and open boot menu (often F12/F10/Esc), then choose the USB device.</li>
+	<li>Choose Try Fedora (live session, not install).</li>
+</ol>
+
+<h3>C. Connect Devices</h3>
+<ol>
+	<li>Plug in USB B if it is not already connected.</li>
+	<li>Connect your phone with its USB cable.</li>
+	<li>Unlock phone and choose File transfer (MTP). If needed, open phone notifications and change USB mode.</li>
+</ol>
+
+<h3>D. Copy Files (Files / Nautilus)</h3>
+<ol>
+	<li>Open the Files app.</li>
+	<li>In the left sidebar you should see:</li>
+	<ul>
+		<li>USB B by its label.</li>
+		<li>Your phone as an MTP device.</li>
+	</ul>
+	<li>Open phone entry, then open Internal storage.</li>
+	<li>Common folders to back up:</li>
+	<ul>
+		<li>DCIM (camera photos and videos)</li>
+		<li>Pictures (app photos)</li>
+		<li>Downloads</li>
+		<li>Documents (if present)</li>
+	</ul>
+	<li>Create a backup folder on USB B, for example: MyPhoneBackup-2025-11-28.</li>
+	<li>Copy folders from phone (Ctrl+C) and paste into USB B backup folder (Ctrl+V).</li>
+	<li>Wait for copy to finish. Do not disconnect during transfer.</li>
+	<li>Spot-check by opening a few copied files from USB B.</li>
+</ol>
+
+<h3>E. Finish Safely</h3>
+<ol>
+	<li>In Files, unmount/eject the phone.</li>
+	<li>Eject USB B from Files.</li>
+	<li>Disconnect phone and USB only after safe-remove confirmation.</li>
+</ol>
+
+<hr>
+
+<h2>Troubleshooting (Common Problems)</h2>
+<ul>
+	<li><strong>Phone not showing up:</strong></li>
+	<ul>
+		<li>Unlock phone and set USB mode to File transfer (MTP).</li>
+		<li>Try a different USB cable (some are charge-only).</li>
+		<li>Try a different USB port.</li>
+	</ul>
+	<li><strong>Files app says "Cannot access":</strong></li>
+	<ul>
+		<li>Wait a few seconds; MTP can mount slowly.</li>
+		<li>Reconnect phone or restart Files app.</li>
+	</ul>
+	<li><strong>USB B has no space:</strong></li>
+	<ul>
+		<li>Copy DCIM first (usually largest and most important).</li>
+		<li>Use a larger USB or remove unneeded files.</li>
+	</ul>
+	<li><strong>If Fedora Live lacks MTP support (rare):</strong></li>
+	<ul>
+		<li>Use network to install support packages or use the optional ADB method below.</li>
+	</ul>
+</ul>
+
+<hr>
+
+<h2>Optional Advanced Method: Use ADB</h2>
+<ul>
+	<li>This requires Android Developer options and USB debugging.</li>
+	<li>In Fedora Live you usually need to install android-tools (requires internet):</li>
+	<ul>
+		<li>Open Terminal and run: <code>sudo dnf install android-tools</code></li>
+		<li>Connect phone and allow debugging prompt.</li>
+		<li>List device: <code>adb devices</code></li>
+		<li>Copy storage example: <code>adb pull /sdcard/ /run/media/live//MyPhoneBackup-adb/</code></li>
+		<li>ADB is powerful but slower and more advanced.</li>
+	</ul>
+</ul>
+
+<hr>
+
+<h2>iPhone Users: Short Note</h2>
+<ul>
+	<li>iPhone file transfer on Linux is not as simple as Android MTP and may require extra tools.</li>
+	<li>Simple options:</li>
+	<ul>
+		<li>Use iCloud backup.</li>
+		<li>Use Mac/Windows with iTunes for full local backup.</li>
+		<li>Linux + libimobiledevice is possible but advanced.</li>
+	</ul>
+</ul>
+
+<hr>
+
+<h2>What to Check After Backup</h2>
+<ul>
+	<li>Open a few copied photos/files directly from USB B.</li>
+	<li>Check total size to confirm major folders copied correctly.</li>
+	<li>Store backup safely, or duplicate it to cloud/offsite storage.</li>
+</ul>
+
+<h2>Why This Is a Great First Project</h2>
+<ul>
+	<li>You get real hands-on practice with Linux boot media.</li>
+	<li>You complete a practical task: protecting important files.</li>
+	<li>You learn USB handling, filesystems, and safe ejection habits.</li>
+</ul>
+</section>
+<div class="fixed-home-link"><a href="/">Home</a></div>
+<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
+</main>
+<footer class="test-footer">
+  <div><h2>AI Practice Lab</h2><p>Free, practical ways to build problem-solving and computer skills.</p></div>
+  <div><h2>Start learning</h2><ul><li><a href="ProjectLinks.html">Practice projects</a></li><li><a href="QuickStart.html">Quick start</a></li></ul></div>
+  <div><h2>Explore</h2><ul><li><a href="FedoraLinks.html">Fedora Linux</a></li><li><a href="InfoLinks.html">AI and work</a></li></ul></div>
+  <div><h2>Contact</h2><p><a href="mailto:info.org">Email the lab</a></p></div>
+  <p class="footer-note">Free and anonymous learning resources from Las Cruces, New Mexico.</p>
+</footer>
+</body>
+</html>

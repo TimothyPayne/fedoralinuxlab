@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /OdtFiles/
+Disallow: /BakFiles/
+
+Sitemap: https://aipracticelab.org/sitemap.xml

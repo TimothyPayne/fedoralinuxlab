@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# =========================
+# Config (edit these)
+# =========================
+HOST="aipracticelab.org"
+KEY="oITVsuQ3OIRCTLjjeUu9uwcfHguW5PAY"
+KEY_LOCATION="https://aipracticelab.org/oITVsuQ3OIRCTLjjeUu9uwcfHguW5PAY.txt"
+SITEMAP_URL="https://aipracticelab.org/sitemap.xml"
+
+CHUNK_SIZE=100
+SLEEP_SECONDS=1
+INDEXNOW_ENDPOINT="https://api.indexnow.org/indexnow"
+
+for cmd in curl python3; do
+  command -v "$cmd" >/dev/null 2>&1 || { echo "Missing required command: $cmd"; exit 1; }
+done
+
+WORKDIR="$(mktemp -d)"
+trap 'rm -rf "$WORKDIR"' EXIT
+
+URLS_TXT="$WORKDIR/urls.txt"
+FILTERED_TXT="$WORKDIR/filtered_urls.txt"
+
+python3 - <<'PY' "$SITEMAP_URL" "$URLS_TXT"
+import sys, urllib.request, xml.etree.ElementTree as ET
+
+start_sitemap = sys.argv[1]
+out_file = sys.argv[2]
+
+visited = set()
+to_visit = [start_sitemap]
+page_urls = []
+
+def fetch(url):
+    req = urllib.request.Request(url, headers={"User-Agent":"indexnow-batch-script/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read()
+
+while to_visit:
+    sm = to_visit.pop(0)
+    if sm in visited:
+        continue
+    visited.add(sm)
+    try:
+        data = fetch(sm)
+        root = ET.fromstring(data)
+    except Exception:
+        continue
+
+    tag = root.tag.lower()
+    if tag.endswith("sitemapindex"):
+        for node in root.findall(".//{*}sitemap/{*}loc"):
+            if node.text and node.text.strip():
+                to_visit.append(node.text.strip())
+    elif tag.endswith("urlset"):
+        for node in root.findall(".//{*}url/{*}loc"):
+            if node.text and node.text.strip():
+                page_urls.append(node.text.strip())
+
+seen = set()
+deduped = []
+for u in page_urls:
+    if u not in seen:
+        seen.add(u)
+        deduped.append(u)
+
+with open(out_file, "w", encoding="utf-8") as f:
+    for u in deduped:
+        f.write(u + "\n")
+PY
+
+awk -v host="$HOST" '
+  $0 ~ "^https?://"host"(/|$)" { print }
+' "$URLS_TXT" > "$FILTERED_TXT"
+
+TOTAL=$(wc -l < "$FILTERED_TXT" | tr -d ' ')
+if [[ "$TOTAL" -eq 0 ]]; then
+  echo "No URLs found for host: $HOST"
+  exit 1
+fi
+
+split -l "$CHUNK_SIZE" "$FILTERED_TXT" "$WORKDIR/chunk_"
+
+for chunk in "$WORKDIR"/chunk_*; do
+  [[ -f "$chunk" ]] || continue
+  payload="$chunk.json"
+
+  python3 - <<'PY' "$HOST" "$KEY" "$KEY_LOCATION" "$chunk" "$payload"
+import json, sys
+host, key, keyloc, chunkf, outf = sys.argv[1:]
+with open(chunkf, "r", encoding="utf-8") as f:
+    urls = [line.strip() for line in f if line.strip()]
+payload = {"host": host, "key": key, "keyLocation": keyloc, "urlList": urls}
+with open(outf, "w", encoding="utf-8") as out:
+    json.dump(payload, out)
+PY
+
+  code=$(curl -s -o /tmp/indexnow_response.out -w "%{http_code}" \
+    -X POST "$INDEXNOW_ENDPOINT" \
+    -H "Content-Type: application/json; charset=utf-8" \
+    --data-binary @"$payload")
+
+  if [[ "$code" == "200" || "$code" == "202" ]]; then
+    echo "OK HTTP $code - $(wc -l < "$chunk" | tr -d ' ') URLs"
+  else
+    echo "FAIL HTTP $code"
+    cat /tmp/indexnow_response.out
+    exit 1
+  fi
+
+  sleep "$SLEEP_SECONDS"
+done
+
+echo "Done."
