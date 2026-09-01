@@ -72,6 +72,14 @@
                 margin-bottom: 0;
             }
 
+            .education-links-feature {
+                grid-column: span 2;
+            }
+
+            .outside-learning-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
             @media (max-width: 980px) {
                 .manufacturing-feature {
                     grid-column: auto;
@@ -88,6 +96,10 @@
 
                 .manufacturing-feature-images {
                     min-height: 260px;
+                }
+
+                .education-links-feature {
+                    grid-column: auto;
                 }
             }
         </style>
@@ -204,47 +216,11 @@ Start the River Rouge to Giga Texas exercise:</p>
 <p>Free Samples to get you to buy, choose wisely</p>
 </section>
 
-<div class="links-box-grid" aria-label="Outside learning links">
-    <a class="links-box links-box-featured" href="https://www.udemy.com/courses/free/">
+<div class="links-box-grid outside-learning-grid" aria-label="Outside learning links">
+    <a class="links-box links-box-featured education-links-feature" href="EducationLinks.html">
         <span class="links-box-copy">
-            <span class="links-box-list">Free Courses</span>
-            <strong>Udemy</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="https://www.coursera.org/">
-        <span class="links-box-copy">
-            <span class="links-box-list">Free Courses</span>
-            <strong>Coursera</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="https://marylandersonline.umd.edu/computer-basics-marylanders-online/">
-        <span class="links-box-copy">
-            <span class="links-box-list">Free Computer Basics</span>
-            <strong>University of Maryland Online</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="https://www.khanacademy.org/">
-        <span class="links-box-copy">
-            <span class="links-box-list">Free Courses</span>
-            <strong>Khan Academy</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="https://www.open.edu/openlearn/">
-        <span class="links-box-copy">
-            <span class="links-box-list">Free Courses</span>
-            <strong>OpenLearn</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="https://www.elementsofai.com/">
-        <span class="links-box-copy">
-            <span class="links-box-list">Free Courses</span>
-            <strong>Elements of AI</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="https://academy.qualcomm.com/course-catalog/AI-Upskilling-Certificate-Development-from-Model-to-App?cmpid=pdsrc-KVbD6kh8I3&utm_medium=pdsrc&utm_source=AW&utm_campaign=GA-AI-2-New&gad_source=1&gad_campaignid=22624412112&gbraid=0AAAAAol8cCtICWrX4-88aYagTArpn8zyM&gclid=CjwKCAjwmdLSBhANEiwAkREMNxBEswnLYgTmpbfqS7h1EXcMGVlRerKiUgWN79ZWUlFRuyos4fEfFxoCMwMQAvD_BwE">
-        <span class="links-box-copy">
-            <span class="links-box-list">AI Upskilling Certificate</span>
-            <strong>Qualcomm AI Academy</strong>
+            <span class="links-box-list">Harvard, IBM, and Cisco are just some of the places to find thousands of online resources.</span>
+            <strong>Free Online Educational Courses</strong>
         </span>
     </a>
 </div>
