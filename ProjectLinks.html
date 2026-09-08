@@ -80,6 +80,20 @@
                 grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
+            .top-practice-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-rows: repeat(2, auto);
+                grid-auto-flow: column;
+            }
+
+            @media (max-width: 980px) {
+                .top-practice-grid {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: none;
+                    grid-auto-flow: row;
+                }
+            }
+
             @media (max-width: 980px) {
                 .manufacturing-feature {
                     grid-column: auto;
@@ -120,8 +134,8 @@
 <section class="readable-flow">
 
 <h1>Practice Projects for Artificial Intelligence</h1>
-<h3>The Better Your Prompt Is, The More Work You Can Get Done</h3>
-
+<h2>Save your work done with AI</h2>
+<p>This can be as simple as a shared folder on Google Drive. Employers need trainable people, not experts. A simple statement about your practice projects can go a long way. <strong>Your Resume.</strong></p>
 <div class="prompt-builder copy-prompt-box">
   <h3>Use this without the Prompt Builder</h3>
   <p>Copy and paste this lead for your own question with this short text first. It helps the AI refine a poorly worded question and turns a one-shot answer into a real conversation instead of frustration:</p>
@@ -133,21 +147,7 @@
 
 </section>
 
-<div class="links-box-grid" aria-label="AI practice links">
-    <a class="links-box links-box-featured" href="QuickStart.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Beginner Friendly</span>
-            <span class="links-box-list">Step-by-Step Guide</span>
-            <strong>Quick Start Guide for asking AI questions</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="1PageExample.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Prompt Tips</span>
-            <span class="links-box-list">One Page Reference</span>
-            <strong>How to Ask Better Questions of AI</strong>
-        </span>
-    </a>
+<div class="links-box-grid top-practice-grid" aria-label="AI practice links">
     <a class="links-box links-box-featured" href="ChatGPTexp.html">
         <span class="links-box-copy">
             <span class="links-box-list">Real Example</span>
@@ -160,6 +160,20 @@
             <span class="links-box-list">Real Example</span>
             <span class="links-box-list">GitHub Copilot Walkthrough</span>
             <strong>GitHub AI explains the work it did from the Prompt</strong>
+        </span>
+    </a>
+    <a class="links-box links-box-featured" href="QuickStart.html">
+        <span class="links-box-copy">
+            <span class="links-box-list">Beginner Friendly</span>
+            <span class="links-box-list">Step-by-Step Guide</span>
+            <strong>Quick Start Guide for asking AI questions</strong>
+        </span>
+    </a>
+    <a class="links-box links-box-featured" href="1PageExample.html">
+        <span class="links-box-copy">
+            <span class="links-box-list">Prompt Tips</span>
+            <span class="links-box-list">One Page Reference</span>
+            <strong>How to Ask Better Questions of AI</strong>
         </span>
     </a>
 </div>
