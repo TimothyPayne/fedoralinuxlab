@@ -12,6 +12,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Normalize FTP remote directory
+        env:
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+        run: |
+          if [ -z "$FTP_REMOTE_DIR" ]; then
+            echo "::error title=Missing FTP_REMOTE_DIR secret::Set the FTP_REMOTE_DIR repository secret to the target FTP directory."
+            exit 1
+          fi
+
+          case "$FTP_REMOTE_DIR" in
+            */) echo "FTP_REMOTE_DIR=$FTP_REMOTE_DIR" >> "$GITHUB_ENV" ;;
+            *) echo "FTP_REMOTE_DIR=$FTP_REMOTE_DIR/" >> "$GITHUB_ENV" ;;
+          esac
+
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -19,7 +33,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          server-dir: ${{ env.FTP_REMOTE_DIR }}
 
 # Instructions:
 # - Add the following repository secrets in GitHub: FTP_HOST, FTP_USERNAME, FTP_PASSWORD, FTP_REMOTE_DIR
