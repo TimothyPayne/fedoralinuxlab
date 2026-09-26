@@ -3,120 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI practice projects and exercises for learning prompt engineering and artificial intelligence skills. Resources for students and professionals.">
-    <meta name="keywords" content="AI practice, AI projects, prompt engineering, AI learning, ChatGPT practice, AI exercises, AI training">
+    <meta name="description" content="Beginner-friendly AI guides, practice activities, and learning resources.">
+    <meta name="keywords" content="AI practice, AI learning, ChatGPT practice, AI exercises, computer skills">
     <link rel="canonical" href="https://aipracticelab.org/ProjectLinks.html">
-    <title>Practice Projects for AI and Robot Industry</title>
+    <title>Practice with AI | AI Practice Lab</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <style>
-            .manufacturing-feature {
-                grid-column: span 2;
-                grid-row: span 2;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-                align-items: stretch;
-                max-width: none;
-                min-height: 360px;
-                padding: 0.8rem;
-                text-align: right;
-            }
-
-            .manufacturing-feature-images {
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                gap: 0.8rem;
-                min-width: 0;
-            }
-
-            .manufacturing-feature-images img,
-            .manufacturing-feature-right img {
-                display: block;
-                width: 75%;
-                height: 75%;
-                min-height: 0;
-                object-fit: cover;
-                justify-self: center;
-                align-self: center;
-            }
-
-            .manufacturing-feature-right {
-                display: grid;
-                grid-template-rows: 1fr auto 1fr;
-                gap: 0.5rem;
-                min-width: 0;
-            }
-
-            .manufacturing-feature-copy {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-end;
-                color: #08324b;
-            }
-
-            .manufacturing-feature-copy strong {
-                display: block;
-                margin-bottom: 1rem;
-                font-size: 1.45rem;
-            }
-
-            .manufacturing-feature-copy p {
-                margin: 0 0 1rem;
-                font-size: 1.2rem;
-            }
-
-            .manufacturing-feature-copy p:last-child {
-                margin-bottom: 0;
-            }
-
-            .education-links-feature {
-                grid-column: span 2;
-            }
-
-            .outside-learning-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-
-            .top-practice-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                grid-template-rows: repeat(2, auto);
-                grid-auto-flow: column;
-            }
-
-            @media (max-width: 980px) {
-                .top-practice-grid {
-                    grid-template-columns: 1fr;
-                    grid-template-rows: none;
-                    grid-auto-flow: row;
-                }
-            }
-
-            @media (max-width: 980px) {
-                .manufacturing-feature {
-                    grid-column: auto;
-                    grid-row: auto;
-                    min-height: 320px;
-                }
-            }
-
-            @media (max-width: 560px) {
-                .manufacturing-feature {
-                    grid-template-columns: 1fr;
-                    min-height: 0;
-                }
-
-                .manufacturing-feature-images {
-                    min-height: 260px;
-                }
-
-                .education-links-feature {
-                    grid-column: auto;
-                }
-            }
-        </style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -132,118 +25,77 @@
 
 
 <section class="readable-flow">
+  <h1>Practice with AI, one step at a time</h1>
+  <p>New to AI? Start with the first guide below. Each step gives you a way to learn or try something at your own pace.</p>
+</section>
 
-<h1>Practice Projects for Artificial Intelligence</h1>
-<h2>Save your work done with AI</h2>
-<p>This can be as simple as a shared folder on Google Drive. Employers need trainable people, not experts. A simple statement about your practice projects can go a long way. <strong>Your Resume.</strong></p>
-<div class="prompt-builder copy-prompt-box">
-  <h3>Use this without the Prompt Builder</h3>
-  <p>Copy and paste this lead for your own question with this short text first. It helps the AI refine a poorly worded question and turns a one-shot answer into a real conversation instead of frustration:</p>
-  <textarea id="copyable-ai-prompt" readonly aria-label="Copyable AI lead prompt">Act as a patient tutor. First rephrase my question more clearly if it is unclear, then answer step by step in plain language, and end by asking me one good follow-up question so we can keep improving the answer together.</textarea>
-  <div class="prompt-actions">
-    <button class="prompt-button" type="button" data-copy-target="copyable-ai-prompt">Copy prompt</button>
+<section aria-labelledby="start-here-title">
+  <div class="readable-flow"><h2 id="start-here-title">1. Start here</h2><p>Learn the basics of asking an AI tool a question.</p></div>
+  <div class="links-box-grid" aria-label="Getting started with AI">
+    <a class="links-box links-box-featured" href="QuickStart.html"><span class="links-box-copy"><span class="links-box-list">Beginner friendly · Step-by-step</span><strong>Quick Start: Ask your first AI question</strong><span>Follow a simple guide to begin a conversation with AI.</span></span></a>
   </div>
-</div>
-
 </section>
 
-<div class="links-box-grid top-practice-grid" aria-label="AI practice links">
-    <a class="links-box links-box-featured" href="ChatGPTexp.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Real Example</span>
-            <span class="links-box-list">ChatGPT Walkthrough</span>
-            <strong>ChatGPT AI explains how it got the right answer</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="GitHubAI.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Real Example</span>
-            <span class="links-box-list">GitHub Copilot Walkthrough</span>
-            <strong>GitHub AI explains the work it did from the Prompt</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="QuickStart.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Beginner Friendly</span>
-            <span class="links-box-list">Step-by-Step Guide</span>
-            <strong>Quick Start Guide for asking AI questions</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="1PageExample.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Prompt Tips</span>
-            <span class="links-box-list">One Page Reference</span>
-            <strong>How to Ask Better Questions of AI</strong>
-        </span>
-    </a>
-</div>
-
-<section class="readable-flow">
-<h3>More projects will be added as they are produced.</h3>
+<section aria-labelledby="learn-examples-title">
+  <div class="readable-flow"><h2 id="learn-examples-title">2. See examples and learn question tips</h2><p>See how AI responds, then use the one-page guide when you want ideas for your own questions.</p></div>
+  <div class="links-box-grid" aria-label="AI examples and question tips">
+    <a class="links-box links-box-featured" href="ChatGPTexp.html"><span class="links-box-copy"><span class="links-box-list">ChatGPT example</span><strong>See how ChatGPT works through an answer</strong><span>A walkthrough showing an AI conversation and its result.</span></span></a>
+    <a class="links-box links-box-featured" href="GitHubAI.html"><span class="links-box-copy"><span class="links-box-list">GitHub Copilot example</span><strong>See an AI coding assistant explain its work</strong><span>Explore how a coding assistant responds to an instruction.</span></span></a>
+    <a class="links-box links-box-featured" href="1PageExample.html"><span class="links-box-copy"><span class="links-box-list">One-page reference</span><strong>How to ask better questions</strong><span>Simple tips for getting a clearer, more useful answer.</span></span></a>
+  </div>
 </section>
 
-<div class="links-box-grid" aria-label="Manufacturing project">
-    <a class="links-box links-box-featured manufacturing-feature" href="RiverRouge.html">
-        <span class="manufacturing-feature-images" aria-hidden="true">
-            <img src="images/RiverRouge.jpg" alt="">
-            <img src="images/GigaTx.jpeg" alt="">
-        </span>
-        <span class="manufacturing-feature-right">
-            <img src="images/1932Ford.jpg" alt="">
-            <span class="manufacturing-feature-copy">
-               <strong>Rouge River to Tesla’s Giga Texas - 100 years</strong>
-<p>Don’t worry — you don’t need to be a computer expert to have a good job.</p>
-<p>The 1st PC was available in 1980, in the early 1980s all Community Colleges had night classes full of regular people gaining their first computer skills. Now it's AI.<br>
-Start the River Rouge to Giga Texas exercise:</p>
-            </span>
-            <img src="images/CyberCab.png" alt="">
-        </span>
-    </a>
-</div>
-
-<div class="links-box-grid" aria-label="Practice project links">
-    <a class="links-box links-box-featured" href="PracticeAI.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Short Exercises</span>
-            <span class="links-box-list">All Skill Levels</span>
-            <strong>Practice Short Exercises for using AI</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="ProjectFor10yrs.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Ages 10 and Up</span>
-            <span class="links-box-list">Family Friendly</span>
-            <strong>Practice for everyone 10 years and older</strong>
-        </span>
-    </a>
-    <a class="links-box links-box-featured" href="OfficeAI.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Office Skills</span>
-            <span class="links-box-list">Workplace Ready</span>
-            <strong>Practice for Office Administration</strong>
-        </span>
-    </a>
-</div>
-
-<section class="readable-flow">
-<h3>Outside Educational Links to Explore</h3>
-<p>Free Samples to get you to buy, choose wisely</p>
+<section aria-labelledby="practice-title">
+  <div class="readable-flow"><h2 id="practice-title">3. Choose something to practice</h2><p>Pick a short activity, a family activity, or a workplace example. You do not need to complete them in order.</p></div>
+  <div class="links-box-grid" aria-label="AI practice activities">
+    <a class="links-box links-box-featured" href="PracticeAI.html"><span class="links-box-copy"><span class="links-box-list">Short activities · Different skill levels</span><strong>Try short AI exercises</strong><span>Practice using AI with a series of manageable activities.</span></span></a>
+    <a class="links-box links-box-featured" href="ProjectFor10yrs.html"><span class="links-box-copy"><span class="links-box-list">Ages 10 and up · Family friendly</span><strong>Practice together with a family activity</strong><span>A learning activity designed for people aged 10 and older.</span></span></a>
+    <a class="links-box links-box-featured" href="OfficeAI.html"><span class="links-box-copy"><span class="links-box-list">Workplace example</span><strong>Practice office tasks with AI</strong><span>Explore ways AI might help with office administration tasks.</span></span></a>
+    <a class="links-box links-box-featured" href="RiverRouge.html"><span class="links-box-copy"><span class="links-box-list">History and future of work</span><strong>From River Rouge to Tesla’s Giga Texas</strong><span>Compare factory work across time and consider skills people may need as technology changes.</span></span></a>
+  </div>
 </section>
 
-<div class="links-box-grid outside-learning-grid" aria-label="Outside learning links">
-    <a class="links-box links-box-featured education-links-feature" href="EducationLinks.html">
-        <span class="links-box-copy">
-            <span class="links-box-list">Harvard, IBM, and Cisco are just some of the places to find thousands of online resources.</span>
-            <strong>Free Online Educational Courses</strong>
-        </span>
-    </a>
-</div>
-
-<section class="readable-flow">
-<h3>YouTube Robot Videos - Cool, Cute, and Creepy</h3>
+<section class="readable-flow" aria-labelledby="save-work-title">
+  <h2 id="save-work-title">Keep a copy of your practice</h2>
+  <p>You can save a useful question and answer in a document or folder so you can find it later. If you use AI practice in a job search, you might mention what you tried and what you learned. You do not need to be an expert to show that you are learning.</p>
 </section>
 
-<div class="links-box-grid" aria-label="YouTube robot videos">
+<section class="prompt-builder copy-prompt-box" aria-labelledby="copy-prompt-title">
+  <h2 id="copy-prompt-title">Want help getting started with a question?</h2>
+  <p>Copy this text and paste it before your question in an AI chat. It asks the AI to explain things step by step and help you continue the conversation.</p>
+  <textarea id="copyable-ai-prompt" readonly aria-label="Copyable AI tutor prompt">Act as a patient tutor. First rephrase my question more clearly if it is unclear, then answer step by step in plain language, and end by asking me one good follow-up question so we can keep improving the answer together.</textarea>
+  <div class="prompt-actions"><button class="prompt-button" type="button" data-copy-target="copyable-ai-prompt">Copy prompt</button></div>
+</section>
+
+<section class="prompt-builder" aria-labelledby="practice-builder-title">
+  <h2 id="practice-builder-title">Make a practice prompt</h2>
+	<p>Use this optional tool to create instructions for an AI chatbot. You can also skip it and try one of the activities above.</p>
+	<div class="prompt-grid">
+		<div class="prompt-field"><label class="prompt-label" for="topic">Topic or assignment</label><input id="topic" type="text" placeholder="Example: Explain this in plain language for beginners."></div>
+		<div class="prompt-field"><label class="prompt-label" for="promptType">What would you like help with?</label><select id="promptType"><option value="Student coaching" selected>Learning or coaching</option><option value="Coding">Coding</option><option value="Image generation">Creating an image</option><option value="Writing help">Writing</option><option value="Research">Research</option></select><small class="prompt-help">Choose the kind of help you want from the AI.</small></div>
+		<div class="prompt-field"><label class="prompt-label" for="ageLevel">Age or learning level</label><select id="ageLevel"><option value="10-12 years old">10–12 years old</option><option value="13-15 years old">13–15 years old</option><option value="16+ years old">16 or older</option><option value="High School" selected>High school</option><option value="College">College</option></select></div>
+		<div class="prompt-field"><label class="prompt-label" for="challengeLevel">How challenging should it be?</label><select id="challengeLevel"><option value="gentle">Gentle</option><option value="standard" selected>Standard</option><option value="stretch">More challenging</option></select></div>
+		<div class="prompt-field"><label class="prompt-label" for="responseStyle">How should the AI explain?</label><select id="responseStyle"><option value="short bullet list">Short list</option><option value="table with strengths and improvements">Table</option><option value="step-by-step coaching">Step by step</option></select></div>
+		<div class="prompt-field prompt-field-full"><label class="prompt-label" for="studentAnswer">Your answer (optional)</label><textarea id="studentAnswer" placeholder="Type an answer here if you want feedback."></textarea></div>
+		<div class="prompt-field prompt-field-full"><label class="prompt-label" for="extraGoal">Anything else you want? (optional)</label><input id="extraGoal" type="text" placeholder="Example: Keep the answer concise and practical."></div>
+		<div class="prompt-field prompt-field-full"><label class="prompt-label" for="generatedPrompt">Prompt to copy into an AI chatbot</label><textarea id="generatedPrompt" readonly placeholder="Choose Build Prompt to create text you can copy."></textarea></div>
+	</div>
+	<div class="prompt-actions"><button id="buildPromptBtn" class="prompt-button" type="button">Build prompt</button><button id="copyPromptBtn" class="prompt-button" type="button">Copy prompt</button><button id="sharePromptBtn" class="prompt-button" type="button">Share prompt</button><button id="clearFormBtn" class="prompt-button prompt-button-secondary" type="button">Clear</button></div>
+	<p>Do not enter passwords, private details, or information you would not want to share with the AI service you use.</p>
+	<p><strong>Tip:</strong> On a phone, tap <strong>Share prompt</strong>. On a computer, use <strong>Copy prompt</strong> and paste into your chatbot.</p>
+	<p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
+</section>
+
+<section aria-labelledby="explore-more-title">
+  <div class="readable-flow"><h2 id="explore-more-title">Explore more</h2><p>These links are optional. You can return to them whenever you like.</p></div>
+  <div class="links-box-grid" aria-label="More learning resources">
+    <a class="links-box links-box-featured" href="EducationLinks.html"><span class="links-box-copy"><span class="links-box-list">Courses from Harvard, IBM, Cisco, and others</span><strong>Find free online courses</strong><span>Explore educational courses and learning resources.</span></span></a>
+  </div>
+</section>
+
+<section aria-labelledby="robot-videos-title">
+  <div class="readable-flow"><h2 id="robot-videos-title">Watch videos about robots and AI</h2><p>These videos are for exploring how robots and AI are being discussed and demonstrated. Video availability and length may change.</p></div>
+  <div class="links-box-grid" aria-label="Robot and AI videos">
     <a class="links-box links-box-featured" href="https://youtu.be/KdeO-D0tZD0?si=Dwd4_HIyKKFUKcJl">
         <span class="links-box-copy">
             <span class="links-box-list">13 Minutes</span>
@@ -300,90 +152,10 @@ Start the River Rouge to Giga Texas exercise:</p>
     </a>
 </div>
 
-<section class="readable-flow">
-<h2>This is Why People Find Robots Creepy:</h2>
-<p><strong>Uncanny Valley</strong> is a concept that explains why people sometimes feel uncomfortable around robots or animated characters that look almost human, but not quite. As a robot becomes more human-like, people usually find it more appealing. However, when it looks very close to a real person but still has small differences—such as unnatural facial expressions, stiff movements, or lifeless eyes—people often react with <strong>Uneasiness or Even Fear</strong>. This dip in comfort is called the <strong>Uncanny Valley</strong></p>
-<img src="images/UncannVal.png" alt="Uncanny Valley Illustration" style="display:block; max-width:50%; height:auto;">
-
-</section>
-
-<section class="prompt-builder" aria-labelledby="practice-builder-title">
-	<h3 id="practice-builder-title">Interactive Practice Prompt Builder</h3>
-	<p>Type your topic and answer, then click <strong>Build Prompt</strong>. Copy or share the generated text into any chatbot to get feedback, suggestions, and your next challenge.</p>
-
-	<div class="prompt-grid">
-		<div class="prompt-field">
-			<label class="prompt-label" for="topic">Topic or assignment</label>
-			<input id="topic" type="text" placeholder="Example: Explain this in plain language for beginners.">
-		</div>
-
-		<div class="prompt-field">
-			<label class="prompt-label" for="promptType">Prompt type</label>
-			<select id="promptType">
-				<option value="Student coaching" selected>Student coaching</option>
-				<option value="Coding">Coding</option>
-				<option value="Image generation">Image generation</option>
-				<option value="Writing help">Writing help</option>
-				<option value="Research">Research</option>
-			</select>
-			<small class="prompt-help">Choose the job you want the AI to do: coaching, coding, image prompts, writing help, or research.</small>
-		</div>
-
-		<div class="prompt-field">
-			<label class="prompt-label" for="ageLevel">Student age level</label>
-			<select id="ageLevel">
-				<option value="10-12 years old">10-12 years old</option>
-				<option value="13-15 years old">13-15 years old</option>
-				<option value="16+ years old">16+ years old</option>
-				<option value="High School" selected>High School</option>
-				<option value="College">College</option>
-			</select>
-		</div>
-
-		<div class="prompt-field">
-			<label class="prompt-label" for="challengeLevel">Challenge level</label>
-			<select id="challengeLevel">
-				<option value="gentle">Gentle</option>
-				<option value="standard" selected>Standard</option>
-				<option value="stretch">Stretch</option>
-			</select>
-		</div>
-
-		<div class="prompt-field">
-			<label class="prompt-label" for="responseStyle">Feedback style</label>
-			<select id="responseStyle">
-				<option value="short bullet list">Short bullet list</option>
-				<option value="table with strengths and improvements">Table</option>
-				<option value="step-by-step coaching">Step-by-step coaching</option>
-			</select>
-		</div>
-
-		<div class="prompt-field prompt-field-full">
-			<label class="prompt-label" for="studentAnswer">Student answer</label>
-			<textarea id="studentAnswer" placeholder="Paste or type the student's answer here..."></textarea>
-		</div>
-
-		<div class="prompt-field prompt-field-full">
-			<label class="prompt-label" for="extraGoal">Optional extra goal</label>
-			<input id="extraGoal" type="text" placeholder="Example: Keep the answer concise and practical.">
-		</div>
-
-		<div class="prompt-field prompt-field-full">
-			<label class="prompt-label" for="generatedPrompt">Prompt to copy into any chatbot</label>
-			<textarea id="generatedPrompt" readonly placeholder="Click Build Prompt to generate reusable instructions."></textarea>
-		</div>
-	</div>
-
-	<div class="prompt-actions">
-		<button id="buildPromptBtn" class="prompt-button" type="button">Build Prompt</button>
-		<button id="copyPromptBtn" class="prompt-button" type="button">Copy Prompt</button>
-		<button id="sharePromptBtn" class="prompt-button" type="button">Share Prompt</button>
-		<button id="clearFormBtn" class="prompt-button prompt-button-secondary" type="button">Clear</button>
-	</div>
-
-	<p><strong>Tip:</strong> On a phone, tap <strong>Share Prompt</strong>. On a computer, use <strong>Copy Prompt</strong> and paste into your chatbot.</p>
-
-	<p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
+<section class="readable-flow" aria-labelledby="uncanny-valley-title">
+  <h2 id="uncanny-valley-title">Why can human-like robots feel unsettling?</h2>
+  <p>The "uncanny valley" describes how a robot or animated character that looks almost human can make some people feel uneasy. Small differences in facial expression or movement may contribute to that reaction.</p>
+  <img src="images/UncannVal.png" alt="Illustration of the uncanny valley: comfort rises as a robot looks more human, then dips for almost-human figures." style="display:block; max-width:50%; height:auto;">
 </section>
 
 <!-- Home Link Bottom -->

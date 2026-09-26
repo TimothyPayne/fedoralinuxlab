@@ -26,12 +26,7 @@
 
 <section class="readable-flow">
   <div class="intro-encourage">
-    <p><strong>You do not need to master every detail of Tesla or any single company.<br>
-    The real goal is to see the bigger pattern and build the habit of learning.</strong></p>
-
-    <p>We’ve been here before. In 1980 I was 20 years old when the first personal computers became available. I got one in 1983, no hard drive and the two 5 inch floppies had less than a megabyte of total storage combined. Born in Seattle, I had a front-row seat as the technology spread. Many people were afraid: “If the company gets computers, we’ll never work again.” What actually happened was far narrower. General computer literacy simply gave people the ability to be trained on the specific software their company used. Knowledge erased most of the fear.</p>
-
-    <p>The same pattern is repeating now with AI and robots. The people who understand how the pieces fit together will be able to learn the rest. Use the prompts and exercises on this page as starting points. Follow any thread that interests you:</p>
+    <p><strong>You do not need to master every detail of Tesla or any single company. The real goal is to see the bigger pattern and build the habit of learning.</strong></p>
 
     <ul>
       <li>History</li>
@@ -45,7 +40,8 @@
   </div>
 
   <h1 class="title">Ore to Assembly: River Rouge, Giga Texas, and the Skills You Will Need</h1>
-  <p class="lead">A short history-and-future worksheet for high-school students and older. Use an AI tool to help answer the prompts. Check facts. Think for yourself.</p>
+  <p class="lead">A short history-and-future worksheet for high-school students and older.<br>Use an AI tool to help answer the prompts. Check facts. Think for yourself.</p>
+</section>
 
   <h2>1. Once Upon a Time Factories Worked Differently</h2>
   <p>Most companies today do not take raw materials in one end of a single plant and ship finished products out the other. They buy parts from many specialized suppliers, ship those parts around the world, and assemble them in one place. That system has advantages, but it also creates long supply chains, extra costs, and delays when something breaks.</p>
@@ -70,9 +66,11 @@
     <p>Use any AI tool. Ask clear questions. Then ask follow-ups. Verify important claims with other sources.</p>
 
     <p><strong>Hint:</strong> Lead your own question with this short text first. It helps the AI refine a poorly worded question and turns a one-shot answer into a real conversation instead of frustration:</p>
-    <p style="background:#edf5f3; padding:0.75rem 1rem; border-radius:8px; font-family:monospace; font-size:0.95rem; margin-top:0.75rem; margin-bottom:0.75rem;">
-      Act as a patient tutor. First rephrase my question more clearly if it is unclear, then answer step by step in plain language, and end by asking me one good follow-up question so we can keep improving the answer together.
-    </p>
+    <textarea id="copyable-tutor-prompt" readonly aria-label="Copyable AI tutor prompt">Act as a patient tutor. First rephrase my question more clearly if it is unclear, then answer step by step in plain language, and end by asking me one good follow-up question so we can keep improving the answer together.</textarea>
+    <div class="prompt-actions">
+      <button id="copyTutorPrompt" class="prompt-button" type="button">Copy prompt</button>
+      <span id="copyTutorStatus" class="copy-status" role="status" aria-live="polite"></span>
+    </div>
 
     <p>After the hint, try one of these starters (or write your own):</p>
     <ol>
@@ -108,6 +106,42 @@
 <div class="fixed-home-link"><a href="/">Home</a></div>
 <div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
 </main>
+
+<script>
+  (function () {
+    "use strict";
+
+    var copyButton = document.getElementById("copyTutorPrompt");
+    var promptText = document.getElementById("copyable-tutor-prompt");
+    var status = document.getElementById("copyTutorStatus");
+
+    function showStatus(message) {
+      status.textContent = message;
+    }
+
+    function fallbackCopy() {
+      promptText.select();
+      try {
+        document.execCommand("copy");
+        showStatus("Prompt copied to clipboard.");
+      } catch (error) {
+        showStatus("Copy failed. Select the text and copy manually.");
+      }
+    }
+
+    copyButton.addEventListener("click", function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(promptText.value)
+          .then(function () {
+            showStatus("Prompt copied to clipboard.");
+          })
+          .catch(fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+    });
+  }());
+</script>
 
 <footer class="test-footer">
   <div><h2>AI Practice Lab</h2><p>Free, practical ways to build problem-solving and computer skills.</p></div>
