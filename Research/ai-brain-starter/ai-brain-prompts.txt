@@ -1,0 +1,48 @@
+AI WITH KYLE - AI SECOND BRAIN STARTER PROMPTS
+
+Open the My AI Brain folder in a local ChatGPT Work or Codex project first.
+Use these prompts in that project. Replace anything in [square brackets].
+
+1. SET UP MY BRAIN
+
+I want a simple folder you can use to understand me and my work, help me to set it up, explain things in ordinary language and interview me before you decide what belongs in my folder.
+
+Read START_HERE.md, about-me.md and current-project.md if present. If I started with an empty folder, create simple notes after the interview. Interview me one question at a time. Ask about what I do, who I help, my current projects, decisions I have made and how I like to work. Explore what I want to BE, DO and HAVE: the person I want to become, the things I want to do and the things I want in my life. Ask deeper follow-up questions when my answers are vague. I may answer with a messy voice note. Treat blank template fields as unknown.
+
+Show me a short summary to correct. After I approve it, save my preferences in about-me.md and the current job in current-project.md. Create or update START_HERE.md with links to these notes. Keep instructions in AGENTS.md short and consistent with what I approved.
+
+Look only at relevant files in sources/. Leave those originals unchanged. Add links to the files you use. Put generated work in outputs/. Flag missing or conflicting facts instead of filling them in. Do not send, publish, buy anything or connect accounts.
+
+Finish by suggesting one useful job we can do with the files already here.
+
+2. DO ONE USEFUL JOB
+
+Read START_HERE.md, my preferences and the current project. I need [specific result] for [person or audience] by [date]. Use [named files in sources/].
+
+Make [one concrete deliverable] and save it in outputs/. Follow my preferences. Use the source files for names, dates, prices and requirements. Link to them so I can check your work. List missing information separately. Stop before sending or publishing anything.
+
+Example: I need a launch email for my workshop. Use the workshop brief and my audience notes. Write one email in my voice, plus a short list of details I still need to supply. Save the draft in outputs/.
+
+3. CHECK A FRESH CHAT
+
+Read START_HERE.md and the notes it links to. What am I working on, who is it for, and which preferences should you follow? Name the files you used. Flag blank or conflicting information. Do not edit anything yet.
+
+4. CHANGE ONE FACT
+
+I added [filename] to sources/. It updates [fact]. Compare it with our current project notes and outputs. Tell me what conflicts and ask if the intended change is unclear. Update the affected working notes and drafts once the change is clear. Leave original source files unchanged. Show me exactly what changed and where.
+
+5. OPTIONAL EXTRA - MAKE THE FOLDER EASIER TO BROWSE
+
+Review the notes in this folder and add a few useful relative Markdown links between related notes. Keep the text and original facts intact. Update START_HERE.md so I can find my current project, sources and latest output. Keep it small. Do not install plugins or sync services.
+
+Obsidian: choose Open folder as vault, then select My AI Brain. Open START_HERE.md. The built-in Graph view displays notes and the links between them.
+
+6. OPTIONAL EXTRA - PLAN ONE TOOL CONNECTION
+
+I want help with [specific task] in [named app]. Explain what access you would need, what information might leave my computer and which actions could change something. Prefer the app's dedicated integration if one is available. Show me a plan before connecting anything. Keep sending, publishing, deleting, spending and account changes for my explicit approval.
+
+Start with prompts 1 and 2. Obsidian, phone access, connected apps, computer use, GitHub and a dedicated computer can all wait.
+
+Start with a few files you are comfortable sharing with your AI provider. Local files can still be sent to a cloud model for processing. Review permissions and back up your folder.
+
+AI with Kyle | aiwithkyle.com | September 2026

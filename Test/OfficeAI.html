@@ -10,32 +10,16 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <style>
-      #main-content { font-family: Georgia, "Times New Roman", serif; line-height: 1.55; max-width: 780px; margin: 0 auto; padding: 1.5rem; color: #222; background: #fff; }
-      #main-content h1, #main-content h2, #main-content h3 { font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
-      #main-content h1 { font-size: 1.7rem; margin-bottom: 0.4rem; }
-      #main-content h2 { font-size: 1.35rem; margin-top: 2rem; border-bottom: 2px solid #333; padding-bottom: 0.25rem; }
-      #main-content h3 { font-size: 1.15rem; margin-top: 1.5rem; }
-      #main-content p, #main-content li { margin-bottom: 0.85rem; }
-      #main-content .intro { font-size: 1.05rem; }
-      #main-content .prompt-box, #main-content .exercise-box, #main-content .reflect-box { background: #f7f7f7; border-left: 5px solid #444; padding: 1rem 1.2rem; margin: 1.4rem 0; }
-    #main-content .exercise-instructions { background: #f7f7f7; border: 2px solid #444; padding: 1.2rem 1.4rem; margin: 1.4rem 0; }
-    #main-content .exercise-instructions-header { display: flex; justify-content: flex-end; margin-bottom: 1rem; }
-    #main-content .exercise-copy-button { background: #333; border: 2px solid #333; color: #fff; cursor: pointer; padding: 0.55rem 0.8rem; font: 600 0.95rem Arial, Helvetica, sans-serif; }
-    #main-content .exercise-copy-button:hover, #main-content .exercise-copy-button:focus { background: #fff; color: #333; }
-    #main-content .exercise-copy-status { margin: 0.5rem 0 0; font-size: 0.9rem; text-align: right; }
-      #main-content .note { font-size: 0.95rem; color: #444; font-style: italic; }
-      @media print { #main-content { max-width: none; padding: 0.5in; } }
-    </style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="test-header">
-  <a class="test-brand" href="index.html">AI Practice Lab</a>
+  <a class="test-brand" href="index.html">Home</a>
   <nav aria-label="Primary navigation">
-    <a href="ProjectLinks.html">Practice</a>
-    <a href="FedoraLinks.html">Linux skills</a>
-    <a href="InfoLinks.html">AI and work</a>
+    <a href="ProjectLinks.html">AI-Practice</a>
+    <a href="FedoraLinks.html">Linux Skills</a>
+    <a href="InfoLinks.html">AI and Work</a>
+    <a href="Contact.html">Contact</a>
   </nav>
 </header>
 <main id="main-content">
@@ -44,12 +28,7 @@
 <p><a href="/">Home</a></p>
 
 <section class="readable-flow">
-<section class="exercise-instructions" aria-labelledby="exercise-title">
-<div class="exercise-instructions-header">
-    <button id="copyExerciseBtn" class="exercise-copy-button" type="button">Copy Instructions</button>
-</div>
-<div id="exerciseCopyContent" class="exercise-copy-content">
-<h1 id="exercise-title">Using AI for Office and Administrative Support</h1>
+<h1>Using AI for Office and Administrative Support</h1>
 
 <p>Artificial Intelligence (AI) can help with many common office and administrative tasks. The quality of the results depends on how clearly the task is described. Small changes in wording can change tone, format, and usefulness of the response.</p>
 
@@ -96,10 +75,6 @@
 </ul>
 
 <p><strong>Privacy Reminder:</strong> Do not include confidential or personal information (such as student records, addresses, or ID numbers) when using AI tools.</p>
-
-</div>
-<p id="exerciseCopyStatus" class="exercise-copy-status" role="status" aria-live="polite"></p>
-</section>
 
 <section class="prompt-builder" aria-labelledby="practice-builder-title">
     <h3 id="practice-builder-title">Interactive Practice Prompt Builder</h3>
@@ -182,8 +157,6 @@
 
 <hr>
 
-<section class="exercise-instructions">
-<div class="exercise-copy-content">
 <h2>Additional Examples for Office and Administrative Support</h2>
 
 <h2>Example 6: Scheduling and Calendar Management</h2>
@@ -216,33 +189,13 @@
 <strong>Question B:</strong> List end-of-day closeout tasks for a school office, including records, communication, and security.<br>
 <strong>What Changes:</strong> Specific context leads to a complete and useful checklist.</p>
 
- </div>
- </section>
-
 <p class="body-text"><a href="ProjectLinks.html">Back to AI Practice</a></p>
 </section>
 
 <!-- Home Link Bottom -->
 
 <!-- Email Footer -->
-<div class="fixed-home-link"><a href="/">Home</a></div>
-<div class="fixed-mail-link"><a href="mailto:info@aipracticelab.org">mailto:info@aipracticelab.org</a></div>
 <script src="js/prompt-builder.js"></script>
-<script>
-    document.getElementById('copyExerciseBtn').addEventListener('click', async function () {
-        const content = Array.from(document.querySelectorAll('.exercise-copy-content'))
-            .map(function (section) { return section.innerText.trim(); })
-            .join('\n\n');
-        const status = document.getElementById('exerciseCopyStatus');
-
-        try {
-            await navigator.clipboard.writeText(content);
-            status.textContent = 'Instructions copied.';
-        } catch (error) {
-            status.textContent = 'Copy failed. Please select the instructions and copy them manually.';
-        }
-    });
-</script>
 </main>
 <footer class="test-footer">
   <div><h2>AI Practice Lab</h2><p>Free, practical ways to build problem-solving and computer skills.</p></div>
