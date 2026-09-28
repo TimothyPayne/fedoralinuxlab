@@ -7,7 +7,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #06283D;
+  color: var(--color-ink, #1a1a1a);
   background-color: transparent;
   margin: 0 auto;
   max-width: 1080px;
@@ -25,17 +25,16 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Pantone Blue 072 approximation for headings site-wide */
 h1, h2, h3 {
-  color: #0018A8;
+  color: var(--color-ink, #1a1a1a);
 }
 
 /* paragraphs: increase line-height for readability */
 p { background: transparent; margin-bottom: 0.85em; line-height: 1.6; }
 
-/* Links: darker and bold for better contrast against the light blue */
-a:link { color: #002E5D; text-decoration: underline; font-weight: 700 }
-a:visited { color: #003f6b; text-decoration: underline; font-weight: 700 }
+/* Links: blue and bold for clear, friendly affordance */
+a:link { color: var(--color-brand-dark, #1d4ed8); text-decoration: underline; font-weight: 700 }
+a:visited { color: var(--color-brand-dark, #1d4ed8); text-decoration: underline; font-weight: 700 }
 a:hover, a:focus { text-decoration: none; opacity: 0.95 }
 
 /* Layout classes replacing legacy <font> tags */

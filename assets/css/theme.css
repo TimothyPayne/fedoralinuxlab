@@ -1,4 +1,4 @@
-@import url("tokens.css");
+@import url("tokens.css?v=20260927");
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -6,7 +6,7 @@ body {
   max-width: 1180px;
   padding: 0 var(--space-5) var(--space-8);
   color: var(--color-ink);
-  background: linear-gradient(135deg, #eef6f2 0%, var(--color-paper) 42%, #fff8ed 100%);
+  background: var(--color-paper);
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: 1.65;
