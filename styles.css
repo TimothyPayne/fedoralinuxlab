@@ -5,10 +5,10 @@
 /* Use a wide, modern system font stack and slightly larger base size */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.125rem;
   font-weight: 400;
-  color: var(--color-ink, #1a1a1a);
-  background-color: transparent;
+  color: var(--color-ink, #252525);
+  background-color: #F7F6F2;
   margin: 0 auto;
   max-width: 1080px;
   padding: 1rem;
@@ -26,16 +26,16 @@ html {
 }
 
 h1, h2, h3 {
-  color: var(--color-ink, #1a1a1a);
+  color: var(--color-ink, #252525);
 }
 
 /* paragraphs: increase line-height for readability */
 p { background: transparent; margin-bottom: 0.85em; line-height: 1.6; }
 
 /* Links: blue and bold for clear, friendly affordance */
-a:link { color: var(--color-brand-dark, #1d4ed8); text-decoration: underline; font-weight: 700 }
-a:visited { color: var(--color-brand-dark, #1d4ed8); text-decoration: underline; font-weight: 700 }
-a:hover, a:focus { text-decoration: none; opacity: 0.95 }
+a:link { color: var(--color-brand-dark, #285F8F); text-decoration: underline; font-weight: 400 }
+a:visited { color: var(--color-brand-dark, #285F8F); text-decoration: underline; font-weight: 400 }
+a:hover, a:focus { text-decoration: underline; text-decoration-thickness: 2px }
 
 /* Layout classes replacing legacy <font> tags */
 .title { font-size: 24pt; text-align: center; margin: 0.5em 0; }
@@ -86,12 +86,12 @@ a:hover, a:focus { text-decoration: none; opacity: 0.95 }
   max-width: 290px;
   min-height: 180px;
   padding: 1.35rem 1rem;
-  border: 2px solid #0b5d8a;
+  border: 2px solid #285F8F;
   border-radius: 12px;
-  background: linear-gradient(180deg, #f8fcff 0%, #e6f3fa 100%);
-  box-shadow: 0 4px 12px rgba(6, 40, 61, 0.12);
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(37, 37, 37, 0.04);
   text-decoration: none;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  transition: none;
   text-align: center;
   line-height: 1.45;
 }
@@ -137,9 +137,9 @@ a:hover, a:focus { text-decoration: none; opacity: 0.95 }
 
 .links-box:hover,
 .links-box:focus {
-  transform: translateY(-2px);
-  border-color: #0077b6;
-  box-shadow: 0 8px 20px rgba(6, 40, 61, 0.18);
+  transform: none;
+  border-color: #285F8F;
+  box-shadow: 0 1px 4px rgba(37, 37, 37, 0.06);
   opacity: 1;
 }
 
@@ -177,12 +177,12 @@ video {
 
 /* Shared prompt builder styles */
 .prompt-builder {
-  border: 2px solid #0b5d8a;
+  border: 2px solid #285F8F;
   border-radius: 12px;
-  background: linear-gradient(180deg, #f8fcff 0%, #e6f3fa 100%);
+  background: #FFFFFF;
   padding: 1rem;
   margin: 1rem 0;
-  box-shadow: 0 4px 12px rgba(6, 40, 61, 0.12);
+  box-shadow: 0 1px 3px rgba(37, 37, 37, 0.04);
 }
 
 .prompt-builder h3 {
@@ -237,12 +237,12 @@ video {
 }
 
 .prompt-button {
-  border: 1px solid #0b5d8a;
-  background: #0b5d8a;
+  border: 1px solid #285F8F;
+  background: #285F8F;
   color: #ffffff;
   border-radius: 8px;
   padding: 0.55rem 0.9rem;
-  font-size: 0.98rem;
+  font-size: 1.125rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -281,7 +281,7 @@ video {
   .title { font-size: 18pt; }
   .subtitle { font-size: 16pt; }
   .lead { font-size: 14pt; }
-  .body-text { font-size: 12pt; }
+  .body-text { font-size: 1.125rem; }
   .links-box {
     max-width: 100%;
     min-height: 140px;

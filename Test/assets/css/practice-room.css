@@ -1,0 +1,65 @@
+/* Standalone styles for the beginner experience. No fonts or libraries to download. */
+:root { color-scheme: light; --ink:#252525; --muted:#4b5358; --paper:#F7F6F2; --blue:#285F8F; --green:#3F7652; --line:#D6D9DC; }
+* { box-sizing:border-box; }
+body { margin:0 auto; max-width:1120px; padding:0 28px; background:var(--paper); color:var(--ink); overflow-wrap:anywhere; font:1.125rem/1.6 system-ui, "Segoe UI", Arial, sans-serif; }
+a { color:var(--blue); text-underline-offset:.2em; }
+a:hover { text-decoration-thickness:2px; }
+a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid #9a4900; outline-offset:5px; }
+.skip-link { position:absolute; left:-10000px; top:12px; padding:12px; background:white; z-index:10; }
+.skip-link:focus { left:12px; }
+.test-header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 24px; padding:22px 0; border-bottom:1px solid var(--line); }
+.test-brand { font-size:1.3rem; font-weight:650; text-decoration:none; color:var(--ink); }
+.test-header nav { display:flex; flex-wrap:wrap; gap:4px 16px; }
+.test-header nav a { display:inline-flex; align-items:center; min-height:44px; padding:6px 4px; font-weight:600; }
+.test-header nav a[aria-current] { text-decoration-thickness:3px; }
+h1,h2,h3 { line-height:1.2; letter-spacing:-.015em; }
+h1 { font-size:clamp(2rem,1.5rem + 2vw,2.75rem); max-width:23ch; margin:12px 0 20px; }
+h2 { font-size:clamp(1.75rem,1.5rem + 1vw,2rem); margin:0 0 16px; }
+h3 { font-size:1.2rem; margin-top:28px; }
+p { margin:0 0 16px; }
+.hero,.page-heading { padding:32px 0 18px; }
+.eyebrow { font-size:1rem; letter-spacing:.04em; font-weight:650; color:var(--blue); }
+.intro { max-width:65ch; font-size:1.3125rem; color:var(--muted); }
+.choices { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin:12px 0 24px; }
+.choice { display:flex; flex-direction:column; align-items:flex-start; padding:26px; border:1px solid var(--line);  border-radius:12px; background:white; text-decoration:none; color:var(--ink); }
+.choice:hover { background:#E8F2F8; border-color:var(--blue); }
+.choice h2 { margin:18px 0 12px; }
+.choice p { color:var(--muted); }
+.card-action { margin-top:auto; padding-top:14px; font-weight:600; color:var(--blue); text-decoration:underline; text-underline-offset:.2em; }
+.start-link { display:flex; flex-wrap:wrap; align-items:center; gap:14px 22px; }
+.start-link span { font-size:1rem; color:var(--muted); }
+.button,button { display:inline-block; min-height:44px; padding:12px 20px; background:var(--blue); color:white; border:2px solid var(--blue); border-radius:7px; font:inherit; font-weight:650; cursor:pointer; text-decoration:none; }
+.button:hover,button:hover { background:#204d74; }
+.note { padding:20px 24px; margin:26px 0; border-left:4px solid var(--green); background:#EAF3EC; border-radius:0 8px 8px 0; max-width:72ch; }
+.step { max-width:68ch; padding:30px 0; border-bottom:1px solid var(--line); }
+.step h2:not(:first-child) { margin-top:32px; }
+.step-number { display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; background:#EAF3EC; border-radius:50%; margin-right:8px; font-size:1.1rem; }
+.question { background:white; border:1px solid var(--line); border-radius:9px; padding:22px; margin:18px 0; }
+.question p { white-space:pre-wrap; }
+.question button { font-size:1.125rem; padding:8px 14px; background:white; color:var(--blue); }
+.question button:hover { background:#E8F2F8; }
+[hidden] { display:none !important; }
+.copy-status { color:var(--green); display:block; font-size:1rem; margin-top:8px; }
+.copy-status:empty { display:none; }
+summary { cursor:pointer; padding:12px 0; text-decoration:underline; text-underline-offset:.2em; }
+details p { padding:16px; background:#E8F2F8; }
+.finish { padding:30px 0 10px; max-width:68ch; }
+.finish .button { margin-bottom:16px; }
+.cycle { background:#E8F2F8; padding:16px 22px; border-radius:8px; font-weight:650; }
+.cycle span { padding:0 6px; }
+.resource-list { padding-left:22px; margin:0; }
+.resource-list li { margin:8px 0; }
+.resource-list a { display:inline-block; padding:8px 0; }
+.resource-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.panel { margin:0; padding:24px; border:1px solid var(--line); border-radius:10px; background:white; }
+img { max-width:100%; height:auto; }
+figcaption { font-size:1rem; margin-top:12px; }
+.lab-footer { margin-top:40px; padding:24px 0; border-top:1px solid var(--line); font-size:1rem; color:var(--muted); }
+.lab-footer a { display:inline-block; padding:8px 0; }
+@media(max-width:58rem) { .choices { grid-template-columns:1fr; } .choice { padding:22px; } .choice h2 { margin-top:10px; } .hero,.page-heading { padding-top:28px; } }
+@media(max-width:38rem) { body { padding:0 18px; } .resource-grid { grid-template-columns:1fr; } .test-header { align-items:flex-start; } .test-header nav { gap:4px 12px; } .note,.question { padding:18px; } }
+@media print { .test-header, .lab-footer, button { display:none; } body { color:black; background:white; } .step,.question { break-inside:avoid; } }
+
+/* Allow enlarged text to wrap inside the existing cards and navigation. */
+.choice, .panel, .test-header nav { min-width:0; }
+button, .button { max-width:100%; white-space:normal; }
