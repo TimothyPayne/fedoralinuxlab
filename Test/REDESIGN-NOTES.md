@@ -44,7 +44,6 @@ Nothing outside Test was edited. Nothing was pushed or deployed.
 - `FastFoodRobots.html`
 - `FedoraLinks.html`
 - `GitHubAI.html`
-- `GitHubAI2.html`
 - `GradeInflation.html`
 - `InfoLinks.html`
 - `LUGreasons.html`
@@ -61,6 +60,9 @@ Nothing outside Test was edited. Nothing was pushed or deployed.
 - `SkillsLinks.html`
 - `TaxPayers.html`
 - `TheWhy.html`
-- `UsUkAssistance.html`
 - `assets/css/theme.css`
 - `index.html`
+
+## Single beginner conversation example
+
+GitHubAI.html now contains the short adapted conversation lesson. The duplicate coding example was preserved outside the website checkout and removed from Test. Its navigation and sitemap entry were removed; the general practice builder remains in ProjectLinks.html.

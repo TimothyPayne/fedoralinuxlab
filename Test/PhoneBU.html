@@ -1,193 +1,103 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="First problem-solving project: Backup your phone by booting Fedora Linux from USB. Learn data management and Linux basics hands-on.">
-	<meta name="keywords" content="phone backup, Fedora USB boot, data backup, Linux tutorial, hands-on learning, first Linux project">
-	<link rel="canonical" href="https://aipracticelab.org/PhoneBU.html">
-	<title>Fedora Phone Backup Project Guide Using Fedora Live USB</title>
-	<meta name="created" content="2025-11-28T10:45:51.776133987"/>
-	<meta name="changed" content="2025-11-28T10:48:16.123115400"/>
-<link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Practice copying selected Android photos and files to a USB drive using Fedora. Choose what matters, check the copies, and keep the originals.">
+<title>Copy Android Photos and Files | AI Practice Lab</title>
+<link rel="stylesheet" href="assets/css/practice-room.css">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="test-header"><a class="test-brand" href="index.html">AI Practice Lab</a><nav aria-label="Primary navigation"><a href="StartHere.html">Start Here</a><a href="Practice.html">Practice</a><a href="AIAtWork.html">AI at Work</a><a href="GeekLab.html">Geek Lab</a></nav></header>
 <main id="main-content">
-<h1>First HowTo: Back Up Your Phone Using Fedora Live USB</h1>
-<section class="readable-flow">
-<p><strong>Estimated time:</strong> 15-30 minutes<br/>
-<strong>Difficulty:</strong> Easy (beginner)<br/>
-<strong>Audience:</strong> Teens learning how to use Linux and safely copy files</p>
-
-<p>You will boot a computer from a Fedora live USB, connect your phone, and copy photos/files to a second USB stick for a simple manual backup.</p>
-
-<h2>What You Need</h2>
+<div class="page-heading">
+<p class="eyebrow">COMPUTER SKILLS · PRACTICE COPYING FILES</p>
+<h1>Copy Android photos and files to a USB drive.</h1>
+<p class="intro">Which photos or documents would you be upset to lose? Make a separate copy of those first. You do not need to copy everything or pay for online storage.</p>
+</div>
+<aside class="note"><strong>This is a selected-file backup, not a complete phone backup.</strong> It copies files you can access, such as photos and documents. It does not save all your apps, messages, contacts, passwords, or phone settings. Files stored only online need to be downloaded first; some apps need their own export or backup method.</aside>
+<section class="step">
+<h2>1. Get ready</h2>
 <ul>
-	<li>A computer that can boot from USB.</li>
-	<li>Two USB sticks:</li>
-	<ul>
-		<li>USB A: a Fedora Live USB (the one you boot from).</li>
-		<li>USB B: an empty or spare USB (where you will copy the phone files).</li>
-	</ul>
-	<li>A phone (Android is easiest for this guide).</li>
-	<li>A USB cable for your phone.</li>
-	<li>Optional: Wi-Fi in the live session if you want to install extra tools.</li>
+<li>Your own unlocked Android phone, or permission from its owner.</li>
+<li>A USB cable that supports data transfer, not just charging.</li>
+<li>A computer running Fedora and an external USB drive with room for your chosen files.</li>
 </ul>
-
-<hr>
-
-<h2>Safety and Privacy First</h2>
-<ul>
-	<li>Back up only your own phone, or a phone you have permission to copy.</li>
-	<li>Do not overwrite important files on the backup USB. Create a new backup folder first.</li>
-	<li>Keep phone battery above 20% or leave it plugged in while copying.</li>
-</ul>
-
-<hr>
-
-<h2>Quick Overview</h2>
-<ol>
-	<li>Prepare USB B (check space and format if needed).</li>
-	<li>Boot computer from Fedora Live USB (USB A).</li>
-	<li>Connect USB B and your phone.</li>
-	<li>On phone, choose File transfer / MTP mode.</li>
-	<li>Use Fedora Files to copy folders (like DCIM) to USB B.</li>
-	<li>Safely eject both devices.</li>
-</ol>
-
-<hr>
-
-<h2>Step-by-Step (GUI, Beginner Friendly)</h2>
-
-<h3>A. Prepare USB B (Backup USB)</h3>
-<ol>
-	<li>Plug USB B into the computer (before or after booting).</li>
-	<li>Confirm enough free space for photos/files. Move old files or use a new USB if needed.</li>
-	<li>If you want broad compatibility with Windows/Mac/phones, format USB B as exFAT:</li>
-	<ul>
-		<li>Open Disks (gnome-disk-utility).</li>
-		<li>Select USB B, click the gear icon, then Format Partition.</li>
-		<li>Choose exFAT (or FAT for very small drives), name it like PHONE-BACKUP.</li>
-		<li>Warning: formatting erases everything on that USB.</li>
-	</ul>
-</ol>
-
-<h3>B. Boot Fedora Live</h3>
-<ol>
-	<li>Insert Fedora Live USB (USB A).</li>
-	<li>Restart and open boot menu (often F12/F10/Esc), then choose the USB device.</li>
-	<li>Choose Try Fedora (live session, not install).</li>
-</ol>
-
-<h3>C. Connect Devices</h3>
-<ol>
-	<li>Plug in USB B if it is not already connected.</li>
-	<li>Connect your phone with its USB cable.</li>
-	<li>Unlock phone and choose File transfer (MTP). If needed, open phone notifications and change USB mode.</li>
-</ol>
-
-<h3>D. Copy Files (Files / Nautilus)</h3>
-<ol>
-	<li>Open the Files app.</li>
-	<li>In the left sidebar you should see:</li>
-	<ul>
-		<li>USB B by its label.</li>
-		<li>Your phone as an MTP device.</li>
-	</ul>
-	<li>Open phone entry, then open Internal storage.</li>
-	<li>Common folders to back up:</li>
-	<ul>
-		<li>DCIM (camera photos and videos)</li>
-		<li>Pictures (app photos)</li>
-		<li>Downloads</li>
-		<li>Documents (if present)</li>
-	</ul>
-	<li>Create a backup folder on USB B, for example: MyPhoneBackup-2025-11-28.</li>
-	<li>Copy folders from phone (Ctrl+C) and paste into USB B backup folder (Ctrl+V).</li>
-	<li>Wait for copy to finish. Do not disconnect during transfer.</li>
-	<li>Spot-check by opening a few copied files from USB B.</li>
-</ol>
-
-<h3>E. Finish Safely</h3>
-<ol>
-	<li>In Files, unmount/eject the phone.</li>
-	<li>Eject USB B from Files.</li>
-	<li>Disconnect phone and USB only after safe-remove confirmation.</li>
-</ol>
-
-<hr>
-
-<h2>Troubleshooting (Common Problems)</h2>
-<ul>
-	<li><strong>Phone not showing up:</strong></li>
-	<ul>
-		<li>Unlock phone and set USB mode to File transfer (MTP).</li>
-		<li>Try a different USB cable (some are charge-only).</li>
-		<li>Try a different USB port.</li>
-	</ul>
-	<li><strong>Files app says "Cannot access":</strong></li>
-	<ul>
-		<li>Wait a few seconds; MTP can mount slowly.</li>
-		<li>Reconnect phone or restart Files app.</li>
-	</ul>
-	<li><strong>USB B has no space:</strong></li>
-	<ul>
-		<li>Copy DCIM first (usually largest and most important).</li>
-		<li>Use a larger USB or remove unneeded files.</li>
-	</ul>
-	<li><strong>If Fedora Live lacks MTP support (rare):</strong></li>
-	<ul>
-		<li>Use network to install support packages or use the optional ADB method below.</li>
-	</ul>
-</ul>
-
-<hr>
-
-<h2>Optional Advanced Method: Use ADB</h2>
-<ul>
-	<li>This requires Android Developer options and USB debugging.</li>
-	<li>In Fedora Live you usually need to install android-tools (requires internet):</li>
-	<ul>
-		<li>Open Terminal and run: <code>sudo dnf install android-tools</code></li>
-		<li>Connect phone and allow debugging prompt.</li>
-		<li>List device: <code>adb devices</code></li>
-		<li>Copy storage example: <code>adb pull /sdcard/ /run/media/live//MyPhoneBackup-adb/</code></li>
-		<li>ADB is powerful but slower and more advanced.</li>
-	</ul>
-</ul>
-
-<hr>
-
-<h2>iPhone Users: Short Note</h2>
-<ul>
-	<li>iPhone file transfer on Linux is not as simple as Android MTP and may require extra tools.</li>
-	<li>Simple options:</li>
-	<ul>
-		<li>Use iCloud backup.</li>
-		<li>Use Mac/Windows with iTunes for full local backup.</li>
-		<li>Linux + libimobiledevice is possible but advanced.</li>
-	</ul>
-</ul>
-
-<hr>
-
-<h2>What to Check After Backup</h2>
-<ul>
-	<li>Open a few copied photos/files directly from USB B.</li>
-	<li>Check total size to confirm major folders copied correctly.</li>
-	<li>Store backup safely, or duplicate it to cloud/offsite storage.</li>
-</ul>
-
-<h2>Why This Is a Great First Project</h2>
-<ul>
-	<li>You get real hands-on practice with Linux boot media.</li>
-	<li>You complete a practical task: protecting important files.</li>
-	<li>You learn USB handling, filesystems, and safe ejection habits.</li>
-</ul>
+<p>These steps describe Fedora Workstation's <strong>Files</strong> app. Other desktops, including Xfce, use different file managers and may need extra phone-transfer support. Menu names vary. Start with one photo; a large collection can take much longer.</p>
+<details>
+<summary>Using Fedora from a live USB instead?</summary>
+<p>If you already have a prepared Fedora Workstation live USB, you can use it to try Fedora without installing it. You will need a <strong>second USB drive</strong> for your copied files. Keep the startup USB plugged in while using the live session.</p>
+<p>Use your computer manufacturer's boot-menu instructions to start from the prepared USB. Choose the option to try Fedora rather than install it. If the choices are unclear, stop and get help. Do not install Fedora or change the computer's disks for this exercise.</p>
+<p>Preparing startup media is a separate task: writing the image erases its target USB. <a href="https://fedoraproject.org/workstation/">Fedora's Workstation page explains the live-USB option</a>. A live session's temporary storage is not your backup destination.</p>
+</details>
 </section>
+<section class="step">
+<h2>2. Make a folder on the backup drive</h2>
+<ol>
+<li>Connect the drive and open <strong>Files</strong>. Find the external drive in the sidebar by its name. Open it and check that it is the drive you intended.</li>
+<li>Right-click an empty area and choose <strong>Properties</strong> to check available space. Allow room for the files you plan to copy and future backups.</li>
+<li>Create a new folder named something like <strong>Phone files — 2026-10-03</strong>, using today's date. Keep existing files on the drive intact.</li>
+</ol>
+<p><strong>If you are asked to format the drive, cancel.</strong> Formatting erases data and is not part of this exercise. Use a suitable prepared drive or get help first.</p>
+</section>
+<section class="step">
+<h2>3. Connect your phone</h2>
+<ol>
+<li>Connect the phone to the computer with the data cable and unlock it.</li>
+<li>Open the phone's USB notification. Under <strong>Use USB for</strong>, select <strong>File transfer</strong>, sometimes labelled <strong>MTP</strong>. Approve a file-access request only on a computer you trust.</li>
+<li>In Files, look for the phone in the sidebar. Open it, then open its internal storage or memory card if available.</li>
+</ol>
+<p>Keep the phone charged and available during the copy. If access stops when it locks, unlock it again.</p>
+</section>
+<section class="step">
+<h2>4. Choose files and copy them</h2>
+<p>Look in <strong>DCIM</strong> for camera photos and videos, <strong>Pictures</strong> for other images, and <strong>Download</strong> or <strong>Documents</strong> for saved files. Folder names and locations vary. You can choose a few important files rather than a whole folder.</p>
+<ol>
+<li>Select one photo on the phone. Press <strong>Ctrl + C</strong> to copy it.</li>
+<li>Open your dated folder on the external drive. Press <strong>Ctrl + V</strong> to paste a copy there.</li>
+<li>Wait for the transfer to finish, then open the copied photo from the external drive.</li>
+<li>If that works, repeat with the other files or folders you chose. Keep same-named folders from different locations in separately named folders so they do not overwrite each other.</li>
+</ol>
+<p><strong>Use copy, not cut or move.</strong> Leave the originals on the phone. If an error appears, or you are asked to replace something unexpectedly, pause and check before continuing.</p>
+</section>
+<section class="step">
+<h2>5. Check the copy and finish</h2>
+<ol>
+<li>Browse the external drive and check that your chosen files are present. Open important photos and documents from that drive. Compare file counts and sizes where available; investigate any missing or unreadable files.</li>
+<li>To practice getting a file back, copy one saved file into a separate folder on the computer called <strong>Backup check</strong> and open it. Do not replace the original. In a live session, this practice copy disappears when the session ends.</li>
+<li>Close files opened from the drive. Use the eject or unmount control beside the external drive in Files. Wait until copying has finished and the drive is safe to unplug.</li>
+<li>Eject the phone if Files offers that control, then disconnect its cable after transfers finish. If using a live USB, shut down Fedora before removing the startup USB.</li>
+</ol>
+<p>Opening one sample is useful, but does not prove every file copied correctly. Check the files you most want to keep before relying on the backup.</p>
+</section>
+<section class="finish">
+<h2>You have a separate copy of the files you chose.</h2>
+<p>Disconnect the backup drive and store it safely. Protect private photos and documents from people who should not see them.</p>
+<p>Repeat after important new photos or changes. A new dated folder keeps the earlier copy while you check the new one; allow space for both. Do not delete your only good copy to make room.</p>
+<p>A second drive stored somewhere else, or an online service you choose, can add protection if both your phone and nearby backup are lost. Consider the cost, privacy, and storage limits. Neither is required to complete this exercise.</p>
+<a class="button" href="GeekLab.html">Back to Geek Lab</a>
+</section>
+<details class="optional-section">
+<summary>If something does not work</summary>
+<ul>
+<li><strong>Phone missing:</strong> unlock it, reselect File transfer, and try another data cable or USB port. Do not unplug during a transfer.</li>
+<li><strong>Access denied:</strong> check the phone's permission request. If your Fedora desktop still cannot open the phone, get help with its file-transfer support. This exercise does not need developer mode, USB debugging, or terminal commands.</li>
+<li><strong>Not enough room:</strong> select fewer must-have files or use a larger prepared drive. Do not erase existing files just to finish the exercise.</li>
+<li><strong>A large video will not copy:</strong> the drive's file format may have a file-size limit. Keep the original and ask for help; do not format the drive as a quick fix.</li>
+<li><strong>A photo is missing:</strong> it may be stored only online or inside an app. Check that app's download or export options; USB file access does not include everything an app can display.</li>
+</ul>
+</details>
+<details class="optional-section">
+<summary>Using an iPhone?</summary>
+<p>This Android file-transfer exercise does not apply to iPhones. Apple offers both computer and iCloud backup methods; online storage is a choice, not the only option. <a href="https://support.apple.com/en-us/108771">Compare Apple's backup methods</a>.</p>
+</details>
+<details class="optional-section">
+<summary>Sources and what has been checked</summary>
+<p>Reviewed on 3 October 2026. <a href="https://support.google.com/android/answer/9064445?hl=en">Google's USB file-transfer instructions</a> support the Android unlock, USB-mode, and cable checks. Google's page describes Windows and Chromebook transfers; it does not verify this exact Fedora setup. Actual phone and desktop compatibility still needs a practical check.</p>
+<p><a href="BackupWindows.html">Practice copying important Windows files to an external drive</a>.</p>
+</details>
 </main>
 <footer class="lab-footer"><p><strong>AI Practice Lab</strong> · A place to try, learn, and try again.</p><p><a href="index.html">Home</a> · <a href="TheWhy.html">About the lab</a> · <a href="Contact.html">Contact</a></p></footer>
 </body>

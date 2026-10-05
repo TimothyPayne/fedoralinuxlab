@@ -1,80 +1,69 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title>HalfInch</title>
-	<meta name="generator" content="LibreOffice 26.2.5.2 (Linux)"/>
-	<meta name="created" content="2026-08-30T22:34:59.876900973"/>
-	<meta name="changed" content="2026-08-30T22:37:16.732066319"/>
-	<style type="text/css">
-		@page { size: 8.5in 11in; margin: 0.5in }
-		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
-		strong { font-weight: bold }
-		a:link { color: #000080; text-decoration: underline }
-	</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Explore how AI advances, what model parameters mean, and why benchmark scores are like gas-mileage figures: useful comparisons that depend on test conditions.">
+<title>AI Advancement and Test Results | AI Practice Lab</title>
+<link rel="stylesheet" href="assets/css/practice-room.css">
 </head>
-<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><p style="margin-bottom: 0in; line-height: 100%; text-decoration: none">
-<span style="display: inline-block; border: none; padding: 0in"><font face="Google Sans, Roboto, sans-serif"><font size="2" style="font-size: 10pt"><b>AI
-Overview</b></font></font></span></p>
-<div id="_DgSVaubSEZi6ruEPubOg-A4_2" dir="ltr"><p style="line-height: 100%; margin-bottom: 0in">
-	<span style="display: inline-block; border: none; padding: 0in"><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">In
-	an AI model, a </span></font></font></span><strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><b>parameter</b></font></font></span></strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	is an internal numerical value—specifically a </span></font></font></span><strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><b>weight
-	or bias</b></font></font></span></strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">—that
-	the neural network adjusts during training to store its
-	understanding of patterns in data. [<a href="https://www.linkedin.com/posts/vmiss_ai-shops-do-not-share-exact-parameter-counts-activity-7397655331511873539-SwIy">1</a>,
-	<a href="https://tensorwave.com/glossary/what-are-parameters-in-llms">2</a>,
-	<a href="https://www.youtube.com/shorts/K-k3Bpabqdw">3</a>]</span></font></font></span></span></p>
-	<p style="line-height: 100%; margin-bottom: 0in"><span style="display: inline-block; border: none; padding: 0in"><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">For
-	a </span></font></font></span><strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><b>10-trillion-parameter
-	model</b></font></font></span></strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	(like advanced frontier systems emerging from labs such as Anthropic
-	or OpenAI), that number means the network contains 10 trillion
-	individual adjustable &quot;knobs&quot; that work together to
-	process information, recognize relationships in text or code, and
-	generate responses. [<a href="https://www.aimagicx.com/blog/claude-mythos-5-trillion-parameter-model-developer-guide-2026">1</a>,
-	<a href="https://wccftech.com/openais-bel-has-over-10-trillion-parameters-and-it-might-just-be-the-worlds-first-agi-threshold-base-model/">2</a>,
-	<a href="https://tensorwave.com/glossary/what-are-parameters-in-llms">3</a>]</span></font></font></span></span></p>
-	<p style="margin-top: 0.25in; margin-bottom: 0.13in; line-height: 100%; text-decoration: none">
-	<span style="display: inline-block; border: none; padding: 0in"><font face="Google Sans, Roboto, sans-serif"><font size="5" style="font-size: 18pt"><b>What
-	Makes Up a Parameter?</b></font></font></span></p>
-	<ul>
-		<li><p style="margin-bottom: 0in; border: none; padding: 0in"><span style="display: inline-block; border: none; padding: 0in"><strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><b>Weights:</b></font></font></span></strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-		Numbers that scale the strength of the connection between
-		individual artificial neurons across different layers of the
-		network. Higher weights mean a stronger connection or influence.
-		[<a href="https://www.youtube.com/shorts/K-k3Bpabqdw">1</a>]</span></font></font></span></span></p></li>
-		<li><p style="margin-bottom: 0in; border: none; padding: 0in"><span style="display: inline-block; border: none; padding: 0in"><strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><b>Biases:</b></font></font></span></strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-		Additional adjustable numbers added to neurons to help the model
-		shift its activation thresholds up or down, ensuring accurate
-		pattern matching. [<a href="https://www.youtube.com/shorts/K-k3Bpabqdw">1</a>]</span></font></font></span></span></p></li>
-	</ul>
-	<p style="margin-top: 0.25in; margin-bottom: 0.13in; text-decoration: none">
-	<span style="display: inline-block; border: none; padding: 0in"><font face="Google Sans, Roboto, sans-serif"><font size="5" style="font-size: 18pt"><b>How
-	They Work in Practice</b></font></font></span></p>
-	<ul>
-		<li><p style="margin-bottom: 0in; border: none; padding: 0in"><span style="display: inline-block; border: none; padding: 0in"><strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><b>Learning
-		(Training):</b></font></font></span></strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-		During training, the model processes vast amounts of data. Every
-		time it makes a mistake or a correct prediction, an algorithm
-		tweaks these 10 trillion values slightly via backpropagation. [<a href="https://www.linkedin.com/posts/vmiss_ai-shops-do-not-share-exact-parameter-counts-activity-7397655331511873539-SwIy">1</a>]</span></font></font></span></span></p></li>
-		<li><p style="margin-bottom: 0in; border: none; padding: 0in"><span style="display: inline-block; border: none; padding: 0in"><strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><b>Scale
-		and Storage:</b></font></font></span></strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-		A parameter is stored as a single numerical value (often a
-		floating-point number). Across 10 trillion parameters, the sheer
-		volume of these numbers dictates the memory, hardware, and
-		infrastructure costs required just to host and run the model. [<a href="https://iternal.ai/llm-parameter-size-guide">1</a>,
-		<a href="https://www.linkedin.com/posts/vmiss_ai-shops-do-not-share-exact-parameter-counts-activity-7397655331511873539-SwIy">2</a>]</span></font></font></span></span></p></li>
-		<li><p style="margin-bottom: 0in; border: none; padding: 0in"><span style="display: inline-block; border: none; padding: 0in"><strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><b>Not
-		a Measure of Consciousness:</b></font></font></span></strong><span style="text-decoration: none"><font face="Google Sans, Roboto, sans-serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-		While 10 trillion parameters approach the estimated scale of
-		synapses in biological brains, parameter count is a measure of
-		architectural capacity and pattern-storage size, not an automatic
-		guarantee of broad reasoning quality or general intelligence.</span></font></font></span></span></p></li>
-	</ul>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="test-header"><a class="test-brand" href="index.html">AI Practice Lab</a><nav aria-label="Primary navigation"><a href="StartHere.html">Start Here</a><a href="Practice.html">Practice</a><a href="AIAtWork.html">AI at Work</a><a href="GeekLab.html">Geek Lab</a></nav></header>
+<main id="main-content">
+<div class="page-heading">
+<p class="eyebrow">GEEK LAB · UNDERSTANDING AI ADVANCEMENT</p>
+<h1>AI is advancing. What do the numbers tell us?</h1>
+<p class="intro">You may hear that an AI model is bigger or has scored better on a test. Those numbers can help explain progress. The next question is: what can it do better for you?</p>
 </div>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
+<section class="step">
+<h2>More than a bigger number</h2>
+<p>An AI model is the trained system behind an AI tool. During training, numerical values called <strong>parameters</strong> are adjusted as the model learns patterns from examples. Think of them as adjustable settings inside the model, rather than facts you can look up one by one.</p>
+<p>Researchers work on training methods, model design, and ways to run models more efficiently. Increasing the number of parameters is one approach; it is not the whole story. A parameter count alone cannot tell you whether a tool will write a clearer message, solve your problem, or give a correct answer.</p>
+<p>A useful way to look for advancement is to ask: does the new version handle a task more reliably, follow your instructions better, or give a useful result with less time and effort? Look for evidence about that task, not just a large headline number.</p>
+</section>
+<section class="step">
+<h2>Think of a car's gas-mileage figure</h2>
+<p>A car may be advertised with an impressive miles-per-gallon number. You still want to know how it was measured. A result from especially favorable conditions may not match your trips through traffic, hills, or cold weather.</p>
+<p>Official EPA mileage estimates use standardized tests intended to represent typical driving. Even those estimates are comparisons, not a promise of the mileage every driver will get.</p>
+<p><strong>AI benchmark scores deserve the same kind of attention.</strong> A benchmark is a set of test tasks used to measure performance. A higher score can show progress on that test. It does not promise the same success on every everyday task.</p>
+<aside class="note">Think “useful test result, with conditions attached.” Ask what was tested and whether it resembles the work you want the AI to do.</aside>
+</section>
+<section class="step">
+<h2>What were the test conditions?</h2>
+<p>Before relying on a headline score, look for a few details:</p>
+<ul>
+<li><strong>The task:</strong> was it answering multiple-choice questions, writing code, or doing something else?</li>
+<li><strong>The setup:</strong> what instructions did the model receive, and could it use extra tools or try more than once?</li>
+<li><strong>The comparison:</strong> were both models tested with the same rules? Which versions were used?</li>
+<li><strong>The source:</strong> who ran the test, and can you find its methods and limits?</li>
+</ul>
+<p>Unlike EPA mileage ratings, AI benchmarks do not all follow one common testing procedure. Even tests with the same name can be run differently. That makes the details important when comparing scores.</p>
+<p>You do not need to become a test expert. If the conditions are missing, treat the number as incomplete information.</p>
+</section>
+<section class="step">
+<h2>Try a small task you can check</h2>
+<p>Here is a made-up example. You can use it to explore whether an AI tool follows instructions:</p>
+<div class="question"><p>Turn these notes into a friendly email under 60 words: The garden-club meeting is Saturday at 10 am in the library meeting room. Bring one idea for the spring planting. Include a subject line. Do not add facts that are not in the notes.</p></div>
+<p>Check the day, time, place, and request. Did the AI invent anything? Is it under 60 words? Would you need to make many changes before using it?</p>
+<p>If you compare two tools or versions, give both the same request. Keep private details out. One successful answer is a useful example, not proof that a tool will always succeed.</p>
+</section>
+<section class="finish">
+<h2>Look for progress you can use.</h2>
+<p>AI advancement is worth exploring. Test scores help describe it, and your own checked examples help you understand what it means in practice. Keep asking: “What improved, under what conditions, and does that help with my task?”</p>
+<a class="button" href="GeekLab.html">Back to Geek Lab</a>
+</section>
+<details class="optional-section">
+<summary>Read more about the ideas on this page</summary>
+<ul>
+<li><a href="https://research.ibm.com/blog/AI-inference-explained">IBM Research: training, parameters, and running an AI model</a>.</li>
+<li><a href="https://www.fueleconomy.gov/feg/why_differ.shtml">U.S. Department of Energy and EPA: why your mileage can vary</a>.</li>
+<li><a href="https://www.anthropic.com/news/evaluating-ai-systems">Anthropic: challenges in measuring AI performance</a>, including how test setup affects comparisons.</li>
+</ul>
+<p>Sources checked on 3 October 2026. This page explains advancement and how to interpret results; it does not rank particular models.</p>
+</details>
+</main>
+<footer class="lab-footer"><p><strong>AI Practice Lab</strong> · A place to try, learn, and try again.</p><p><a href="index.html">Home</a> · <a href="TheWhy.html">About the lab</a> · <a href="Contact.html">Contact</a></p></footer>
 </body>
 </html>

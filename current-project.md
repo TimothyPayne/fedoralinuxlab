@@ -1,5 +1,7 @@
 # Current Project
 
+> Current website tasks and session handoff: [Website work](WEBSITE-WORK.md). Updated 3 October 2026. Use that note for current priorities; older status and Test exclusions below are historical.
+
 ## Purpose
 
 Help people in New Mexico build practical AI and computer-literacy skills.

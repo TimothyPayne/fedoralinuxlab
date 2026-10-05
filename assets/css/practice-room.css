@@ -63,3 +63,8 @@ figcaption { font-size:1rem; margin-top:12px; }
 /* Allow enlarged text to wrap inside the existing cards and navigation. */
 .choice, .panel, .test-header nav { min-width:0; }
 button, .button { max-width:100%; white-space:normal; }
+
+/* Keep optional learning separate from the next step in the beginner journey. */
+.optional-practice { max-width:68ch; margin:16px 0; padding:8px 20px; border:1px solid var(--line); border-radius:8px; background:white; }
+.optional-practice > summary { color:var(--blue); min-height:44px; }
+.optional-practice .finish { padding-top:20px; }

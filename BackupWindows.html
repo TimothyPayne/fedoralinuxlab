@@ -1,79 +1,98 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Complete guide to backing up Windows safely before installing Fedora Linux. Protect your data and learn safe dual-boot setup procedures.">
-	<meta name="keywords" content="Windows backup, Fedora Linux installation, data backup, dual boot, Windows safety, Linux installation guide">
-	<link rel="canonical" href="https://aipracticelab.org/BackupWindows.html">
-	<title>How To Backup and Rescue Windows - Fedora Linux Lab Org</title>
-	<meta name="created" content="00:00:00"/>
-	<meta name="changed" content="2025-11-27T17:11:18.422991427"/>
-<link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Choose the Windows files that matter to you, copy them to an external drive, and check your backup. Online storage is optional.">
+<title>Back Up the Files That Matter | AI Practice Lab</title>
+<link rel="stylesheet" href="assets/css/practice-room.css">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="test-header"><a class="test-brand" href="index.html">AI Practice Lab</a><nav aria-label="Primary navigation"><a href="StartHere.html">Start Here</a><a href="Practice.html">Practice</a><a href="AIAtWork.html">AI at Work</a><a href="GeekLab.html">Geek Lab</a></nav></header>
 <main id="main-content">
-<section class="readable-flow">
-<h1>How To Backup Windows</h1>
-
-<p>In Windows File Explorer, the left sidebar shows Local Disk (C:).</p>
-<p>Right-click the drive and choose Properties at the bottom of the list. This shows the drive size and what is used.</p>
-<p>If needed, inexpensive 2.5-inch laptop drives and USB external cases can be used for backups.</p>
-
-<hr>
-
-<h2>Part 1: Create a Recovery Drive (Windows 10)</h2>
-<p>This is needed to recover from a data disaster. Microsoft requires proper recovery media for reinstall and repair.</p>
-
-<ol>
-	<li>In the lower-left search box, type Recovery Drive and open it.</li>
-	<li>Confirm Backup system files is selected (this is usually the default).</li>
-	<li>Click Next and wait.</li>
-	<li>Select your USB flash drive from the list.</li>
-	<li>Click Next. Warning: all data on that USB drive will be deleted.</li>
-	<li>Click Create. This can take a long time depending on USB speed.</li>
-	<li>Click Finish when the recovery drive is ready.</li>
-</ol>
-
-<h2>Part 2: Partition and Prepare the Backup Drive</h2>
-<p>Use extreme caution here. Measure twice, cut once.</p>
-
-<ol>
-	<li>In the lower-left search box, type Partition and open Create and format hard disk partitions.</li>
-	<li>In Disk Management, confirm the C: drive is your Windows NTFS drive.</li>
-	<li>Confirm the RECOVERY USB is the device you are editing (often FAT32). Check twice.</li>
-	<li>Right-click the Unallocated section.</li>
-	<li>Choose New Simple Volume.</li>
-	<li>In the wizard, click Next through size and drive-letter screens. Default values are usually correct.</li>
-	<li>Format the volume (default NTFS is fine) and set a label like Backup.</li>
-	<li>Leave Quick format checked (default), then click Finish.</li>
-</ol>
-
-<p>Close all open windows. Your backup drive is now ready.</p>
-
-<hr>
-
-<h2>Part 3: Run Windows Backup</h2>
-<p>Windows encourages cloud storage, but you can still back up to USB.</p>
-
-<ol>
-	<li>Open Control Panel from the lower-left search box.</li>
-	<li>Go to System and Security.</li>
-	<li>Select Backup and Restore (Windows 7).</li>
-	<li>Select Change settings to choose the backup drive.</li>
-	<li>In the pop-up window, double-click the drive you want to use.</li>
-	<li>For setup, Let Windows choose is the default and recommended.</li>
-	<li>Click Next.</li>
-	<li>Review settings (defaults are usually fine; schedule can be changed).</li>
-	<li>Click Save settings and run backup.</li>
-</ol>
-
-<p>Backup can be started any time; you do not have to wait for the scheduled day.</p>
-<p>While backup is running, click View details to watch progress.</p>
+<div class="page-heading">
+<p class="eyebrow">COMPUTER SKILLS · ONE USEFUL TASK</p>
+<h1>Back up the files that matter.</h1>
+<p class="intro">What would you be upset to lose? Start with those files. You can save a separate copy on an external USB drive you own, without paying for online storage.</p>
+</div>
+<aside class="note"><strong>You have a choice.</strong> Windows may offer OneDrive online storage. You can use it, choose another service, or keep your backup on your own drive. This exercise uses File Explorer to copy selected files. It does not require a cloud account or subscription.</aside>
+<section class="step">
+<h2>1. Choose what you want to keep</h2>
+<p>You do not have to copy everything on the hard drive. Look for files that would be difficult or impossible to replace:</p>
+<ul>
+<li>Family photos and videos.</li>
+<li>Letters, financial records, and other important documents.</li>
+<li>Your writing, schoolwork, business files, and personal projects.</li>
+</ul>
+<p>Check Documents, Pictures, Desktop, and any folders you use. Look in Downloads too: it may contain something important, not just replaceable downloads.</p>
+<p>Installers you can download again, duplicate copies, and files you no longer want may not need backup. <strong>You decide what matters.</strong> You do not need to delete anything to leave it out of this backup.</p>
+<p>Choosing fewer files can reduce the storage you need. In File Explorer, select a folder or file, right-click it, and choose <strong>Properties</strong> to see its size. Check each group you plan to copy and allow extra room for future files and older backup copies.</p>
 </section>
+<section class="step">
+<h2>2. Connect a separate backup drive</h2>
+<p>Use an external USB hard drive, SSD, or USB flash drive with enough available space. A folder on the computer's own drive is not a separate backup if that drive fails.</p>
+<ol>
+<li>Plug in the external drive. Press <strong>Windows key + E</strong> to open File Explorer.</li>
+<li>Open <strong>This PC</strong>. Identify the external drive by its name and size. Do not choose Local Disk (C:).</li>
+<li>Right-click the external drive and select <strong>Properties</strong> to check its free space.</li>
+<li>Open that drive. Right-click an empty area and choose <strong>New → Folder</strong>. Give it a clear name such as <strong>Important files — 2026-10-03</strong>, using today's date.</li>
+</ol>
+<p><strong>If Windows asks to format the drive, cancel.</strong> Formatting erases its contents. Get help identifying or preparing the drive before continuing. Keep any existing files on it intact.</p>
+</section>
+<section class="step">
+<h2>3. Copy your chosen files</h2>
+<p>Save and close documents you are working on first. Try one small folder before copying a larger collection.</p>
+<ol>
+<li>Find a file or folder you want to keep. Select it and press <strong>Ctrl + C</strong> to copy it.</li>
+<li>Open your dated backup folder on the external drive. Press <strong>Ctrl + V</strong> to paste a copy there.</li>
+<li>Wait for copying to finish. Repeat for the other files you chose. If source folders have the same name, put them in separately named folders inside the backup.</li>
+<li>If Windows reports an error, or asks to replace files unexpectedly, pause and check. Do not assume the backup is complete.</li>
+</ol>
+<p><strong>Copy, rather than cut or move.</strong> Your originals should stay on the computer. Copy your personal files, not the Windows or Program Files folders.</p>
+<details>
+<summary>Are some of your files stored in OneDrive?</summary>
+<p>A cloud symbol can mean the file is online only. While connected to the internet, right-click the files you chose and select <strong>Always keep on this device</strong>. Wait for them to download before copying. Downloading needs room on your computer too.</p>
+<p>This does not turn off OneDrive or remove its existing online copies. After copying, check the files on the external drive as described below. <a href="https://support.microsoft.com/en-us/onedrive/save-disk-space-with-onedrive-files-on-demand-for-windows">Microsoft's guide to online-only files</a>.</p>
+</details>
+</section>
+<section class="step">
+<h2>4. Check that you can get a file back</h2>
+<p>A finished progress bar is a start. Now check your copy.</p>
+<ol>
+<li>Open the backup folder on the external drive. Look for the files you intended to save.</li>
+<li>Open a few copied documents and photos directly from that drive. Check that they are readable and contain what you expect.</li>
+<li>For a small practice restore, create a new folder on your computer called <strong>Backup check</strong>. Copy one file from the external drive into it and open that copy. Do not replace or delete the original.</li>
+<li>Close files opened from the external drive. Use <strong>Safely Remove Hardware</strong> in the taskbar, or <strong>Eject</strong> if File Explorer offers it. Wait for permission to disconnect.</li>
+</ol>
+<p>A sample check does not prove every file copied correctly. Check your most important files individually, and resolve any errors before relying on this backup.</p>
+</section>
+<section class="finish">
+<h2>You now have a separate copy.</h2>
+<p>This protects the files you selected, as they were when you copied them. It does not save all your apps, Windows settings, or a complete restorable Windows system. Some apps keep information in their own storage and need a separate export or backup.</p>
+<p>Repeat the copy after important changes, or choose a regular time that works for you. Use a new dated folder so you keep the previous copy until the new one is checked. Older copies use space too; keep enough for your needs and do not remove your only good backup.</p>
+<p>Disconnect the drive when finished and store it safely. Keep sensitive records away from people who should not see them.</p>
+<a class="button" href="GeekLab.html">Back to Geek Lab</a>
+</section>
+<details class="optional-section">
+<summary>Optional: other backup choices</summary>
+<h2>A copy somewhere else</h2>
+<p>A computer and a backup drive in the same home can both be lost to fire, theft, or another disaster. For files you cannot replace, consider another copy elsewhere:</p>
+<ul>
+<li><strong>A second drive stored somewhere trusted:</strong> you buy or reuse the drive and bring it back to update it. Protect private files while it is away.</li>
+<li><strong>Online storage:</strong> convenient access away from home, with storage limits, privacy settings, and free or paid plans to compare. More space may cost money. You choose the provider and which files to upload.</li>
+</ul>
+<p>Selecting your must-have files can reduce the space needed for either option. Check whether a service keeps older versions and deleted files: synchronization can copy a deletion as well as a change.</p>
+<h2>Automatic local copies</h2>
+<p>Windows <strong>File History</strong> is another option for keeping versions of personal files on an external drive. Check which folders it includes and reconnect the drive for updates. It does not require Microsoft online storage. <a href="https://support.microsoft.com/en-au/windows/experience/backup-recovery/backup-and-restore-with-file-history">Read Microsoft's File History instructions</a>.</p>
+<h2>Recovering Windows itself</h2>
+<p>A Windows recovery USB helps with reinstalling Windows, but it does not contain your personal-file backup. Making recovery media erases the USB you select. Use a different USB from your file-backup drive. <a href="https://support.microsoft.com/en-us/windows/experience/backup-recovery/recovery-drive">Read Microsoft's recovery-drive instructions</a>.</p>
+</details>
+<details class="optional-section">
+<summary>Sources and Windows version note</summary>
+<p>Instructions reviewed on 3 October 2026. Windows labels may vary. The manual file-copy method applies to Windows 10 and 11; Windows 10 standard support ended on 14 October 2025. <a href="https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025">Check Microsoft's supported-system and extended-security options</a>.</p>
+<p><a href="https://support.microsoft.com/en-us/windows/experience/backup-recovery/move-your-files-to-a-new-windows-pc-using-an-external-storage-device">Microsoft: copy and check files using an external storage device</a>.</p>
+</details>
 </main>
 <footer class="lab-footer"><p><strong>AI Practice Lab</strong> · A place to try, learn, and try again.</p><p><a href="index.html">Home</a> · <a href="TheWhy.html">About the lab</a> · <a href="Contact.html">Contact</a></p></footer>
 </body>

@@ -20,6 +20,22 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            Test/**
+            Research/**
+            BakFiles/**
+            outputs/**
+            sources/**
+            .agents/**
+            .aws/**
+            .codex/**
+            .vscode/**
+            **/*.md
+            **/*.sh
+            Contact Page.txt
 
 # Instructions:
 # - Add the following repository secrets in GitHub: FTP_HOST, FTP_USERNAME, FTP_PASSWORD, FTP_REMOTE_DIR

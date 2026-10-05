@@ -1,101 +1,49 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="AI practice projects and exercises for learning prompt engineering and artificial intelligence skills. Resources for students and professionals.">
-    <meta name="keywords" content="AI practice, AI projects, prompt engineering, AI learning, ChatGPT practice, AI exercises, AI training">
-    
-	<title>GitHub Copilot Example of AI-Assisted Work</title>
-	<link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <style>
-      #main-content { font-family: Georgia, "Times New Roman", serif; line-height: 1.55; max-width: 780px; margin: 0 auto; padding: 1.5rem; color: #222; background: #fff; }
-      #main-content h1, #main-content h2, #main-content h3 { font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
-      #main-content h1 { font-size: 1.7rem; margin-bottom: 0.4rem; }
-      #main-content h2 { font-size: 1.35rem; margin-top: 2rem; border-bottom: 2px solid #333; padding-bottom: 0.25rem; }
-      #main-content h3 { font-size: 1.15rem; margin-top: 1.5rem; }
-      #main-content p, #main-content li { margin-bottom: 0.85rem; }
-      #main-content .intro { font-size: 1.05rem; }
-      #main-content .prompt-box, #main-content .exercise-box, #main-content .reflect-box { background: #f7f7f7; border-left: 5px solid #444; padding: 1rem 1.2rem; margin: 1.4rem 0; }
-	#main-content .exercise-instructions { background: #f7f7f7; border: 2px solid #444; padding: 1.2rem 1.4rem; margin: 1.4rem 0; }
-	#main-content .exercise-instructions-header { display: flex; justify-content: flex-end; margin-bottom: 1rem; }
-	#main-content .exercise-copy-button { background: #333; border: 2px solid #333; color: #fff; cursor: pointer; padding: 0.55rem 0.8rem; font: 600 0.95rem Arial, Helvetica, sans-serif; }
-	#main-content .exercise-copy-button:hover, #main-content .exercise-copy-button:focus { background: #fff; color: #333; }
-	#main-content .exercise-copy-status { margin: 0.5rem 0 0; font-size: 0.9rem; text-align: right; }
-      #main-content .note { font-size: 0.95rem; color: #444; font-style: italic; }
-      @media print { #main-content { max-width: none; padding: 0.5in; } }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="See a short example of how an AI responds to a request and how you can ask for a change in everyday words.">
+<title>What an AI Conversation Looks Like | AI Practice Lab</title>
+<link rel="stylesheet" href="assets/css/practice-room.css">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="test-header"><a class="test-brand" href="index.html">AI Practice Lab</a><nav aria-label="Primary navigation"><a href="StartHere.html">Start Here</a><a href="Practice.html">Practice</a><a href="AIAtWork.html">AI at Work</a><a href="GeekLab.html">Geek Lab</a></nav></header>
 <main id="main-content">
-
-<section class="readable-flow">
-<section class="exercise-instructions" aria-labelledby="exercise-title">
-<div class="exercise-instructions-header">
-	<button id="copyExerciseBtn" class="exercise-copy-button" type="button">Copy Instructions</button>
+<div class="page-heading">
+<p class="eyebrow">SEE AN EXAMPLE · EVERYDAY WORDS ARE ENOUGH</p>
+<h1>What an AI conversation looks like.</h1>
+<p class="intro">You ask for something. The AI replies. If the result is close but not quite right, you tell it what to change.</p>
 </div>
-<div id="exerciseCopyContent" class="exercise-copy-content">
-<h1 id="exercise-title">Example: AI Prompt and The Actions Taken</h1>
-
-<h2>My Prompt to the AI</h2>
-<p>"GitHubAI.html was created with a word processor and needs unwanted characters removed, plus background color and an email address in the lower-right corner."</p>
-
-<h2>Actions Taken - The AI Explains:</h2>
-<p>The file was cleaned and standardized. Summary:</p>
-
-<h3>Removed LibreOffice Artifacts</h3>
-<ul>
-	<li>Removed LibreOffice generator metadata.</li>
-	<li>Removed excessive font-family declarations (`.western`, `.cjk`, `.ctl`).</li>
-	<li>Removed print-specific styling (`@page` rules).</li>
-	<li>Converted inline font tags (`&lt;font&gt;`) into semantic HTML.</li>
-</ul>
-
-<h3>Added Background Color</h3>
-<ul>
-	<li>Linked `styles.css`, which provides the site background styling.</li>
-</ul>
-
-<h3>Added Email in Lower Right Corner</h3>
-<ul>
-	<li>Added `info@aipracticelab.org` using the site footer pattern.</li>
-</ul>
-
-<h3>Fixed HTML Structure</h3>
-<ul>
-	<li>Ensured navigation links are inside the `&lt;body&gt;` ... `&lt;main id="main-content"&gt;` structure.</li>
-	<li>Used proper language and charset declarations.</li>
-	<li>Removed redundant attributes and cleaned formatting.</li>
-</ul>
-
-<p>The page now has consistent site styling and cleaner, more maintainable markup.</p>
-
-<hr>
-
-</div>
-<p id="exerciseCopyStatus" class="exercise-copy-status" role="status" aria-live="polite"></p>
+<p>This short example is adapted from a recorded conversation about this website. The wording is shortened to make it easier to follow.</p>
+<section class="step">
+<h2>1. Say what you want</h2>
+<div class="question"><p><strong>Person:</strong> Put these three website links in separate boxes.</p></div>
+<p><strong>AI:</strong> I’ll put the links in three boxes and keep the rest of the page as it is.</p>
+<p>The AI describes what it plans to do. You can correct it if it misunderstood.</p>
 </section>
-
-
+<section class="step">
+<h2>2. Look at the result and ask for a change</h2>
+<div class="question"><p><strong>Person:</strong> This is close, but I wanted narrower, taller boxes.</p></div>
+<p><strong>AI:</strong> I’ll make the boxes narrower and taller, keeping the same three links.</p>
+<p>You do not need special wording. Tell it which part is useful and which part needs changing.</p>
 </section>
-
-<p class="body-text"><a href="ProjectLinks.html">Back to Practice AI </a></p>
-<script>
-	document.getElementById('copyExerciseBtn').addEventListener('click', async function () {
-		const content = document.getElementById('exerciseCopyContent').innerText.trim();
-		const status = document.getElementById('exerciseCopyStatus');
-
-		try {
-			await navigator.clipboard.writeText(content);
-			status.textContent = 'Instructions copied.';
-		} catch (error) {
-			status.textContent = 'Copy failed. Please select the instructions and copy them manually.';
-		}
-	});
-</script>
+<section class="step">
+<h2>3. Add another detail</h2>
+<div class="question"><p><strong>Person:</strong> Put a small picture in the top-left corner of the first box, above the text.</p></div>
+<p><strong>AI:</strong> I’ll add the picture to the first box and leave the other two boxes as they are.</p>
+<p>One small change at a time makes the result easier to check.</p>
+</section>
+<aside class="note"><strong>You still check the work.</strong> In this example, you would look at the page: are there three links, do they work, and did anything else change? An AI saying it made a change does not prove the result is correct.</aside>
+<p>This conversation used a coding assistant with access to website files. An ordinary AI chat can suggest wording or instructions, but does not automatically have access to change your files.</p>
+<section class="finish">
+<h2>You can use the same approach.</h2>
+<p>For a message, a list, or an explanation: ask, read the answer, then describe one change you want. You can ask it to use simpler words or make the answer shorter.</p>
+<a class="button" href="StartHere.html">Try your first AI conversation</a>
+<p><a href="GeekLab.html">Back to Geek Lab</a> · <a href="ProjectLinks.html">More practice ideas</a></p>
+</section>
 </main>
 <footer class="lab-footer"><p><strong>AI Practice Lab</strong> · A place to try, learn, and try again.</p><p><a href="index.html">Home</a> · <a href="TheWhy.html">About the lab</a> · <a href="Contact.html">Contact</a></p></footer>
 </body>

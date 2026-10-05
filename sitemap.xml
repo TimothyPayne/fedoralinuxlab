@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aipracticelab.org/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/1PageExample.html</loc>
@@ -14,11 +14,11 @@
   </url>
   <url>
     <loc>https://aipracticelab.org/BackupWindows.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/ChatGPTexp.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/Contact.html</loc>
@@ -30,23 +30,19 @@
   </url>
   <url>
     <loc>https://aipracticelab.org/FastFoodRobots.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/FedoraLinks.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/GitHubAI.html</loc>
-    <lastmod>2026-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://aipracticelab.org/GitHubAI2.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/InfoLinks.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/LUGreasons.html</loc>
@@ -66,7 +62,7 @@
   </url>
   <url>
     <loc>https://aipracticelab.org/PhoneBU.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/PracticeAI.html</loc>
@@ -82,7 +78,7 @@
   </url>
   <url>
     <loc>https://aipracticelab.org/ProjectLinks.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/QuickStart.html</loc>
@@ -90,7 +86,7 @@
   </url>
   <url>
     <loc>https://aipracticelab.org/RiverRouge.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://aipracticelab.org/SkillsLinks.html</loc>
@@ -105,7 +101,23 @@
     <lastmod>2026-09-27</lastmod>
   </url>
   <url>
-    <loc>https://aipracticelab.org/UsUkAssistance.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <loc>https://aipracticelab.org/10Tparam.html</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aipracticelab.org/AIAtWork.html</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aipracticelab.org/GeekLab.html</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aipracticelab.org/Practice.html</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://aipracticelab.org/StartHere.html</loc>
+    <lastmod>2026-10-04</lastmod>
   </url>
 </urlset>
