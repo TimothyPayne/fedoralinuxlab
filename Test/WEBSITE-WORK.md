@@ -39,3 +39,7 @@ Changed only Test; no promotion, publication, or deployment. The map describes t
 - [x] Confirmed no builder fields or controls remain; all five missions, bonus activity, readable examples, and navigation remain. Shared script and other pages' builders unchanged. git diff --check passes.
 
 Current handoff: local Test edit complete. Review at http://127.0.0.1:8765/ProjectFor10yrs.html (refresh an already-open page). No promotion or deployment. Original preserved outside the website in this chat's work directory.
+
+## Approved release completed — 7 October 2026
+
+The owner approved root promotion, GitHub push, and web-server update. Release bf852a5 was pushed to main; FTP Deploy run 37677672566 succeeded. All 35 public release files returned HTTP 200. Text files match root exactly; desk image pixels and dimensions match. The root WEBSITE-WORK.md now records the completed release and outstanding maintenance.

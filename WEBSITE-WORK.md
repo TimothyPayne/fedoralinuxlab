@@ -10,7 +10,7 @@ Use this checklist for unfinished work. `[ ]` means still open; `[x]` means comp
 
 - [x] Promote the approved “See what you can do” design, visual site map, navigation, image activity, and young-learner builder removal to root.
 - [x] Check 146 local references on the six entry pages, sitemap XML, noindex removal, image presence, and desktop/mobile root map layout. All passed; git diff --check passes.
-- [ ] **In progress: GitHub and web server update.** Commit the approved files, push main, monitor FTP Deploy, and verify live pages and assets. User explicitly authorized both updates in this chat.
+- [x] **GitHub and web server update:** release bf852a5 pushed to main; FTP Deploy run 37677672566 succeeded. All 35 live files returned HTTP 200; all text files match root, and the desk image has identical dimensions and pixels. User explicitly authorized both updates in this chat.
 
 ### Next: review the updated pages
 
@@ -46,7 +46,7 @@ Use this checklist for unfinished work. `[ ]` means still open; `[x]` means comp
 
 Approved changes promoted to root on 7 October 2026: updated homepage and four learning pages, added SiteMap.html and top-navigation links throughout, added the generated desk image and image-creation lesson, removed ProjectFor10yrs.html’s prompt builder, and refreshed sitemap.xml. Root copies omit Test’s noindex metadata. Existing legacy content preserved; unrelated AGENTS.md edits remain outside this release.
 Checks passed: six entry pages / 146 local references and fragments, copy-target IDs, single main headings, noindex removal, sitemap parsing, image availability, whitespace, and root map desktop/mobile layouts. Prior Test browser checks and user design approval apply to the byte-identical promoted visual content. Full screen-reader/clipboard-denial audits and previously deferred work remain open.
-Next: push the release, confirm FTP Deploy success, and verify public content. No claim of completed deployment until those checks pass. Pre-release root files preserved outside the repository in this chat’s work/root-before-release directory.
+Deployed: release bf852a5 pushed to GitHub main; FTP Deploy run 37677672566 succeeded. Verified all 35 public release files with cache-bypassing requests: HTML/CSS/XML match local bytes; the PNG encoding differs but its 1536 × 1024 pixels are identical. Live SiteMap.html also verified in the browser. Next: routine maintenance and the outstanding audits above. Pre-release root files preserved outside the repository in this chat’s work/root-before-release directory.
 
 ## Small monthly resource check
 Review the ProjectLinks selection once a month when doing website maintenance. Keep two beginner demonstrations, two workplace examples, and two advanced channels; replace rather than append. Confirm links/playback, upload dates, difficulty and learning purpose. Refresh the dated 2026 example when useful; retain a clearly dated older example if it still teaches well. Check current claims against original sources and remove unsupported ones. Record the actual check date. No scheduler or automatic changes have been set up.
@@ -75,3 +75,5 @@ Completed approved root update (4 October 2026): promoted 10Tparam.html, AIAtWor
 
 
 Completed working-instruction update (5 October 2026): updated AGENTS.md to require reading this authoritative work record before website work, treat current-project.md as background, resolve the Test workflow conflict, and update task status and handoff after each task with changes, verification, unfinished work, and the next step. Reviewed the documentation diff and checked whitespace. Website pages unchanged; local documentation edits only, with no push or deployment. Existing browser visual/interaction/video review remains the next website task.
+
+Release verification: https://github.com/TimothyPayne/fedoralinuxlab/actions/runs/37677672566. Public site: https://aipracticelab.org/ and https://aipracticelab.org/SiteMap.html. Verification report and live screenshot saved outside the served repository in this chat’s outputs. Final handoff-only commit skips another deployment because Markdown is excluded from FTP uploads.
