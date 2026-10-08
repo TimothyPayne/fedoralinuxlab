@@ -4,7 +4,7 @@ Updated: 7 October 2026. This note supersedes older task/status sections in curr
 
 ## To-do list
 
-- [ ] **Homepage meta descriptions — 8 October 2026:** matching English and Spanish descriptions added to root and review copies; metadata and preservation checks passed. Owner authorized GitHub and web-server update. Next: push the focused release and verify the live pages.
+- [x] **Homepage meta descriptions — 8 October 2026:** matching descriptions added to both root homepages and review copies. Commit a441c2c pushed to GitHub; FTP Deploy run 37849505106 succeeded. Both live HTML files returned HTTP 200 and match local root bytes; review noindex preserved.
 
 Use this checklist for unfinished work. `[ ]` means still open; `[x]` means completed and checked. Mark the task being worked on as **In progress**, record its next step, and leave incomplete checks open. Add new ideas here before starting them; ideas are not approved website changes. Update this list after each task.
 
@@ -47,7 +47,7 @@ Use this checklist for unfinished work. `[ ]` means still open; `[x]` means comp
 ## Current handoff
 
 8 October 2026: fixed the missing homepage meta description in root `index.html`, root `es/index.html`, `Test/index.html`, and `Test/es/index.html`. English and Spanish descriptions describe the same beginner practice content. Preserved every other HTML byte, including language links and preview-only noindex tags. Originals saved outside the served repository in the current chat's work/before-meta-fix directory.
-Checks passed: exactly one matching description per page, root pages indexable, review copies retain noindex, no page content or assets changed. Owner explicitly authorized root, Spanish, GitHub, and web-server updates. Deployment pending; next step is the focused GitHub push and live verification. Unrelated existing review-copy changes remain separate.
+Checks passed: exactly one matching description per page, root pages indexable, review copies retain noindex, no page content or assets changed. Owner explicitly authorized root, Spanish, GitHub, and web-server updates. Commit a441c2c pushed to GitHub main; FTP Deploy run [37849505106](https://github.com/TimothyPayne/fedoralinuxlab/actions/runs/37849505106) succeeded. Both live homepages returned HTTP 200 and match local root bytes. Review-copy metadata changes are local alongside pre-existing review work. Next: rerun Bing’s inspection after it fetches the update. Unrelated existing review-copy changes remain separate.
 
 ## Small monthly resource check
 Review the ProjectLinks selection once a month when doing website maintenance. Keep two beginner demonstrations, two workplace examples, and two advanced channels; replace rather than append. Confirm links/playback, upload dates, difficulty and learning purpose. Refresh the dated 2026 example when useful; retain a clearly dated older example if it still teaches well. Check current claims against original sources and remove unsupported ones. Record the actual check date. No scheduler or automatic changes have been set up.
