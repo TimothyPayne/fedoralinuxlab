@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<meta content="Practica copiar fotos y archivos seleccionados de Android a una unidad USB con Fedora. Elige lo importante, comprueba las copias y conserva los originales." name="description"/>
+<title>Copia fotos y archivos de Android | AI Practice Lab</title>
+<link href="../assets/css/practice-room.css" rel="stylesheet"/>
+<link href="../PhoneBU.html" hreflang="en" rel="alternate"/><link href="PhoneBU.html" hreflang="es" rel="alternate"/><link href="../assets/css/spanish.css" rel="stylesheet"/><link href="https://aipracticelab.org/es/PhoneBU.html" rel="canonical"/></head>
+<body>
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<header class="test-header"><a class="test-brand" href="index.html">AI Practice Lab</a><nav aria-label="Navegación principal"><a href="StartHere.html">Empieza aquí</a><a href="Practice.html">Práctica</a><a href="AIAtWork.html">IA en el trabajo</a><a href="GeekLab.html">Tecnología</a><a href="SiteMap.html">Mapa del sitio</a></nav><nav aria-label="Idioma" class="language-switch"><span aria-current="page" lang="es">Español</span><a href="../PhoneBU.html" hreflang="en" lang="en">English</a></nav></header>
+<main id="main-content">
+<div class="page-heading">
+<p class="eyebrow">HABILIDADES INFORMÁTICAS · PRACTICA COPIAR ARCHIVOS</p>
+<h1>Copia fotos y archivos de Android a una unidad USB.</h1>
+<p class="intro">¿Qué fotos o documentos te daría pena perder? Haz primero una copia independiente de esos archivos. No necesitas copiarlo todo ni pagar almacenamiento en línea.</p>
+</div>
+<aside class="note"><strong>Este es un respaldo de archivos seleccionados, no de todo el teléfono.</strong> Copia archivos a los que puedes acceder, como fotos y documentos. No guarda todas tus aplicaciones, mensajes, contactos, contraseñas ni ajustes del teléfono. Los archivos que solo están en línea deben descargarse primero; algunas aplicaciones necesitan su propio método de exportación o respaldo.</aside>
+<section class="step">
+<h2>1. Prepárate</h2>
+<ul>
+<li>Tu propio teléfono Android desbloqueado, o permiso de su dueño.</li>
+<li>Un cable USB que permita transferir datos, no solo cargar.</li>
+<li>Una computadora con Fedora y una unidad USB externa con espacio para los archivos elegidos.</li>
+</ul>
+<p>Estos pasos describen la aplicación <strong>Archivos</strong> de Fedora Workstation. Otros escritorios, incluido Xfce, usan administradores distintos y pueden necesitar soporte adicional para transferencias del teléfono. Los nombres de los menús varían. Empieza con una foto; una colección grande puede tardar mucho más.</p>
+<details>
+<summary>¿Usas Fedora desde una USB de prueba?</summary>
+<p>Si ya tienes preparada una USB de Fedora Workstation, puedes probarlo sin instalarlo. Necesitarás una <strong>segunda unidad USB</strong> para los archivos copiados. Mantén conectada la USB de inicio durante la sesión de prueba.</p>
+<p>Sigue las instrucciones del fabricante de tu computadora para iniciar desde la USB preparada. Elige probar Fedora, no instalarlo. Si las opciones no están claras, detente y pide ayuda. No instales Fedora ni cambies los discos de la computadora para este ejercicio.</p>
+<p>Preparar el medio de inicio es otra tarea: grabar la imagen borra la USB de destino. <a href="https://fedoraproject.org/workstation/">La página de Fedora Workstation explica la opción de USB de prueba</a>. El almacenamiento temporal de una sesión de prueba no es el destino para tu respaldo.</p>
+</details>
+</section>
+<section class="step">
+<h2>2. Crea una carpeta en la unidad de respaldo</h2>
+<ol>
+<li>Conecta la unidad y abre <strong>Archivos</strong>. Busca la unidad externa por su nombre en la barra lateral. Ábrela y comprueba que sea la que querías usar.</li>
+<li>Haz clic derecho en un espacio vacío y elige <strong>Propiedades</strong> para comprobar el espacio disponible. Deja lugar para los archivos que vas a copiar y para futuros respaldos.</li>
+<li>Crea una carpeta nueva con un nombre como <strong>Archivos del teléfono — 2026-10-03</strong>, usando la fecha de hoy. Conserva intactos los archivos que ya están en la unidad.</li>
+</ol>
+<p><strong>Si te pide formatear la unidad, cancela.</strong> Formatear borra datos y no forma parte de este ejercicio. Usa una unidad preparada adecuada o pide ayuda primero.</p>
+</section>
+<section class="step">
+<h2>3. Conecta tu teléfono</h2>
+<ol>
+<li>Conecta el teléfono a la computadora con el cable de datos y desbloquéalo.</li>
+<li>Abre la notificación USB del teléfono. En <strong>Usar USB para</strong>, selecciona <strong>Transferencia de archivos</strong>, a veces llamada <strong>MTP</strong>. Autoriza el acceso a archivos solo en una computadora de confianza.</li>
+<li>En Archivos, busca el teléfono en la barra lateral. Ábrelo y luego abre su almacenamiento interno o tarjeta de memoria, si está disponible.</li>
+</ol>
+<p>Mantén el teléfono cargado y disponible durante la copia. Si el acceso se detiene al bloquearse, desbloquéalo de nuevo.</p>
+</section>
+<section class="step">
+<h2>4. Elige archivos y cópialos</h2>
+<p>Busca en <strong>DCIM</strong> las fotos y videos de la cámara; en <strong>Pictures (Imágenes)</strong> otras imágenes; y en <strong>Download (Descargas)</strong> o <strong>Documents (Documentos)</strong> los archivos guardados. Los nombres y las ubicaciones varían. Puedes elegir unos pocos archivos importantes en lugar de una carpeta completa.</p>
+<ol>
+<li>Selecciona una foto en el teléfono. Presiona <strong>Ctrl + C</strong> para copiarlo.</li>
+<li>Abre la carpeta con fecha en la unidad externa. Presiona <strong>Ctrl + V</strong> para pegar una copia allí.</li>
+<li>Espera a que termine la transferencia y abre la foto copiada desde la unidad externa.</li>
+<li>Si funciona, repite con los otros archivos o carpetas elegidos. Guarda en carpetas separadas las carpetas con el mismo nombre que provengan de lugares distintos, para que no se sobrescriban.</li>
+</ol>
+<p><strong>Usa copiar, no cortar ni mover.</strong> Deja los originales en el teléfono. Si aparece un error o te pide reemplazar algo inesperadamente, detente y revisa antes de continuar.</p>
+</section>
+<section class="step">
+<h2>5. Comprueba la copia y termina</h2>
+<ol>
+<li>Explora la unidad externa y comprueba que estén los archivos elegidos. Abre fotos y documentos importantes desde esa unidad. Compara cantidades y tamaños cuando sea posible; investiga cualquier archivo que falte o no se pueda leer.</li>
+<li>Para practicar la recuperación de un archivo, copia uno de los archivos guardados en una carpeta separada de la computadora llamada <strong>Comprobación del respaldo</strong> y ábrelo. No reemplaces el original. En una sesión de prueba, esta copia de práctica desaparece al terminar la sesión.</li>
+<li>Cierra los archivos abiertos desde la unidad. Usa el control de expulsar o desmontar junto a la unidad externa en Archivos. Espera a que termine la copia y sea seguro desconectarla.</li>
+<li>Expulsa el teléfono si Archivos ofrece esa opción y desconecta el cable cuando terminen las transferencias. Si usas una USB de prueba, apaga Fedora antes de quitar la USB de inicio.</li>
+</ol>
+<p>Abrir una muestra es útil, pero no demuestra que todo se haya copiado correctamente. Comprueba los archivos que más quieras conservar antes de confiar en el respaldo.</p>
+</section>
+<section class="finish">
+<h2>Tienes una copia independiente de los archivos elegidos.</h2>
+<p>Desconecta la unidad de respaldo y guárdala en un lugar seguro. Protege las fotos y documentos privados de personas que no deban verlos.</p>
+<p>Repite el proceso después de tomar fotos importantes o hacer cambios. Una carpeta nueva con fecha conserva la copia anterior mientras revisas la nueva; deja espacio para ambas. No borres tu única copia válida para hacer espacio.</p>
+<p>Una segunda unidad guardada en otro lugar o un servicio en línea que elijas puede añadir protección si se pierden tanto el teléfono como el respaldo cercano. Considera el costo, la privacidad y los límites de almacenamiento. Ninguna de estas opciones es necesaria para completar este ejercicio.</p>
+<a class="button" href="GeekLab.html">Volver al laboratorio de tecnología</a>
+</section>
+<details class="optional-section">
+<summary>Si algo no funciona</summary>
+<ul>
+<li><strong>El teléfono no aparece:</strong> desbloquéalo, vuelve a seleccionar Transferencia de archivos y prueba otro cable de datos o puerto USB. No lo desconectes durante una transferencia.</li>
+<li><strong>Acceso denegado:</strong> revisa la solicitud de permiso del teléfono. Si el escritorio de Fedora sigue sin poder abrirlo, pide ayuda con el soporte de transferencia de archivos. Este ejercicio no necesita modo de desarrollador, depuración USB ni comandos de terminal.</li>
+<li><strong>No hay suficiente espacio:</strong> elige menos archivos indispensables o usa una unidad preparada de mayor capacidad. No borres archivos existentes solo para terminar el ejercicio.</li>
+<li><strong>Un video grande no se copia:</strong> el formato de archivos de la unidad puede tener un límite de tamaño. Conserva el original y pide ayuda; no formatees la unidad como solución rápida.</li>
+<li><strong>Falta una foto:</strong> puede estar solo en línea o dentro de una aplicación. Revisa sus opciones de descarga o exportación; el acceso por USB no incluye todo lo que muestra una aplicación.</li>
+</ul>
+</details>
+<details class="optional-section">
+<summary>¿Usas un iPhone?</summary>
+<p>Este ejercicio de transferencia de Android no sirve para iPhone. Apple ofrece respaldos en computadora y en iCloud; el almacenamiento en línea es una opción, no la única. <a href="https://support.apple.com/en-us/108771">Compara los métodos de respaldo de Apple</a>.</p>
+</details>
+<details class="optional-section">
+<summary>Fuentes y comprobaciones realizadas</summary>
+<p>Revisado el 3 de octubre de 2026. <a href="https://support.google.com/android/answer/9064445?hl=en">Las instrucciones de Google para transferir archivos por USB</a> respaldan los pasos de desbloqueo, modo USB y comprobación del cable en Android. La página de Google describe transferencias con Windows y Chromebook; no verifica esta configuración exacta de Fedora. La compatibilidad real entre teléfono y escritorio necesita una prueba práctica.</p>
+<p><a href="BackupWindows.html">Practica copiar archivos importantes de Windows a una unidad externa</a>.</p>
+</details>
+<p class="translation-note">Los enlaces externos pueden abrir contenido en inglés. Revisa las opciones de idioma del servicio.</p></main>
+<footer class="lab-footer"><p><strong>AI Practice Lab</strong> · Un lugar para probar, aprender y volver a intentar.</p><p><a href="index.html">Inicio</a> · <a href="TheWhy.html">Acerca del laboratorio</a> · <a href="Contact.html">Contacto</a></p></footer>
+</body>
+</html>

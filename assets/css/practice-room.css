@@ -149,3 +149,10 @@ h1 { font-size:clamp(2.4rem,1.4rem + 4vw,4.5rem); letter-spacing:-.045em; max-wi
 .map-pages p { margin:4px 0 0; color:var(--muted); font-size:1rem; }
 .map-extra { padding:16px; background:var(--tint); border-radius:10px; margin:20px 0 0; font-size:1rem; }
 @media(max-width:48rem) { .site-map-grid { grid-template-columns:1fr; } .map-area { padding:22px; } }
+
+/* Language links stay separate from learning-area navigation. */
+.language-switch { display:flex; flex-wrap:wrap; gap:12px; align-items:center; width:100%; font-size:.95rem; }
+.language-switch a,.language-switch span { padding:6px 0; min-height:36px; }
+.language-switch [aria-current] { font-weight:700; }
+.language-note { font-size:.88em; font-weight:400; }
+.translation-note { padding:16px 20px; margin:24px 0 0; background:#e7f1eb; border-radius:8px; font-size:.95rem; }

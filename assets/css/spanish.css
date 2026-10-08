@@ -1,0 +1,11 @@
+/* Spanish text can be longer than its English equivalent. */
+html[lang="es"] { overflow-wrap: anywhere; }
+html[lang="es"] main, html[lang="es"] .prompt-field { min-width: 0; }
+html[lang="es"] input, html[lang="es"] select, html[lang="es"] textarea { max-width: 100%; box-sizing: border-box; }
+html[lang="es"] .translation-note { padding:16px 20px; margin:24px 0; background:#e7f1eb; color:#173b35; border-radius:8px; font-size:.95rem; }
+html[lang="es"] img { max-width:100%; height:auto; }
+@media (max-width:600px) {
+ html[lang="es"] table { display:block; max-width:100%; overflow-x:auto; }
+}
+html[lang="es"] #generatedPrompt,
+html[lang="es"] #linuxGeneratedPrompt { min-height: 16rem; line-height: 1.6; }

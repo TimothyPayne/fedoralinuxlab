@@ -77,3 +77,15 @@ Completed approved root update (4 October 2026): promoted 10Tparam.html, AIAtWor
 Completed working-instruction update (5 October 2026): updated AGENTS.md to require reading this authoritative work record before website work, treat current-project.md as background, resolve the Test workflow conflict, and update task status and handoff after each task with changes, verification, unfinished work, and the next step. Reviewed the documentation diff and checked whitespace. Website pages unchanged; local documentation edits only, with no push or deployment. Existing browser visual/interaction/video review remains the next website task.
 
 Release verification: https://github.com/TimothyPayne/fedoralinuxlab/actions/runs/37677672566. Public site: https://aipracticelab.org/ and https://aipracticelab.org/SiteMap.html. Verification report and live screenshot saved outside the served repository in this chat’s outputs. Final handoff-only commit skips another deployment because Markdown is excluded from FTP uploads.
+
+
+## Spanish mirror maintenance rule — 8 October 2026
+
+At the owner's request, root-level English HTML pages are the source of truth. When a live root page changes, update its Spanish counterpart in `Test/es/` during the same task and notify the owner after the mirror is complete. Keep `Test/es/` as a noindex preview: promotion to root `es/`, a push, or deployment requires separate approval. The daily monitor is configured on this task to check for changed root pages, update affected Spanish previews, and report completion; it should stay quiet when nothing changed.
+
+
+## Spanish root release — 8 October 2026
+
+The owner authorized promotion of the complete Spanish preview, the GitHub update, and the web-server deployment. Copied all 32 Spanish pages from `Test/es/` to root `es/`, removed preview-only noindex tags, set Spanish canonical URLs, and preserved paired English/Spanish navigation and local asset paths. Added English-language switches and reciprocal `hreflang` links to all 32 root English pages, added shared Spanish CSS and localized the shared copy and prompt-builder scripts, and added the 32 Spanish URLs with language alternates to the root sitemap. `Test/es/` remains the review copy.
+
+Local validation passed: 32 Spanish pages and 658 local references resolve; paired language switches, canonical/alternate links, sitemap pairs, unique IDs, readable landmarks, shared JavaScript syntax, and `git diff --check` are valid. The root Spanish homepage rendered in the local preview with the language switch and learning paths visible. GitHub push and live deployment are pending.

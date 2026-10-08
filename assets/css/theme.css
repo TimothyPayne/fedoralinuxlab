@@ -145,3 +145,8 @@ main > p, main > ul, main > ol, .body-text { max-width: 68ch; }
 .prompt-label { color: var(--color-ink); font-weight: 600; }
 .copy-status { color: #3F7652; }
 @media (max-width: 48rem) { .prompt-grid { grid-template-columns: 1fr; } }
+
+/* Paired language navigation for the Spanish pages. */
+.language-switch { display:flex; flex-wrap:wrap; gap:12px; align-items:center; width:100%; font-size:.95rem; }
+.language-switch a,.language-switch span { padding:6px 0; min-height:36px; }
+.language-switch [aria-current] { font-weight:700; }

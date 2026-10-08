@@ -29,3 +29,9 @@
 - Check nearby pages and shared assets before introducing new patterns or dependencies.
 - The workflow in `.github/workflows/ftp-deploy.yml` uploads the repository root when changes are pushed to `main`. Never push or deploy without the owner's explicit approval.
 - Do not expose credentials, visitor data, or private information in files or output.
+
+## English and Spanish mirrors
+
+- When a live root-level HTML page is added or updated, update its Spanish counterpart in root `es/` and the review copy in `Test/es/` during the same task, using the English root page as the source of truth. Preserve page structure, links, examples, accessibility text, and interactive behavior in both languages.
+- Tell the owner which English page changed and when its Spanish mirrors are complete. If a mirror cannot be updated or checked, report that plainly.
+- Keep `Test/es/` as a noindex review copy. Publishing changes to the live site still requires the owner's explicit approval.
