@@ -4,7 +4,7 @@ Updated: 7 October 2026. This note supersedes older task/status sections in curr
 
 ## To-do list
 
-- [ ] **River Rouge images — 9 October 2026:** corrected the Test English and Spanish previews to use the owner-supplied `Test/images/Terafab.png` beside the historical Ford photo. Caption identifies a proposed chip factory and links to the video on https://www.terafab.ai/. Ford source and Terafab video links open in new tabs in both languages; target and rel attributes verified. Image inspected; paths, intrinsic dimensions, alt text, video link, noindex, and whitespace checks passed. Browser layout review remains pending. Next: owner reviews previews; root promotion and deployment require approval.
+- [ ] **River Rouge images — deployed 9 October 2026:** approved English and Spanish root pages and Ford/Terafab assets pushed in `11a619c`; FTP Deploy 37971709713 succeeded. Both live HTML pages match root; images load at correct dimensions; Terafab pixels match. Ford response differs from local bytes/pixels, including fresh-URL check; browser review remains pending. Spanish preview complete. Next: inspect live visuals and resolve Ford image-delivery differences if needed.
 
 - [x] **Homepage meta descriptions — 8 October 2026:** matching descriptions added to both root homepages and review copies. Commit a441c2c pushed to GitHub; FTP Deploy run 37849505106 succeeded. Both live HTML files returned HTTP 200 and match local root bytes; review noindex preserved.
 
@@ -47,6 +47,8 @@ Use this checklist for unfinished work. `[ ]` means still open; `[x]` means comp
 - [ ] **Release:** after browser, interaction, and video checks pass, summarize the reviewed changes for the owner's deployment decision. Local root promotion is complete; no push or deployment has occurred. Deployment requires separate approval.
 
 ## Current handoff
+
+9 October 2026 release verified: owner-approved Ford/Terafab image section promoted to English and Spanish root pages. Commit `11a619c` pushed to main; FTP Deploy run https://github.com/TimothyPayne/fedoralinuxlab/actions/runs/37971709713 succeeded. Both public HTML pages match root byte-for-byte. Both public images load at correct dimensions; Terafab pixels match local. Ford image response differs from local bytes/pixels (including cache-busted check); image-delivery transformation or caching remains unresolved. Spanish Test mirror is complete and noindex. Browser visual review remains pending. Unrelated Test edits remain local. Next: owner inspects live visuals; investigate Ford delivery differences if visible.
 
 9 October 2026 release in progress: owner explicitly approved root, GitHub, and web-server updates. Promoted only the approved factory-image section to root `RiverRouge.html` and `es/RiverRouge.html`, preserving other root content and Spanish canonical metadata. Copied Ford and Terafab images to root images. English and Spanish review copies remain noindex. All four pages passed local reference, image dimension/alt text, new-tab link, and indexability checks; git diff --check passed. Root originals saved in /tmp/river-rouge-release-before. GitHub push and live deployment verification are next.
 
