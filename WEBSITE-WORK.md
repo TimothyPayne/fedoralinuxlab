@@ -4,7 +4,7 @@ Updated: 10 October 2026. This note supersedes older task/status sections in cur
 
 ## To-do list
 
-- [ ] **Canonical cleanup — prepared 11 October 2026:** 64 English/Spanish review mirrors complete; production patch and guarded homepage redirects pass local checks. Root promotion and publication await owner approval.
+- [x] **Canonical cleanup — published 11 October 2026:** owner-approved 64 English/Spanish pages and guarded homepage redirects published in d0065f7. FTP Deploy run 38171465971 succeeded. All 64 live directory/page URLs return 200, match root bytes, have the expected canonical and no noindex; both explicit index aliases return 301 and query strings are preserved. Spanish review mirrors complete and noindex. Google validation completion remains external.
 
 - [x] **Spanish meta descriptions — published 11 October 2026:** five reviewed descriptions promoted to root Spanish pages and pushed in `add07f9`. FTP Deploy run 38170337737 succeeded. All five live pages returned HTTP 200, match local root bytes, and have exactly one nonempty description. Test/es mirrors complete and retain noindex; English pages unchanged. Earlier mention of six fixes remains unmatched to a sixth URL; no sixth page guessed. No further work required for the five supplied pages.
 
@@ -67,6 +67,8 @@ Use this checklist for unfinished work. `[ ]` means still open; `[x]` means comp
 - [ ] **Release:** after browser, interaction, and video checks pass, summarize the reviewed changes for the owner's deployment decision. Local root promotion is complete; no push or deployment has occurred. Deployment requires separate approval.
 
 ## Current handoff
+
+11 October 2026 canonical release verified: commit d0065f7 pushed to main; FTP Deploy https://github.com/TimothyPayne/fedoralinuxlab/actions/runs/38171465971 succeeded. All 64 live pages match root byte-for-byte, return 200, declare exactly the expected canonical URL and have no noindex or index.html Home links. /index.html and /es/index.html redirect 301 to their directory homepages; query-string redirect check passed. English/Spanish Test mirrors complete and noindex. Live verification report saved in this chat outputs/live-canonical-verification.json. Unrelated AGENTS/Test changes remain uncommitted. Next: allow Google to finish its existing validation; use Search Console issue details if its one affected URL still fails.
 
 11 October 2026: Owner explicitly approved canonical root promotion, GitHub push and deployment. Applied only the prepared 64-page production canonical/home-link patch and guarded .htaccess homepage-alias redirects. All production files match the verified release; originals saved in this chat work/root-before-publication/. Spanish root and review mirrors complete. Prior Apache checks passed; publication and live verification in progress. Existing unrelated Test and AGENTS edits remain unstaged.
 
