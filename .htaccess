@@ -9,8 +9,12 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.aipracticelab\.org [NC]
 RewriteRule ^(.*)$ https://aipracticelab.org/$1 [L,R=301]
 
-# Keep /index.html directly accessible (avoid Search Console "Page with redirect")
-RewriteRule ^index\.html$ - [L]
+# Redirect explicit homepage aliases; THE_REQUEST excludes internal DirectoryIndex rewrites.
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+RewriteRule ^index\.html$ https://aipracticelab.org/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+es/index\.html(?:[?\s]) [NC]
+RewriteRule ^es/index\.html$ https://aipracticelab.org/es/ [R=301,L]
 
 # Set index.html as the default directory index
 DirectoryIndex index.html
