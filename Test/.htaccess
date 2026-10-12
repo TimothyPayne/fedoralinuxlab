@@ -1,16 +1,19 @@
-# Enable URL rewriting
+# Canonical URLs: HTTPS, non-www, and directory homepages.
 RewriteEngine On
 
-# Force HTTPS - redirect all HTTP traffic to HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Match explicit client requests only; avoid DirectoryIndex redirect loops.
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+RewriteRule ^index\.html$ https://aipracticelab.org/ [R=301,L]
 
-# Remove www - redirect www to non-www (consistent with canonical tags)
-RewriteCond %{HTTP_HOST} ^www\.aipracticelab\.org [NC]
-RewriteRule ^(.*)$ https://aipracticelab.org/$1 [L,R=301]
+RewriteCond %{THE_REQUEST} \s/+es/index\.html(?:[?\s]) [NC]
+RewriteRule ^es/index\.html$ https://aipracticelab.org/es/ [R=301,L]
 
-# Keep /index.html directly accessible (avoid Search Console "Page with redirect")
-RewriteRule ^index\.html$ - [L]
+# Include the trailing slash before scheme/host normalization.
+RewriteRule ^es$ https://aipracticelab.org/es/ [R=301,L]
 
-# Set index.html as the default directory index
+# Normalize scheme and hostname together, preserving path and query string.
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.aipracticelab\.org(?::[0-9]+)?$ [NC]
+RewriteRule ^ https://aipracticelab.org%{REQUEST_URI} [R=301,L]
+
 DirectoryIndex index.html
