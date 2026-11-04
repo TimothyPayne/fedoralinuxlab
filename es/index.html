@@ -9,7 +9,16 @@
   .start-link { flex-direction:column; align-items:flex-start; }
   .start-link > span { flex-basis:auto; }
 }
+
+.ai-glossary { margin:32px 0; max-width:72ch; }
+.ai-glossary details { padding:12px 20px; background:white; border:1px solid var(--line); border-radius:10px; }
+.ai-glossary summary { font-weight:650; }
+.ai-glossary details p { padding:0; background:transparent; }
+.ai-glossary dt { font-weight:700; margin-top:18px; }
+.ai-glossary dd { margin:4px 0 16px; }
+.ai-glossary .copy-status { color:var(--ink); }
 </style>
+<script src="../js/ai-glossary.js" defer></script>
 </head>
 <body><a class="skip-link" href="#main-content">Saltar al contenido</a>
 <header class="test-header"><a class="test-brand" href="./">AI Practice Lab</a>
@@ -42,6 +51,47 @@
 </p>
 <aside class="note"><strong>Puedes usar palabras de todos los días.</strong> Haz una pregunta, lee la respuesta y pide un cambio. No necesitas hacerlo perfecto la primera vez.
 </aside>
+<section class="ai-glossary" aria-labelledby="ai-glossary-title" id="ai-glossary">
+<h2 id="ai-glossary-title">Palabras de IA, en lenguaje sencillo</h2>
+<p>Una guía breve de 15 términos. No necesitas memorizarlos para empezar.</p>
+<details><summary>Leer y copiar el glosario de IA</summary>
+<p>Copia el glosario y pégalo en tus notas o en un documento para guardarlo. También puedes seleccionar y copiar el texto directamente.</p>
+<div id="ai-glossary-text"><p><strong>AI Practice Lab · Palabras de IA, en lenguaje sencillo</strong></p>
+<dl>
+<dt>Inteligencia artificial (IA)</dt>
+<dd>Sistemas de computadora que realizan tareas como reconocer patrones, trabajar con el lenguaje o hacer predicciones.</dd>
+<dt>IA generativa</dt>
+<dd>IA que crea contenido, como texto, imágenes, audio o video.</dd>
+<dt>Chatbot</dt>
+<dd>Un programa con el que conversas por mensajes. Algunos chatbots usan IA generativa.</dd>
+<dt>Solicitud (prompt)</dt>
+<dd>La pregunta, las instrucciones o la información que das a una herramienta de IA.</dd>
+<dt>Mensaje de seguimiento</dt>
+<dd>Otro mensaje que agrega detalles, hace una pregunta o pide un cambio.</dd>
+<dt>Contexto</dt>
+<dd>La información disponible para la respuesta actual de la IA, como las instrucciones y partes de la conversación.</dd>
+<dt>Modelo</dt>
+<dd>El sistema matemático entrenado que usa una herramienta de IA para producir resultados.</dd>
+<dt>Entrenamiento</dt>
+<dd>El proceso de ajustar un modelo con ejemplos u otros comentarios. Una conversación normal no necesariamente vuelve a entrenar el modelo.</dd>
+<dt>Token</dt>
+<dd>Una unidad pequeña que usa un modelo para procesar información. En texto, puede ser parte de una palabra, una palabra completa o un signo de puntuación.</dd>
+<dt>Modelo de lenguaje grande (LLM)</dt>
+<dd>Un modelo entrenado con grandes cantidades de texto para trabajar con el lenguaje, por ejemplo, generar respuestas.</dd>
+<dt>Alucinación</dt>
+<dd>Una respuesta de IA que incluye información inventada o incorrecta, aunque parezca segura de lo que dice.</dd>
+<dt>Sesgo</dt>
+<dd>Patrones que pueden hacer que un sistema de IA trate de forma injusta a personas o ideas, o dé un resultado parcial.</dd>
+<dt>Verificación</dt>
+<dd>Revisar un resultado con fuentes confiables o pruebas del mundo real antes de usarlo.</dd>
+<dt>Automatización</dt>
+<dd>Usar programas o máquinas para realizar pasos con menos trabajo manual.</dd>
+<dt>Agente de IA</dt>
+<dd>Un sistema de IA que puede usar herramientas y dar pasos hacia una meta. Sus acciones y permisos aún necesitan supervisión humana.</dd>
+</dl></div>
+<button type="button" id="copy-glossary" hidden>Copiar el glosario</button>
+<p class="copy-status" id="glossary-status" role="status" aria-live="polite"></p>
+</details></section>
 </main>
 <footer class="lab-footer">
 <p><strong>AI Practice Lab</strong> · Un lugar para probar, aprender y volver a intentar.

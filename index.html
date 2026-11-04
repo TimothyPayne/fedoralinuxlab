@@ -9,7 +9,16 @@
   .start-link { flex-direction:column; align-items:flex-start; }
   .start-link > span { flex-basis:auto; }
 }
+
+.ai-glossary { margin:32px 0; max-width:72ch; }
+.ai-glossary details { padding:12px 20px; background:white; border:1px solid var(--line); border-radius:10px; }
+.ai-glossary summary { font-weight:650; }
+.ai-glossary details p { padding:0; background:transparent; }
+.ai-glossary dt { font-weight:700; margin-top:18px; }
+.ai-glossary dd { margin:4px 0 16px; }
+.ai-glossary .copy-status { color:var(--ink); }
 </style>
+<script src="js/ai-glossary.js" defer></script>
 </head>
 <body><a class="skip-link" href="#main-content">Skip to content</a>
 <header class="test-header"><a class="test-brand" href="./">AI Practice Lab</a>
@@ -42,6 +51,47 @@
 </p>
 <aside class="note"><strong>You can use everyday words.</strong> Ask a question, read the answer, and ask for a change. You don’t need to get it perfect the first time.
 </aside>
+<section class="ai-glossary" aria-labelledby="ai-glossary-title" id="ai-glossary">
+<h2 id="ai-glossary-title">AI words, in plain language</h2>
+<p>A short guide to 15 terms. You do not need to memorize them to get started.</p>
+<details><summary>Read and copy the AI glossary</summary>
+<p>Copy the glossary and paste it into your notes or a document to save it. You can also select and copy the text directly.</p>
+<div id="ai-glossary-text"><p><strong>AI Practice Lab · AI words, in plain language</strong></p>
+<dl>
+<dt>Artificial intelligence (AI)</dt>
+<dd>Computer systems that perform tasks such as recognizing patterns, working with language, or making predictions.</dd>
+<dt>Generative AI</dt>
+<dd>AI that creates content, such as text, pictures, audio, or video.</dd>
+<dt>Chatbot</dt>
+<dd>A program you talk with through messages. Some chatbots use generative AI.</dd>
+<dt>Prompt</dt>
+<dd>The question, instructions, or information you give an AI tool.</dd>
+<dt>Follow-up</dt>
+<dd>Another message that adds details, asks a question, or requests a change.</dd>
+<dt>Context</dt>
+<dd>The information available to the AI for its current response, such as instructions and parts of the conversation.</dd>
+<dt>Model</dt>
+<dd>The trained mathematical system that an AI tool uses to produce results.</dd>
+<dt>Training</dt>
+<dd>The process of adjusting a model using examples or other feedback. An ordinary chat does not necessarily retrain the model.</dd>
+<dt>Token</dt>
+<dd>A small unit a model uses to process information. In text, it may be part of a word, a whole word, or punctuation.</dd>
+<dt>Large language model (LLM)</dt>
+<dd>A model trained on large amounts of text to work with language, including generating responses.</dd>
+<dt>Hallucination</dt>
+<dd>An AI response that includes invented or incorrect information, even when it sounds confident.</dd>
+<dt>Bias</dt>
+<dd>Patterns that can lead an AI system to treat people or ideas unfairly or give a one-sided result.</dd>
+<dt>Verification</dt>
+<dd>Checking a result against reliable sources or real-world evidence before relying on it.</dd>
+<dt>Automation</dt>
+<dd>Using software or machines to carry out steps with less hands-on work.</dd>
+<dt>AI agent</dt>
+<dd>An AI system that can use tools and take steps toward a goal. Its actions and permissions still need human oversight.</dd>
+</dl></div>
+<button type="button" id="copy-glossary" hidden>Copy glossary</button>
+<p class="copy-status" id="glossary-status" role="status" aria-live="polite"></p>
+</details></section>
 </main>
 <footer class="lab-footer">
 <p><strong>AI Practice Lab</strong> · A place to try, learn, and try again.
