@@ -8,6 +8,7 @@
 <title>AI, Work, and Your Next Skill | AI Practice Lab</title>
 <link href="assets/css/practice-room.css" rel="stylesheet"/>
 <link href="InfoLinks.html" hreflang="en" rel="alternate"/><link href="es/InfoLinks.html" hreflang="es" rel="alternate"/><link rel="canonical" href="https://aipracticelab.org/InfoLinks.html">
+<script src="js/practice-room.js?v=20261007-es-all" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -39,7 +40,12 @@
 <section class="finish">
 <h2>Choose one thing to practice.</h2>
 <p>Think of a task from work, school, or home: explaining a problem, organizing a few steps, or writing a clear message.</p>
-<p>You could ask AI: “I want to practice explaining a problem clearly. Give me a simple made-up workplace situation. Let me write a short message, then suggest one improvement. Ask me one question at a time.”</p>
+<div class="question">
+<span class="example-label">Try this question in your AI chat</span>
+<p id="info-prompt">I want to practice explaining a problem clearly. Give me a simple made-up workplace situation. Let me write a short message, then suggest one improvement. Ask me one question at a time.</p>
+<button type="button" data-copy="info-prompt" hidden>Copy this question</button>
+<span class="copy-status" role="status"></span>
+</div>
 <p>Use made-up details. Read the suggestion and decide whether it makes your meaning clearer. Keep one example of what you learned.</p>
 <a class="button" href="AIAtWork.html">Try an everyday work exercise</a>
 <p><a href="ProjectLinks.html">More examples and optional deeper learning</a> · <a href="GeekLab.html">Back to Geek Lab</a></p>
