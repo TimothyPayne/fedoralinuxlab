@@ -31,6 +31,39 @@
 <li><a href="PhoneBU.html">Copia fotos y archivos de Android a una unidad USB</a>
 </li>
 </ul>
+<details id="linux-version-desktop">
+<summary>Encuentra tu versión de Linux y tu entorno de escritorio</summary>
+<p>Anota tres datos. En «Fedora 44 con GNOME», son:</p>
+<ul>
+<li><strong>Distribución</strong> (el sistema Linux que usas) — Fedora</li>
+<li><strong>Versión</strong> (la edición publicada de esa distribución) — 44</li>
+<li><strong>Entorno de escritorio</strong> (la interfaz con tus menús y ventanas) — GNOME</li>
+</ul>
+<h3>Empieza por el menú</h3>
+<ul>
+<li><strong>GNOME</strong> — Abre <strong>Configuración → Sistema → Acerca de → Detalles del sistema</strong>.</li>
+<li><strong>KDE Plasma</strong> — Busca <strong>Acerca de este sistema</strong> (About this System) o abre el <strong>Centro de información</strong> (Info Center).</li>
+<li><strong>Xfce o LXQt</strong> — Busca <strong>Acerca de Xfce</strong> (About Xfce) o <strong>Acerca de LXQt</strong> (About LXQt), si aparecen.</li>
+</ul>
+<p>Los nombres y la ubicación de los menús pueden variar según la versión. Algunas ventanas de información solo muestran el nombre y la versión del escritorio. Usa la terminal para encontrar los datos de Linux que te falten.</p>
+<h3>Si necesitas usar la terminal</h3>
+<p>Abre Terminal desde el menú de aplicaciones de tu escritorio. Ejecuta estos comandos por separado y presiona Intro después de cada uno. Puedes usarlos sin instalar nada ni usar <code>sudo</code>.</p>
+<ol>
+<li><code>cat /etc/os-release</code><br>Busca <code>PRETTY_NAME</code>, el nombre del sistema tal como se muestra al usuario, a menudo con su versión. Usa <code>VERSION_ID</code> para identificar la versión de la distribución si aparece ese campo.</li>
+<li><code>echo "$XDG_CURRENT_DESKTOP"</code><br>Esto muestra cómo identifica el escritorio tu sesión. Si ves nombres separados por dos puntos, copia el valor completo. Una línea en blanco significa que la sesión no indicó el escritorio en ese ajuste. Revisa el menú o indica que desconoces el escritorio.</li>
+</ol>
+<p><strong>Ejemplo de resultado</strong><br><samp>PRETTY_NAME="Fedora Linux 44 (Workstation Edition)"</samp><br><samp>VERSION_ID=44</samp><br><samp>GNOME</samp></p>
+<p><strong>Al pedir ayuda</strong>, copia los tres datos de tu propio resultado. Para este ejemplo, escribe <strong>Distribución</strong> Fedora Linux (Workstation Edition), <strong>Versión</strong> 44, <strong>Entorno de escritorio</strong> GNOME.</p>
+</details>
+<details id="rename-linux-folder">
+<summary>Cambia el nombre de una carpeta en Linux y deshaz el cambio</summary>
+<ol>
+<li>Abre tu <strong>carpeta personal</strong> en el gestor de archivos. Haz clic derecho en un espacio vacío, elige <strong>Carpeta nueva</strong> (en Dolphin, <strong>Crear nuevo → Carpeta</strong>) y crea una carpeta vacía llamada <strong>Rename Practice</strong>. Si ya existe <strong>Rename Practice</strong> o <strong>Rename Practice 2</strong>, elige dos nombres que estén libres y recuerda el original. Usa solo la carpeta vacía que crees para este ejercicio.</li>
+<li>Haz clic derecho en tu carpeta de práctica, elige <strong>Renombrar</strong> y cambia el nombre a <strong>Rename Practice 2</strong> o al segundo nombre que elegiste.</li>
+<li>De inmediato, en la misma ventana, elige <strong>Deshacer renombrado</strong> (en Dolphin, <strong>Deshacer: Renombrar</strong>) en el menú del gestor de archivos o pulsa <kbd>Ctrl</kbd>+<kbd>Z</kbd> una vez si el gestor lo permite. Si vuelve a aparecer el nombre original, usa <strong>Renombrar</strong> para ponerle otra vez el segundo nombre y practicar el paso siguiente. Si la opción de deshacer no está disponible y aún ves el segundo nombre, pasa directamente al siguiente paso.</li>
+<li>Haz clic derecho en la carpeta de práctica que tiene el segundo nombre, elige <strong>Renombrar</strong> y escribe el nombre original. Comprueba que la carpeta vuelva a mostrar su nombre original en el mismo lugar de tu carpeta personal.</li>
+</ol>
+</details>
 </section>
 <section class="panel">
 <h2>Experimentos con IA y programación
