@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://aipracticelab.org/FedoraLinks.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aipracticelab.org/FedoraLinks.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://aipracticelab.org/es/FedoraLinks.html" />
   </url>
@@ -229,7 +229,7 @@
   </url>
   <url>
     <loc>https://aipracticelab.org/es/FedoraLinks.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aipracticelab.org/FedoraLinks.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://aipracticelab.org/es/FedoraLinks.html" />
   </url>
@@ -357,5 +357,17 @@
     <lastmod>2026-10-08</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aipracticelab.org/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://aipracticelab.org/es/" />
+  </url>
+  <url>
+    <loc>https://aipracticelab.org/TryFedoraUSB.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipracticelab.org/TryFedoraUSB.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aipracticelab.org/es/TryFedoraUSB.html" />
+  </url>
+  <url>
+    <loc>https://aipracticelab.org/es/TryFedoraUSB.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aipracticelab.org/TryFedoraUSB.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aipracticelab.org/es/TryFedoraUSB.html" />
   </url>
 </urlset>
