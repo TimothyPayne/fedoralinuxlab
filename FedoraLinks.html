@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Explore Fedora at your own pace, try a useful file task, and prepare a clear question when you need Linux help." name="description"/>
 <meta content="Fedora Linux, open source, beginner Linux, Fedora download, Linux practice Linux Troubleshooting AI Prompt Builder" name="keywords"/>
-<title>Explore Fedora Linux | AI Practice Lab</title>
+<title>Linux: Start Here | AI Practice Lab</title>
 <link href="styles.css" rel="stylesheet"/>
 <link href="assets/css/theme.css" rel="stylesheet"/>
 <link href="FedoraLinks.html" hreflang="en" rel="alternate"/><link href="es/FedoraLinks.html" hreflang="es" rel="alternate"/><link rel="canonical" href="https://aipracticelab.org/FedoraLinks.html">
@@ -16,8 +16,13 @@
 <header class="test-header"><a class="test-brand" href="./">AI Practice Lab</a><nav aria-label="Primary navigation"><a href="StartHere.html">Start Here</a><a href="Practice.html">Practice</a><a href="AIAtWork.html">AI at Work</a><a href="GeekLab.html">Geek Lab</a><a href="SiteMap.html">Site Map</a></nav><nav aria-label="Language" class="language-switch"><span aria-current="page" lang="en">English</span><a href="es/FedoraLinks.html" hreflang="es" lang="es">Español</a></nav></header>
 <main id="main-content">
 <section class="readable-flow">
-<h1 class="title">Explore Fedora Linux</h1>
+<h1 class="title">Linux: Start Here</h1>
 <p>Curious about another way to use a computer? Fedora is a Linux operating system you can use for browsing, writing, and learning computer skills. You can explore at your own pace; Linux is optional for practicing AI.</p>
+<p>Linux comes in different flavors called distributions, or distros for short. Fedora and Ubuntu are two examples. The desktop is what you see and use on screen, including the menus and windows. Our USB exercise uses Fedora Workstation with the GNOME desktop. If you already use Linux, you can start with the system you have.</p>
+<ul>
+<li><a href="#rename-linux-folder"><strong>I already have Linux</strong></a> — start with the folder exercise.</li>
+<li><a href="TryFedoraUSB.html"><strong>I want to try Linux</strong></a> — try Fedora from a USB drive.</li>
+</ul>
 <h2>What is Fedora?</h2>
 <p>Fedora is developed by a community, with Red Hat as its primary sponsor. It is available without a purchase price. Like any operating system, it has its own tools and ways of doing things.</p>
 <p><strong>Open source</strong> means the software's license allows people to inspect, modify, and share its code. That is more than simply being free to download. You do not need to read code to use Fedora.</p>
@@ -26,19 +31,50 @@
 <p>If you use Windows, a prepared Fedora live USB lets you try Fedora without installing it. A live session runs from the USB; installing Fedora is a separate choice that can change the computer's drive.</p>
 <p><strong>Keep these two steps separate:</strong> making a live USB erases the USB you select. Installing an operating system can erase computer files depending on the choices you make. Back up important files first, and get help if you cannot identify the drive or understand an option.</p>
 <ul>
-<li><a href="https://fedoraproject.org/workstation/">Fedora Workstation</a> — official information, downloads, and the live-USB option. Workstation uses the GNOME desktop.</li>
-<li><a href="https://fedoraproject.org/spins/xfce/">Fedora Xfce</a> — an alternative desktop with a more traditional layout. Check its requirements and your computer's compatibility; no desktop is a guarantee that an old computer will work well.</li>
+<li><a href="https://fedoraproject.org/workstation/">Fedora Workstation</a> — official information, downloads, and the live-USB option.</li>
 </ul>
-<p><a href="TryFedoraUSB.html">Try Fedora from a USB drive</a></p>
-<h2 id="test-computer">A spare computer for experiments</h2>
+<h2>Practice with Linux</h2>
+<details id="rename-linux-folder">
+<summary>Rename a Linux folder and undo it</summary>
+<ol>
+<li>Open <strong>Home</strong> in your file manager. Right-click an empty space, choose <strong>New Folder</strong> (in Dolphin, <strong>Create New → Folder</strong>), and create an empty folder named <strong>Rename Practice</strong>. If either <strong>Rename Practice</strong> or <strong>Rename Practice 2</strong> already exists, choose two unused names and remember the original. Use only the empty folder you create for this exercise.</li>
+<li>Right-click your practice folder, choose <strong>Rename</strong>, and change its name to <strong>Rename Practice 2</strong> or your second unused name.</li>
+<li>Right away, in the same window, choose <strong>Undo Rename</strong> (in Dolphin, <strong>Undo: Rename</strong>) from the file manager menu or press <kbd>Ctrl</kbd>+<kbd>Z</kbd> once if your file manager supports it. If the original name returns, use <strong>Rename</strong> to give the folder its second name again so you can practice the next step. If Undo is unavailable and the second name is still visible, go straight to the next step.</li>
+<li>Right-click the practice folder with its second name, choose <strong>Rename</strong>, and type its original name. Confirm that the folder now shows its original name in the same location in Home.</li>
+</ol>
+</details>
+<details id="linux-version-desktop">
+<summary>Find your Linux version and desktop</summary>
+<p>Write down three details. In “Fedora 44 with GNOME,” they are:</p>
+<ul>
+<li><strong>Distribution</strong> (the Linux system you use) — Fedora</li>
+<li><strong>Version</strong> (the release of that distribution) — 44</li>
+<li><strong>Desktop environment</strong> (the interface with your menus and windows) — GNOME</li>
+</ul>
+<h3>Start with the menu</h3>
+<ul>
+<li><strong>GNOME</strong> — Open <strong>Settings → System → About → System Details</strong>.</li>
+<li><strong>KDE Plasma</strong> — Search for <strong>About this System</strong> or open <strong>Info Center</strong>.</li>
+<li><strong>Xfce or LXQt</strong> — Look for <strong>About Xfce</strong> or <strong>About LXQt</strong>, if available.</li>
+</ul>
+<p>Menu names and locations can vary by release. Some About windows only show the desktop name and its version. Use the terminal for any missing Linux details.</p>
+<h3>If you need the terminal</h3>
+<p>Open Terminal from your desktop’s app menu. Run these commands separately, pressing Enter after each. Both work without installing anything or using <code>sudo</code>.</p>
+<ol>
+<li><code>cat /etc/os-release</code><br>Look for <code>PRETTY_NAME</code>, the system name as it’s meant to be shown, often with its release. Use <code>VERSION_ID</code> for the distribution version when that field is present.</li>
+<li><code>echo "$XDG_CURRENT_DESKTOP"</code><br>This shows how your session identifies its desktop. If you see names separated by colons, copy the whole value. A blank line means this session didn’t report a desktop through that setting. Check the menu or say the desktop is unknown.</li>
+</ol>
+<p><strong>Sample output</strong><br><samp>PRETTY_NAME="Fedora Linux 44 (Workstation Edition)"</samp><br><samp>VERSION_ID=44</samp><br><samp>GNOME</samp></p>
+<p><strong>In a help request</strong>, copy the three details from your own results. For this example, write <strong>Distribution</strong> Fedora Linux (Workstation Edition), <strong>Version</strong> 44, <strong>Desktop environment</strong> GNOME.</p>
+</details>
+</section>
+<section aria-labelledby="more-linux-practice">
+<div class="readable-flow">
+<h2 id="more-linux-practice">More Linux practice</h2>
+<h3 id="test-computer">A spare computer for experiments</h3>
 <p>A <strong>test box</strong> is a second computer you can afford to reset if an experiment goes wrong. Keep everyday work and your only copies of important files elsewhere. Begin with one small change, note what you did, and have a way to reinstall the operating system.</p>
 <p>Use made-up data or copies. Keep backups on a separate drive and disconnect it during experiments. A spare machine is not automatically a secure sandbox: software can still access connected drives, accounts, or your network. Ask what a command changes before running it, and give tools only the access they need.</p>
-<h3>Lubuntu: another option for older equipment</h3>
-<p><a href="https://lubuntu.me/">Lubuntu's official website</a> describes an Ubuntu-based Linux system designed to be lightweight, using the LXQt desktop. It is an alternative to explore alongside Fedora.</p>
-<p>The owner of this lab reports that Lubuntu runs well on their 2008 computer. That is one person's experience, not a benchmark or a promise for every old machine. Check the current release's supported hardware, try the live USB, and test the browser and applications you actually need before installing. Modern websites can still demand substantial memory.</p>
-<p>We have not established a performance comparison between Lubuntu and Fedora's lighter desktops. Choose using your computer's results, not its age alone. Installing can erase files, so keep a verified backup first.</p>
-<p><a href="ProjectLinks.html#advanced-title">Return to optional AI experiments and advanced channels</a>.</p>
-<h2>Try one useful file task</h2>
+<h3>Try one useful file task</h3>
 <ul>
 <li><a href="PhoneBU.html">Copy selected Android photos and files to a USB drive</a> — keep originals and check your copies.</li>
 <li><a href="BackupWindows.html">Back up important Windows files to an external drive</a> — useful before making changes to a Windows computer.</li>
@@ -49,9 +85,9 @@
 <p><a href="https://fedoraproject.org/wiki/Red_Hat_contributions">Fedora's explanation of Red Hat's support</a> and <a href="https://opensource.org/osd">the Open Source Initiative's definition</a>. Sources checked on 3 October 2026.</p>
 <p><a href="LUGreasons.html">Read about learning together in a computer lab</a>.</p>
 </details>
-</section>
+</div>
 <section aria-labelledby="linux-builder-title" class="prompt-builder">
-<h2 id="linux-builder-title">Optional: make a clear help request</h2>
+<h3 id="linux-builder-title">Optional: make a clear help request</h3>
 <p>Describe one problem below, then select <strong>Build Prompt</strong>. This page prepares text; it does not contact an AI service or run commands. Copy the request into an AI chat you choose, or use the details when asking a person for help.</p>
 <div class="prompt-grid">
 <div class="prompt-field">
@@ -96,6 +132,19 @@
 <p><strong>Before sharing:</strong> remove passwords, account details, and private information from both your error text and the generated request. AI advice can be wrong. Ask what a suggested command does before running it, especially if it changes settings or files.</p>
 <noscript><p>The builder needs JavaScript. You can still write your request using the fields as a guide: your system, the problem, the error, and what you tried.</p></noscript>
 <p aria-live="polite" class="copy-status" id="linuxCopyStatus" role="status"></p>
+</section>
+</section>
+<section class="readable-flow">
+<h2>Other options</h2>
+<ul>
+<li><a href="https://fedoraproject.org/spins/xfce/">Fedora Xfce</a> — an alternative desktop with a more traditional layout. Check its requirements and your computer's compatibility; no desktop is a guarantee that an old computer will work well.</li>
+</ul>
+<p><strong>Tip:</strong> If GNOME feels slow on your installed Fedora Workstation system, you can add Xfce without reinstalling Fedora. Open Terminal and run <code>sudo dnf install @xfce-desktop-environment</code>. When it finishes, sign out and choose Xfce from the session menu on the sign-in screen. GNOME stays available.</p>
+<h3>Lubuntu: another option for older equipment</h3>
+<p><a href="https://lubuntu.me/">Lubuntu's official website</a> describes an Ubuntu-based Linux system designed to be lightweight, using the LXQt desktop. It is an alternative to explore alongside Fedora.</p>
+<p>The owner of this lab reports that Lubuntu runs well on their 2008 computer. That is one person's experience, not a benchmark or a promise for every old machine. Check the current release's supported hardware, try the live USB, and test the browser and applications you actually need before installing. Modern websites can still demand substantial memory.</p>
+<p>We have not established a performance comparison between Lubuntu and Fedora's lighter desktops. Choose using your computer's results, not its age alone. Installing can erase files, so keep a verified backup first.</p>
+<p><a href="ProjectLinks.html#advanced-title">Return to optional AI experiments and advanced channels</a>.</p>
 </section>
 <p><a href="GeekLab.html">Back to Geek Lab</a></p>
 <script src="js/linux-prompt-builder.js"></script>

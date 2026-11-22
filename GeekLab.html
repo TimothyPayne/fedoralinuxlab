@@ -18,66 +18,25 @@
 <p class="intro">Enjoy computers and experiments? Explore computers, Linux, and AI experiments at your own pace. These are optional; you can practice AI without them.
 </p>
 </div>
-<section class="visual-example"><p class="eyebrow">SEE WHAT YOU CAN DO · ILLUSTRATIVE EXAMPLE</p><h2>Make unfamiliar words easier to understand.</h2><div class="conversation"><div class="bubble ask"><span class="example-label">Something to try</span><p id="geek-prompt">How does a data center work? Explain it in simple words for a beginner.</p><button data-copy="geek-prompt" hidden="" type="button">Copy this question</button><span class="copy-status" role="status"></span></div><div class="bubble reply"><span class="example-label">Sample result · illustrative</span><p>A data center is a building with many computers. They store information and run online services. Power, cooling, and network connections help keep them working.</p></div></div><p class="example-caption">Try asking for an example of a service you use. Check technical details against the resources below.</p></section><div class="resource-grid">
+<div class="resource-grid">
 <section class="panel">
-<h2>Computers &amp; Linux
+<h2>Linux
 </h2>
 <ul class="resource-list">
-<li><a href="FedoraLinks.html">Fedora Linux resources and troubleshooting practice</a>
-</li>
-<li><a href="BackupWindows.html">Windows backup guide</a>
-</li>
-<li><a href="PhoneBU.html">Copy Android photos and files to a USB drive</a>
+<li><a href="FedoraLinks.html"><strong>Linux: Start Here</strong></a>
 </li>
 </ul>
-<details id="linux-version-desktop">
-<summary>Find your Linux version and desktop</summary>
-<p>Write down three details. In “Fedora 44 with GNOME,” they are:</p>
-<ul>
-<li><strong>Distribution</strong> (the Linux system you use) — Fedora</li>
-<li><strong>Version</strong> (the release of that distribution) — 44</li>
-<li><strong>Desktop environment</strong> (the interface with your menus and windows) — GNOME</li>
-</ul>
-<h3>Start with the menu</h3>
-<ul>
-<li><strong>GNOME</strong> — Open <strong>Settings → System → About → System Details</strong>.</li>
-<li><strong>KDE Plasma</strong> — Search for <strong>About this System</strong> or open <strong>Info Center</strong>.</li>
-<li><strong>Xfce or LXQt</strong> — Look for <strong>About Xfce</strong> or <strong>About LXQt</strong>, if available.</li>
-</ul>
-<p>Menu names and locations can vary by release. Some About windows only show the desktop name and its version. Use the terminal for any missing Linux details.</p>
-<h3>If you need the terminal</h3>
-<p>Open Terminal from your desktop’s app menu. Run these commands separately, pressing Enter after each. Both work without installing anything or using <code>sudo</code>.</p>
-<ol>
-<li><code>cat /etc/os-release</code><br>Look for <code>PRETTY_NAME</code>, the system name as it’s meant to be shown, often with its release. Use <code>VERSION_ID</code> for the distribution version when that field is present.</li>
-<li><code>echo "$XDG_CURRENT_DESKTOP"</code><br>This shows how your session identifies its desktop. If you see names separated by colons, copy the whole value. A blank line means this session didn’t report a desktop through that setting. Check the menu or say the desktop is unknown.</li>
-</ol>
-<p><strong>Sample output</strong><br><samp>PRETTY_NAME="Fedora Linux 44 (Workstation Edition)"</samp><br><samp>VERSION_ID=44</samp><br><samp>GNOME</samp></p>
-<p><strong>In a help request</strong>, copy the three details from your own results. For this example, write <strong>Distribution</strong> Fedora Linux (Workstation Edition), <strong>Version</strong> 44, <strong>Desktop environment</strong> GNOME.</p>
-</details>
-<details id="rename-linux-folder">
-<summary>Rename a Linux folder and undo it</summary>
-<ol>
-<li>Open <strong>Home</strong> in your file manager. Right-click an empty space, choose <strong>New Folder</strong> (in Dolphin, <strong>Create New → Folder</strong>), and create an empty folder named <strong>Rename Practice</strong>. If either <strong>Rename Practice</strong> or <strong>Rename Practice 2</strong> already exists, choose two unused names and remember the original. Use only the empty folder you create for this exercise.</li>
-<li>Right-click your practice folder, choose <strong>Rename</strong>, and change its name to <strong>Rename Practice 2</strong> or your second unused name.</li>
-<li>Right away, in the same window, choose <strong>Undo Rename</strong> (in Dolphin, <strong>Undo: Rename</strong>) from the file manager menu or press <kbd>Ctrl</kbd>+<kbd>Z</kbd> once if your file manager supports it. If the original name returns, use <strong>Rename</strong> to give the folder its second name again so you can practice the next step. If Undo is unavailable and the second name is still visible, go straight to the next step.</li>
-<li>Right-click the practice folder with its second name, choose <strong>Rename</strong>, and type its original name. Confirm that the folder now shows its original name in the same location in Home.</li>
-</ol>
-</details>
 </section>
 <section class="panel">
-<h2>AI &amp; coding experiments
+<h2>AI experiments
 </h2>
 <ul class="resource-list">
-<li><a href="GitHubAI.html">See what an AI conversation looks like</a>
-</li>
-<li><a href="ChatGPTexp.html">Find a movie from clues, then check the answer</a>
-</li>
 <li><a href="10Tparam.html">AI advancement: what test scores can tell you</a>
 </li>
 </ul>
 </section>
 <section class="panel">
-<h2>Robots &amp; the changing workplace
+<h2>Technology in the workplace
 </h2>
 <ul class="resource-list">
 <li><a href="ProjectLinks.html#robot-videos-title">Short robot videos and optional AI exploration</a>
@@ -90,11 +49,11 @@
 </li>
 </ul>
 </section>
-<figure class="panel"><img alt="Rows of equipment cabinets inside a data center" loading="lazy" src="images/data-center.jpg" width="600"/>
-<figcaption>This is what the inside of a data center can look like: rows of cabinets holding computers and other equipment. Try asking your AI chat: “How does a data center work? Explain it in simple words for a beginner.”
-</figcaption>
-</figure>
 </div>
+<section class="visual-example"><p class="eyebrow">SEE WHAT YOU CAN DO · ILLUSTRATIVE EXAMPLE</p><h2>Make unfamiliar words easier to understand.</h2><figure class="panel"><img alt="Rows of equipment cabinets inside a data center" loading="lazy" src="images/data-center.jpg" width="600"/>
+<figcaption>This is what the inside of a data center can look like: rows of cabinets holding computers and other equipment.</figcaption>
+</figure>
+<div class="conversation"><div class="bubble ask"><span class="example-label">Something to try</span><p id="geek-prompt">How does a data center work? Explain it in simple words for a beginner.</p><button data-copy="geek-prompt" hidden="" type="button">Copy this question</button><span class="copy-status" role="status"></span></div><div class="bubble reply"><span class="example-label">Sample result · illustrative</span><p>A data center is a building with many computers. They store information and run online services. Power, cooling, and network connections help keep them working.</p></div></div><p class="example-caption">Try asking for an example of a service you use. Check technical details against the resources below.</p></section>
 <aside class="note">Explore examples of AI, technology, and changing workplaces. Start with something that interests you, and go deeper when you’re ready. Some articles discuss changing technology or current events; check their dates and original sources before relying on them.
 </aside>
 </main>
